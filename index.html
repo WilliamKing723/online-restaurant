@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta mame="viewpoint" content="width=device-width, initial-scale=1.0">
+	<meta charset="utf-8" />
+	<title>Online-Restaurant</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+	<link rel ="stylesheet" href="Stylesheet/main.css" />
+<body background="Img/網頁背景.jpg">
+	<!--標題目錄-->
+	<div class="title">
+		<div class="headline"><a href="index.html"><img src="Img/Title.png " style="width:85px ; height:66px "/></a><a href="index.html"><span>OnlineRestaurant</span></a></div>
+		<div class="list">
+			<div class="item"><a href="Order/order.html">Your Order</a></div>
+			<div class="item"><a href="Feedback/feedback.html">Feedback</a></div>
+			<div class="item"><a href="Produceprice/productprice.html">Product Price</a></div>
+			<div class="item"><a href="">Google Forms</a></div>
+		</div>
+	</div>
+	<!--產品名稱-->
+	<div class="prodname">
+		<ul id="name" class="name">			
+			<li class="eat">甜點</li>
+			<li class="eat">炒飯</li>
+			<li class="eat">排餐</li>
+			<li class="eat">滷味</li>
+			<li class="eat">麵類</li>
+		</ul>
+	</div>
+	<!--計時器-->
+	<script>
+		setInterval(function(){
+			var li=document.querySelector('.eat') ;
+			var ul=document.getElementById('name') ;
+			ul.appendChild(li) ;
+		},3000)
+	</script>
+	<!--產品內容-->
+	<div class="proudct">
+		<ul id="imgs" class="imgs">
+			<li class="img"><img src="Img/麵類.jpg" style="width: 550px; height: 370px"/></li>
+			<li class="img"><img src="Img/甜點.jpg" style="width: 550px; height: 370px"/></li>
+			<li class="img"><img src="Img/炒飯.jpg" style="width: 550px; height: 370px"/></li>
+			<li class="img"><img src="Img/排餐.jpg" style="width: 550px; height: 370px"/></li>
+			<li class="img"><img src="Img/滷味.jpg" style="width: 550px; height: 370px"/></li>
+		</ul>	
+	</div>
+	<script>
+		setInterval(function(){
+			var li=document.querySelector('.img') ;
+			var ul=document.getElementById('imgs') ;
+			ul.appendChild(li) ;
+		},3000)
+	</script>
+	
+</body>
+</head>
+</html>
