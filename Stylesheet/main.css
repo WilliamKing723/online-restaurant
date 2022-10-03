@@ -2,6 +2,10 @@
     display: flex;
     background-color: beige;
 }
+.frame{
+    margin: 200px;
+    border-style: solid;
+}
 body{
     background-size: 150%;
 }
@@ -28,7 +32,9 @@ body{
 ul{
     list-style: none;
 }
+
 .name{
+    padding-left: 1000px;
     width: 250px;
     height: 80px;
     margin-top: 300px;
@@ -43,6 +49,7 @@ ul{
  }
    
 .imgs{
+    padding-left: 800px;
     width: 550px;
     height: 400px;
     overflow: hidden;
