@@ -1,9 +1,13 @@
 const express = require("express") ;
 const router = express.Router();
+const fs = require("fs");
+const app=express();
 
 
-router.get("/",function(req,res){
-    res.send("/order的路徑");
+//app.use('/Stylesheet', express.static(__dirname + '/Stylesheet'));
+
+app.get("/", function(req,res){
+    res.send(fs.readFileSync('order.html').toString());
 });
 
 router.get("/page",function(req,res){

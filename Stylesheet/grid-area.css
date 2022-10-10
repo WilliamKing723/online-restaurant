@@ -1,9 +1,9 @@
 .container-grid{
     display:grid ;
     grid-template-areas:
-        ' blank-left top top top blank-right  '
+        'blank-left top top top blank-right  '
         'blank-left left middle right blank-right '
-        ' blank-left footer footer footer blank-right';
+        'blank-left footer footer footer blank-right';
         grid-column-gap: 5px;
         grid-row-gap: 5px;
 }
