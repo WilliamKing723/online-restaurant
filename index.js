@@ -10,6 +10,11 @@ const productpriceRouter = require("./router/productprice.js");
 
 app.use('/Img', express.static(__dirname + '/Img'));
 app.use('/Stylesheet', express.static(__dirname + '/Stylesheet'));
+app.use('/index.html', express.static(__dirname + "/index.html"));
+app.use('/Order', express.static(__dirname + "/Order"));
+app.use('/Feedback', express.static(__dirname + "/Feedback"));
+app.use('/Productprice', express.static(__dirname + "/Productprice"));
+
 
 app.get("/", function(req,res){
     res.send(fs.readFileSync('index.html').toString());
@@ -17,9 +22,9 @@ app.get("/", function(req,res){
 
 
 
-app.use("/feedback", feedbackRouter);
-app.use("/order", orderRouter);
-app.use("/productprice", productpriceRouter);
+app.use("/feedback.js", feedbackRouter);
+app.use("/order.js", orderRouter);
+app.use("/productprice.js", productpriceRouter);
 
 
 app.listen(portNum,function(){

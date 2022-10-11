@@ -6,10 +6,9 @@
         'blank-left footer footer footer blank-right';
         grid-column-gap: 5px;
         grid-row-gap: 5px;
+    
 }
 .top{
-    background-color: brown;
-    padding: 30px;
     text-align: center;
     grid-area: top;
 }
@@ -45,7 +44,7 @@
     grid-area: blank-right;
 }
 
-@media (max-width:1250px){
+@media (max-width:990px){
     .container-grid{
         display:grid ;
         grid-template-areas:

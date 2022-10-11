@@ -4,16 +4,11 @@ const fs = require("fs");
 const app=express();
 
 
-//app.use('/Stylesheet', express.static(__dirname + '/Stylesheet'));
-
-app.get("/", function(req,res){
-    res.send(fs.readFileSync('productprice.html').toString());
-});
-
-router.get("/page",function(req,res){
-    res.json({message:"/prductprice/page的路徑"});
+router.get("/", function(req,res){
+    res.send(fs.readFileSync('../Productprice/productprice.html').toString());
 });
 
 
-// moudle[1] 將router倒出,等別人require引入使用
+
+// moudle[1] 將router導出,等別人require引入使用
 module.exports = router ;
