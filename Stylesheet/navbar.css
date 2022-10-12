@@ -5,14 +5,9 @@ nav{
 .navbar{
     background-color: rgb(40, 204, 136);
 }
-.headline{
-    display: flex;
-    align-items: center;
-    font-size: 24px;
-    color: black;
-}
+
 li a {
-    color:yellow !important;
+    color:rgb(255, 0, 187) !important;
     font-size:20px;
    
 }
@@ -30,9 +25,13 @@ li a:hover{
 
 @media (max-width:990px){
     nav{
-        height:auto;
+        height: auto;
+        width: auto;
     }
     .nav-link {
         padding:10px;
+    }
+    .form{
+        align-items: center;
     }
 }

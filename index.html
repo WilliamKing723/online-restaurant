@@ -19,28 +19,45 @@
 	<div class="container-grid">
 		<div class="top">
 			<nav class="navbar navbar-expand-lg navbar-light">
-				<div class="container-fluid">
-					<div class="headline"><a href="index.html"><img src="Img/Title.png " style="width:85px ; height:66px "/></a><a href="index.html"><span>OnlineRestaurant</span></a></div>
-					<div class="collapse navbar-collapse" id="linkbar"></div>
-					<ul class="navbar-nav me-auto">
-						<li class="nav-item">
-						<a class="nav-link" href="Order/order.html">Your Order</a>
-						</li>
-						<li class="nav-item">
-						<a class="nav-link" href="Feedback/feedback.html">Feedback</a>
-						</li>
-						<li class="nav-item">
-						<a class="nav-link" href="Productprice/productprice.html">Product Price</a>
-						</li>
-						<li class="nav-item">
-						<a class="nav-link" href="#">Google Forms</a>
-						</li>
-					</ul>
+				<div class="container-fluid">					
+					<div class="headline"><a href="index.html"><img src="Img/Title.png " style="width:85px ; height:66px "/></a></div>
+
+					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#linkbar">
+						<span class="navbar-toggler-icon"></span>
+					</button>				
+					
+					<div class="collapse navbar-collapse" id="linkbar">
+						<ul class="navbar-nav me-auto">
+							<li class="nav-item">
+							<a class="nav-link" href="index.html">Home</a>
+							</li>
+							<li class="nav-item">
+							<a class="nav-link" href="Order/order.html">Your Order</a>
+							</li>
+							<li class="nav-item">
+							<a class="nav-link" href="Feedback/feedback.html">Feedback</a>
+							</li>
+							<li class="nav-item">
+							<a class="nav-link" href="Productprice/productprice.html">Product Price</a>
+							</li>
+							<li class="nav-item">
+							<a class="nav-link" href="#">Google Forms</a>
+							</li>
+						</ul>
+						<form style="width:300px;" class="input-group">
+							<input  class="form-control me-3" type="search" placeholder="搜尋">
+							<button  class="btn btn-success" type="submit">Search</button>
+						</form>
+					</div>
 				</div>
 			</nav>
 		</div>
 		<div class="left">
 			<div class="container-meals">
+				
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#linkbar">
+					<span class="navbar-toggler-icon"></span>
+				</button>	
 				<ul class="meals">
 					<li class="meals-item">Main meal</li>					
 					<li class="meals-item">Side meal</li>					
@@ -48,6 +65,7 @@
 					<li class="meals-item">Dessert</li>
 					<li class="meals-item">Combo meal</li>
 				</ul>
+				
 			</div>
 		</div>
 		<div class="middle">

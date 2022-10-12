@@ -10,27 +10,113 @@
 	<!--導覽列CSS-->
 	<link rel ="stylesheet" href="../Stylesheet/navbar.css" />
 </head>
-<body background="../Img/網頁背景.jpg">
+<body>
 	<!--標題目錄-->
+	
 	<nav class="navbar navbar-expand-lg navbar-light">
+
 		<div class="container-fluid">
-			<div class="headline"><a href="../index.html"><img src="../Img/Title.png " style="width:85px ; height:66px "/></a><a href="../index.html"><span>OnlineRestaurant</span></a></div>
-			<div class="collapse navbar-collapse" id="linkbar"></div>
-			<ul class="navbar-nav me-auto">
-				<li class="nav-item">
-				<a class="nav-link" href="order.html"">Your Order</a>
-				</li>
-				<li class="nav-item">
-				<a class="nav-link" href="../Feedback/feedback.html">Feedback</a>
-				</li>
-				<li class="nav-item">
-				<a class="nav-link" href="../Productprice/productprice.html">Product Price</a>
-				</li>
-				<li class="nav-item">
-				<a class="nav-link" href="#">Google Forms</a>
-				</li>
-			</ul>
+			<div class="headline"><a href="../index.html"><img src="../Img/Title.png " style="width:85px ; height:66px "/></a></div>
+
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#linkbar">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="linkbar">
+				<ul class="navbar-nav me-auto">
+					<li class="nav-item">
+					<a class="nav-link" href="../index.html"">Home</a>
+					<li class="nav-item">
+					<a class="nav-link" href="order.html"">Your Order</a>
+					</li>
+					<li class="nav-item">
+					<a class="nav-link" href="../Feedback/feedback.html">Feedback</a>
+					</li>
+					<li class="nav-item">
+					<a class="nav-link" href="../Productprice/productprice.html">Product Price</a>
+					</li>
+					<li class="nav-item">
+					<a class="nav-link" href="#">Google Forms</a>
+					</li>
+				</ul>
+				<form style="width:300px;" class="input-group">
+					<input  class="form-control me-3" type="search" placeholder="搜尋">
+					<button  class="btn btn-success" type="submit">Search</button>
+				</form>
+
+
+			</div>
 		</div>
 	</nav>
+	
+	<aside class="bd-aside sticky-xl-top text-muted align-self-start mb-3 mb-xl-5 px-2">
+		<h2 class="h6 pt-4 pb-3 mb-4 border-bottom">On this page</h2>
+		<nav class="small" id="toc">
+		  <ul class="list-unstyled">
+			<li class="my-2">
+			  <button class="btn d-inline-flex align-items-center collapsed" data-bs-toggle="collapse" aria-expanded="false" data-bs-target="#main meals-collapse" aria-controls="main meals-collapse">Main meals</button>
+			  	<ul>
+			 	 <li><button class="btn d-inline-flex align-items-center collapsed" data-bs-toggle="collapse" aria-expanded="false" data-bs-target="#noodles-collapse" aria-controls="noodles-collapse">Noodles</button></li>
+					<ul class="list-unstyled ps-3 collapse" id="noodles-collapse">
+						<li><a class="d-inline-flex align-items-center rounded" href="#">fried noodles 炒麵</a></li>
+						<li><a class="d-inline-flex align-items-center rounded" href="#">soup noodles 湯麵</a></li>
+						<li><a class="d-inline-flex align-items-center rounded" href="#">dry noodles 乾麵</a></li>
+						<li><a class="d-inline-flex align-items-center rounded" href="#">Fried instant noodles 炒泡麵</a></li>
+					</ul>
+				<li><button class="btn d-inline-flex align-items-center collapsed" data-bs-toggle="collapse" aria-expanded="false" data-bs-target="#rice-collapse" aria-controls="rice-collapse">Rice</button></li>
+					<ul class="list-unstyled ps-3 collapse" id="rice-collapse">
+						<li><a class="d-inline-flex align-items-center rounded" href="#">stewed rice 燉飯</a></li>
+						<li><a class="d-inline-flex align-items-center rounded" href="#">Risotto 燴飯</a></li>
+						<li><a class="d-inline-flex align-items-center rounded" href="#">fried rice 炒飯</a></li>
+						<li><a class="d-inline-flex align-items-center rounded" href="#">Curry rice 咖哩飯</a></li>
+						<li><a class="d-inline-flex align-items-center rounded" href="#">Donburi 丼飯</a></li>
+					</ul>
+				<li><button class="btn d-inline-flex align-items-center collapsed" data-bs-toggle="collapse" aria-expanded="false" data-bs-target="#vergetarian food-collapse" aria-controls="vergetarian food-collapse">vegetarian food</button></li>
+					<ul class="list-unstyled ps-3 collapse" id="vergetarian food-collapse">
+						<li><a class="d-inline-flex align-items-center rounded" href="#">hot pot 火鍋</a></li>
+						<li><a class="d-inline-flex align-items-center rounded" href="#">noodles 麵</a></li>
+						<li><a class="d-inline-flex align-items-center rounded" href="#">rice 飯</a></li>
+						<li><a class="d-inline-flex align-items-center rounded" href="#">vegetarian meat cooking 素肉料理</a></li>
+					</ul>
+				</ul>
+			</li>
+			<li class="my-2">
+			  <button class="btn d-inline-flex align-items-center collapsed" data-bs-toggle="collapse" aria-expanded="false" data-bs-target="#side meals-collapse" aria-controls="side meals-collapse">Side meals</button>
+			  <ul class="list-unstyled ps-3 collapse" id="side meals-collapse">
+				<li><a class="d-inline-flex align-items-center rounded" href="#">salad 沙拉</a></li>
+				<li><a class="d-inline-flex align-items-center rounded" href="#">thick soup濃湯</a></li>
+				<li><a class="d-inline-flex align-items-center rounded" href="#">fried food 炸物</a></li>
+				<li><a class="d-inline-flex align-items-center rounded" href="#">blanched vegetables 燙青菜</a></li>
+				<li><a class="d-inline-flex align-items-center rounded" href="#">lu wei 滷味</a></li>
+			  </ul>
+			</li>
+			<li class="my-2">
+			  <button class="btn d-inline-flex align-items-center collapsed" data-bs-toggle="collapse" aria-expanded="false" data-bs-target="#drinks-collapse" aria-controls="drinks-collapse">Drinks</button>
+			  <ul class="list-unstyled ps-3 collapse" id="drinks-collapse">
+				<li><a class="d-inline-flex align-items-center rounded" href="#">tea 茶類</a></li>
+				<li><a class="d-inline-flex align-items-center rounded" href="#">juice 果汁</a></li>
+				<li><a class="d-inline-flex align-items-center rounded" href="#">coffee 咖啡</a></li>
+				<li><a class="d-inline-flex align-items-center rounded" href="#">Carbonated drinks 碳酸飲料</a></li>
+			  </ul>
+			</li>
+			<li class="my-2">
+				<button class="btn d-inline-flex align-items-center collapsed" data-bs-toggle="collapse" aria-expanded="false" data-bs-target="#dessert-collapse" aria-controls="dessert-collapse">Dessert</button>
+				<ul class="list-unstyled ps-3 collapse" id="dessert-collapse">
+				  <li><a class="d-inline-flex align-items-center rounded" href="#">pudding布丁</a></li>
+				  <li><a class="d-inline-flex align-items-center rounded" href="#">cake蛋糕</a></li>
+				  <li><a class="d-inline-flex align-items-center rounded" href="#">panna cotta 奶酪</a></li>
+				  <li><a class="d-inline-flex align-items-center rounded" href="#">cookie 餅乾</a></li>
+				</ul>
+			  </li>
+			  <li class="my-2">
+				<button class="btn d-inline-flex align-items-center collapsed" data-bs-toggle="collapse" aria-expanded="false" data-bs-target="#combo meals-collapse" aria-controls="combo meals-collapse">Combo meals</button>
+				<ul class="list-unstyled ps-3 collapse" id="combo meals-collapse">
+				  <li><a class="d-inline-flex align-items-center rounded" href="#">Meal for two</a></li>
+				  <li><a class="d-inline-flex align-items-center rounded" href="#">Recommended Package</a></li>
+				</ul>
+			  </li>
+		  </ul>
+		</nav>
+	  </aside>
 </body>
 </html>
