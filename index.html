@@ -17,16 +17,44 @@
 			<div class="item"><a href="">Google Forms</a></div>
 		</div>
 	</div>
-	<!--產品名稱-->
-	<div class="prodname">
-		<ul id="name" class="name">			
-			<li class="eat">甜點</li>
-			<li class="eat">炒飯</li>
-			<li class="eat">排餐</li>
-			<li class="eat">滷味</li>
-			<li class="eat">麵類</li>
-		</ul>
+	<div class="frame">
+		<!--產品名稱-->
+		<div class="prodname">
+			<ul id="name" class="name">			
+				<li class="eat">甜點</li>
+				<li class="eat">炒飯</li>
+				<li class="eat">排餐</li>
+				<li class="eat">滷味</li>
+				<li class="eat">麵類</li>
+			</ul>
+		</div>
+		<!--計時器-->
+		<script>
+			setInterval(function(){
+				var li=document.querySelector('.eat') ;
+				var ul=document.getElementById('name') ;
+				ul.appendChild(li) ;
+			},3000)
+		</script>
+		<!--產品內容-->
+		<div class="proudct">
+			<ul id="imgs" class="imgs">
+				<li class="img"><img src="Img/麵類.jpg" style="width: 550px; height: 370px"/></li>
+				<li class="img"><img src="Img/甜點.jpg" style="width: 550px; height: 370px"/></li>
+				<li class="img"><img src="Img/炒飯.jpg" style="width: 550px; height: 370px"/></li>
+				<li class="img"><img src="Img/排餐.jpg" style="width: 550px; height: 370px"/></li>
+				<li class="img"><img src="Img/滷味.jpg" style="width: 550px; height: 370px"/></li>
+			</ul>	
+		</div>
+		<script>
+			setInterval(function(){
+				var li=document.querySelector('.img') ;
+				var ul=document.getElementById('imgs') ;
+				ul.appendChild(li) ;
+			},3000)
+		</script>
 	</div>
+<<<<<<< HEAD
 	<!--計時器-->
 	<script>
 		setInterval(function(){
@@ -53,6 +81,8 @@
 		},3000)
 	</script>
 	<p>123</p>
+=======
+>>>>>>> 29903e6947e8431c4d544f803a1af57df005fd5d
 </body>
 </head>
 </html>
