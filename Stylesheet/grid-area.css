@@ -4,9 +4,6 @@
         'top top top top top '
         'blank-left left middle right blank-right '
         'blank-left footer footer footer blank-right';
-        grid-column-gap: 5px;
-        grid-row-gap: 5px;
-    
 }
 .top{
     text-align: center;
