@@ -3,6 +3,8 @@ nav{
     
 }
 .navbar{
+    position: fixed;
+    width: 100%;
     background-color: rgb(40, 204, 136);
 }
 
@@ -25,7 +27,6 @@ li a:hover{
     padding-top: 0;
     padding-bottom: 0;
     box-shadow: none;
-    border-bottom: #dee2e6 1px solid;
     align-items: stretch;
     height: 66px;
 }
@@ -46,5 +47,5 @@ li a:hover{
     .form{
         align-items: center;
     }
-  
+
 }
