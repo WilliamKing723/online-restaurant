@@ -5,16 +5,10 @@ nav{
 .navbar{
     background-color: rgb(40, 204, 136);
 }
-.headline{
-    display: flex;
-    align-items: center;
-    font-size: 24px;
-    color: black;
-}
+
 li a {
-    color:yellow !important;
+    color:rgb(255, 0, 187) !important;
     font-size:20px;
-   
 }
 li a:hover{
     color:black !important;
@@ -27,12 +21,30 @@ li a:hover{
 .nav-link {
     padding:20px;
 }
-
+.navbar.fixed-top {
+    padding-top: 0;
+    padding-bottom: 0;
+    box-shadow: none;
+    border-bottom: #dee2e6 1px solid;
+    align-items: stretch;
+    height: 66px;
+}
+.fixed-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
 @media (max-width:990px){
     nav{
-        height:auto;
+        height: auto;
     }
     .nav-link {
         padding:10px;
     }
+    .form{
+        align-items: center;
+    }
+  
 }
