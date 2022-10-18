@@ -66,27 +66,21 @@
                 <div class="col-lg-10 col-md-11 col-xs-12">
                     <select class="form-control" id="sQuestionName" name="QuestionName" onchange="SetLabel(this);">
 						<option value="">請選擇</option>
-<option value="1">餐廳產品.服務相關問題及意見</option>
-<option value="3">相關意見及詢問</option>
-<option value="5">給我們的鼓勵</option>
+<option value="1">服務相關問題及意見</option>
+<option value="3">給我們的鼓勵</option>
 <option value="6">員工和服務相關</option>
 <option value="4">其他</option>
 </select>
                 </div>
             </div>
-            <span class="errormsg" id="errormsg_QuestionList">請選擇問題種類。
-            </span>
 			<div id="MainLabel" style="display:none;">
 				<br>
 				<div class="row">
-					<div class="col-lg-1 col-md-1 col-xs-12">*餐廳</div>
 					<div class="col-lg-10 col-md-11 col-xs-12">
-					
 	</select>
 						<input class="form-control" id="StoreAddress" name="StoreAddress" readonly="readonly" type="text" value="">
 					</div>
 				</div>
-				<span class="errormsg" id="errormsg_StoreName">請選擇餐廳。</span>
 				<br>
 				<div id="InvoiceAndDateLabel" class="row">
 					<div id="AppLabel" style="display:none;">
@@ -96,93 +90,53 @@
 								<div class="col-lg-2 col-md-2 col-xs-12">*餐廳問題種類</div>
 								<div class="col-lg-8 col-md-9 col-xs-12">
 									<select class="form-control" id="sAppQuestionName" name="AppQuestionName"><option value="">請選擇</option>
-			<option value="47">滿意度調查</option>
-			<option value="48">其他/詢問/建議</option>
 			</select>
 								</div>
 							</div>
-							<span class="errormsg" id="errormsg_AppQuestionList">請選擇問題種類。</span>
 						</div>
 						<br>
 						<div class="row">
 							<div class="col-lg-1 col-md-1 col-xs-12">*Email</div>
 							<div class="col-lg-10 col-md-11 col-xs-12">
-								<input class="McdTxtBox" id="Email" maxlength="60" name="Email" type="text" value="">
+								<input class="TxtBox" id="Email" maxlength="60" name="Email" type="text" value="">
 								
 							</div>
 						</div>
 						</div>
-						<span class="errormsg" id="errormsg_WrongEmail" style="color:red">Email格式不正確。</span>
-						<span class="errormsg" id="errormsg_Email">請輸入Email。</span>
 					</div>
 					<br>
 					<div class="row">
 						<div class="col-lg-1 col-md-1 col-xs-12">*建議事項</div>
 						<div class="col-lg-10 col-md-9 col-xs-12">
-							<small >最大字數: 500 ，還剩: <span id="chLeft">500</span></small>
+						   <small >
+							"最大字數: 500 ，還剩:" 
+							<span id="chLeft">500</span>
+							</small>
 							<br>
-							<textarea class="McdTxtArea" cols="20" id="Suggestion" maxlength="500" name="Suggestion" onkeyup="checkLength(this);" rows="4"></textarea>
-                    </div>
+							<textarea class="McdTxtArea" cols="20" id="Suggestion"
+							 maxlength="500" name="Suggestion" onkeyup="checkLength(this);"
+							 rows="4"></textarea>
+                        </div>
 					</div>
-					<span class="errormsg" id="errormsg_Suggestion">請輸入建議事項。</span>
 					<br>
 				    <br>
 					<div class="row">
-						<div class="col-lg-12 col-md-12 col-xs-12">
-							<label style="font-weight: normal;">
-								<input checked="checked" data-val="true" data-val-required="NeedContact 欄位是必要項。" id="NeedContact" name="NeedContact" onchange="SetContactLabel(this, false);" type="radio" value="False">
-								"只想提供寶貴意見，不需專人回電"
-							</label>
+					<div class="col-lg-12 col-md-12 col-xs-12">
 						</div>
 					</div>
 					<div class="row">
 						<div class="col-lg-2 col-md-2 col-xs-12">
-							<label style="font-weight: normal;">
-								<input id="NeedContact" name="NeedContact" onchange="SetContactLabel(this,true);" type="radio" value="True">
-								"需要專人回電"
-							</label>
 						</div>
 						<div id="ContactLabel" class="col-lg-10 col-md-10 col-xs-12" style="display:none">
 							<div class="row">
-								<div class="col-lg-2 col-md-2 col-xs-12">
-									市話
-								</div>
-								<div class="col-lg-10 col-md-10 col-xs-12">
-									
-									<input class="McdTxtBox" id="AreaPhoneNumber" maxlength="4" 
-									name="AreaPhoneNumber" style="width: 45px;" type="text" value="">-
-									<input class="McdTxtBox" id="PhoneNumber" maxlength="10"
-								    name="PhoneNumber" style="width: auto;" type="text" value="">-
-									<input class="McdTxtBox" id="Ext" maxlength="10" 
-									name="Ext" style="width: 60px;" type="text" value="">
-									"分機"
-						</div>
 						</div>
 						<br>
-						<div class="row">
-							<div class="col-lg-2 col-md-2 col-xs-12">*手機</div>
-							<div class="col-lg-2 col-md-2 col-xs-12">
-								<input class="McdTxtBox" id="MobilePhone" maxlength="10" name="MobilePhone" type="text" value="">
-								</div>
-								
-			
-							</div>
-							<span class="errormsg" id="errormsg_MobilePhoneLength">手機號碼不正確。</span>
-							<span class="errormsg" id="errormsg_MobilePhone">請輸入手機號碼。</span>
-			
-							<br>
-			
-							<div class="row">
-								<div class="col-lg-2 col-md-2 col-xs-12">*聯繫時間</div>
-								<div class="col-lg-10 col-md-10 col-xs-12">
-									<select class="form-control" id="sContactTime" name="ContactTimeName"><option value="">請選擇</option>
-			<option value="1">09:00~12:00</option>
-			<option value="2">13:00~18:00</option>
+						<div class="row"></div>
+							<div class="row"></div>
 			</select>
+	</select>
 		</div>
 	</div>
-	<span class="errormsg" id="errormsg_ContactTimeList">請選擇聯繫時間。
-	</span>
 	<br>
 	</div>
     </div>
@@ -190,41 +144,6 @@
     <br>
 	<input id="CaptchaDeText" name="CaptchaDeText" type="hidden" value=
 	"00dcc3b035be438cb3a2d3edf81d8442">
-	<div class="row">
-		<div class="col-lg-1 col-md-1 col-xs-12">*驗證碼</div>
-		<img class="col-lg-2 col-md-2" style="display:normal" id="CaptchaImage"
-		src="/contact/DefaultCaptcha/Generate?t=00dcc3b035be438cb3a2d3edf81d8442">
-		<div class="col-lg-9 col-md-9 col-xs-12">
-	    <div class="col-lg-12 col-md-12 col-xs-12">
-			<div class="col-lg-3 col-md-3 col-xs-12">
-			<input class="McdTxtBox" id="txtValidCode" 
-			name="CaptchaInputText" type="text" value="">
-				</div>
-				<span>(大小寫皆可)</span>
-			</div>
-        <div class="col-lg-12 col-md-12 col-xs-12">
-			<script type="text/javascript">
-	                    $(function () {
-
-			$('#ae061610505443c4905406409c8f52bc').show();
-				        });
-	
-	
-				function ______aa33e38a2e24496ab2942a41b981ae14________() {
-						$('#ae061610505443c4905406409c8f52bc').hide();
-					$.post("/contact/DefaultCaptcha/Refresh", { t: $('#CaptchaDeText').val() },
-						function () {
-							$('#ae061610505443c4905406409c8f52bc').show();
-						});
-					return false;
-				}
-					</script>
-					<a href="#CaptchaImage" id="ae061610505443c4905406409c8f52bc" onclick="______aa33e38a2e24496ab2942a41b981ae14________()" 
-					style="display:inline;">刷新驗證碼</a>
-                    </div>
-		</div>
-		</div>
-				<span class="errormsg" id="errormsg_Valid" style="display:block"><span class="field-validation-valid" data-valmsg-for="CaptchaInputText" data-valmsg-replace="true"></span></span>
 				<br>
 			<div class="row">
 				<div class="col-lg-12 col-md-12 col-xs-12" style="margin-right: 10px;">
@@ -256,7 +175,7 @@
 			jQuery(function ($) {
 				$.mask.definitions['y'] = '[2]';
 				$.mask.definitions['m'] = '[01]';
-				$.mask.definitions['d'] = '[0-3]';});
+				$.mask.definitions['d'] = '[0-3]';
 	
 			$('input[name="InvoiceType"]').on("click", function (e) {
 	
@@ -458,7 +377,6 @@
 	
 				if (QuestionName.value == "1") {
 	
-					//發票號碼 和 載具
 					var InvoiceNo_Eng = document.getElementById("InvoiceNo_Eng");
 					var InvoiceNo_Number = document.getElementById("InvoiceNo_Number");
 					var InvoiceType = $('input[name="InvoiceType"]:checked').val();
