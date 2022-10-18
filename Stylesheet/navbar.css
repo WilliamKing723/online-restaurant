@@ -3,6 +3,7 @@ nav{
     
 }
 .navbar{
+    width: 100%;
     background-color: rgb(40, 204, 136);
 }
 
@@ -13,28 +14,25 @@ li a {
 li a:hover{
     color:black !important;
     background-color: lightyellow;
-    
+    height: 70;
 }
 .nav-item{
     text-align: center;
+    justify-content: center;
 }
-.nav-link {
-    padding:20px;
-}
+
 .navbar.fixed-top {
     padding-top: 0;
     padding-bottom: 0;
     box-shadow: none;
-    border-bottom: #dee2e6 1px solid;
     align-items: stretch;
     height: 66px;
 }
 .fixed-top {
     position: fixed;
-    top: 0;
+    top: 100;
     right: 0;
     left: 0;
-    z-index: 1030;
 }
 @media (max-width:990px){
     nav{
@@ -44,7 +42,7 @@ li a:hover{
         padding:10px;
     }
     .form{
-        align-items: center;
+        align-items: flex-end;
     }
-  
+
 }

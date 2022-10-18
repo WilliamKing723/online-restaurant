@@ -48,7 +48,6 @@
 	<div class="title">
 		<br>
 		<div class="row">
-			::before
             <div class="col-lg-1 col-md-1 col-xs-12">*姓名</div>
             <div class="col-lg-10 col-md-6 col-xs-12">
                 <input class="McdTxtBox" id="Name" maxlength="10" name="Name" style="width: 120px;" type="text" value="">
@@ -57,10 +56,8 @@
                 <input type="radio" id="CustF" value="2" name="CustSex">
                 <label for="SexF">小姐</label>
             </div>
-			::after
         </div>
 		<div class="row">
-			::before
             <div class="col-lg-1 col-md-1 col-xs-12">*姓名</div>
             <div class="col-lg-10 col-md-6 col-xs-12">
                 <input class="McdTxtBox" id="Name" maxlength="10" name="Name" style="width: 120px;" type="text" value="">
@@ -69,13 +66,11 @@
                 <input type="radio" id="CustF" value="2" name="CustSex">
                 <label for="SexF">小姐</label>
             </div>
-             ::after
         </div>
 		<span class="errormsg" id="errormsg_Name">請輸入姓名。</span>
 		<br>
 		<div id="QuestionLabel">
             <div class="row">
-				::before
                 <div class="col-lg-1 col-md-1 col-xs-12">*問題種類</div>
                 <div class="col-lg-10 col-md-11 col-xs-12">
                     <select class="form-control" id="sQuestionName" name="QuestionName" onchange="SetLabel(this);">
@@ -87,7 +82,6 @@
 <option value="4">其他</option>
 </select>
                 </div>
-             ::after
             </div>
             <span class="errormsg" id="errormsg_QuestionList">請選擇問題種類。
             </span>
@@ -132,30 +126,25 @@
 					</div>
 					<br>
 					<div class="row">
-						::before
 						<div class="col-lg-1 col-md-1 col-xs-12">*建議事項</div>
 						<div class="col-lg-10 col-md-9 col-xs-12">
 							<small>最大字數: 500 ，還剩: <span id="chLeft">500</span></small>
 							<br>
 							<textarea class="McdTxtArea" cols="20" id="Suggestion" maxlength="500" name="Suggestion" onkeyup="checkLength(this);" rows="4"></textarea>
-                       </div>
-					   ::after
+                    </div>
 					</div>
 					<span class="errormsg" id="errormsg_Suggestion">請輸入建議事項。</span>
 					<br>
 				    <br>
 					<div class="row">
-						::before
 						<div class="col-lg-12 col-md-12 col-xs-12">
 							<label style="font-weight: normal;">
 								<input checked="checked" data-val="true" data-val-required="NeedContact 欄位是必要項。" id="NeedContact" name="NeedContact" onchange="SetContactLabel(this, false);" type="radio" value="False">
 								"只想提供寶貴意見，不需專人回電"
 							</label>
 						</div>
-						::after
 					</div>
 					<div class="row">
-						::before
 						<div class="col-lg-2 col-md-2 col-xs-12">
 							<label style="font-weight: normal;">
 								<input id="NeedContact" name="NeedContact" onchange="SetContactLabel(this,true);" type="radio" value="True">
@@ -205,30 +194,28 @@
 	</span>
 	<br>
 	</div>
-	::after
     </div>
 	<br>
     <br>
 	<input id="CaptchaDeText" name="CaptchaDeText" type="hidden" value=
 	"00dcc3b035be438cb3a2d3edf81d8442">
 	<div class="row">
-      ::before
 		<div class="col-lg-1 col-md-1 col-xs-12">*驗證碼</div>
 		<img class="col-lg-2 col-md-2" style="display:normal" id="CaptchaImage"
 		src="/contact/DefaultCaptcha/Generate?t=00dcc3b035be438cb3a2d3edf81d8442">
 		<div class="col-lg-9 col-md-9 col-xs-12">
-	      <div class="col-lg-12 col-md-12 col-xs-12">
+	    <div class="col-lg-12 col-md-12 col-xs-12">
 			<div class="col-lg-3 col-md-3 col-xs-12">
-			  <input class="McdTxtBox" id="txtValidCode" 
-			  name="CaptchaInputText" type="text" value="">
+			<input class="McdTxtBox" id="txtValidCode" 
+			name="CaptchaInputText" type="text" value="">
 				</div>
 				<span>(大小寫皆可)</span>
 			</div>
-           <div class="col-lg-12 col-md-12 col-xs-12">
+        <div class="col-lg-12 col-md-12 col-xs-12">
 			<script type="text/javascript">
-	                     $(function () {
+	                    $(function () {
 
-			   $('#ae061610505443c4905406409c8f52bc').show();
+			$('#ae061610505443c4905406409c8f52bc').show();
 				        });
 	
 	
@@ -244,13 +231,11 @@
 					<a href="#CaptchaImage" id="ae061610505443c4905406409c8f52bc" onclick="______aa33e38a2e24496ab2942a41b981ae14________()" 
 					style="display:inline;">刷新驗證碼</a>
                     </div>
-		          </div>
-	              ::after
-	           </div>
-			   <span class="errormsg" id="errormsg_Valid" style="display:block"><span class="field-validation-valid" data-valmsg-for="CaptchaInputText" data-valmsg-replace="true"></span></span>
-			   <br>
-			   <div class="row">
-                 ::before
+		</div>
+		</div>
+				<span class="errormsg" id="errormsg_Valid" style="display:block"><span class="field-validation-valid" data-valmsg-for="CaptchaInputText" data-valmsg-replace="true"></span></span>
+				<br>
+			<div class="row">
 				<div class="col-lg-12 col-md-12 col-xs-12" style="margin-right: 10px;">
 					<label for="cbAgree">
 						<input class="cbAgree" data-val="true" data-val-required="TermChecked 欄位是必要項。" id="TermChecked" name="TermChecked" type="checkbox" value="true"><input name="TermChecked" type="hidden" value="false">
@@ -260,13 +245,11 @@
 						「<a href="/contact/index/Privacy?Length=5" target="_blank">隱私權聲明</a>」
 					</label>
 				</div>
-				::after
 			</div>
 			<span class="errormsg" id="errormsg_TermsOfService"></span>
 			<br>
 			<br>
 			<div class="row">
-			  ::before
 			<div class="col-lg-2 col-md-2 col-xs-6">
             <input id="submitbutton" class="btn-lg btn-sm btn-xs btn-block" 
 			name="submitbutton" type="submit" value="確認送出" onclick="
@@ -274,7 +257,6 @@
 			</div>
 			<br>
 			<br>
-			::after
 			</div>
 			<br>
 			<br>
@@ -282,7 +264,6 @@
 			</form>
 			<hr>
 			<footer> </footer>
-			::after
         </div>
 		<br>
 		<br>

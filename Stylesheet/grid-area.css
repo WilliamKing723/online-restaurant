@@ -10,7 +10,8 @@
     grid-area: top;
 }
 .middle{
-    padding: 100px;
+    padding-top: 200px;
+    padding-bottom: 300px;
     background-color: cyan;
     grid-area: middle;
 }
@@ -32,27 +33,15 @@
     text-align: center;
     grid-area: footer;
 }
-.blank-left{
-    background-color: white;
-    grid-area: blank-left;
-}
-.blank-right{
-    background-color: white;
-    grid-area: blank-right;
-}
 
 @media (max-width:990px){
     .container-grid{
         display:grid ;
-        grid-template-areas:
-            'blank-left'
+        grid-template-areas:            
             'top'
             'left'
             'middle'
             'right'
-            'footer'
-            'blank-right';
-            grid-column-gap: 5px;
-            grid-row-gap: 5px;
+            'footer'            
     }
 }
