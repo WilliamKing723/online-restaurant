@@ -4,142 +4,101 @@
 	<meta mame="viewpoint" content="width=device-width, initial-scale=1.0">
 	<meta charset="utf-8" />
 	<title>Online-Restaurant</title>
+	<!-- Bootstrap 連結 -->
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
-	<link rel ="stylesheet" href="od.css" />
+	<!-- TQuery連結 -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<!-- FontAwesome 連結 -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+	<script src="/Order/order.js"></script>
 	<!--導覽列CSS-->
 	<link rel ="stylesheet" href="../Stylesheet/navbar.css" />
+	<link rel ="stylesheet" href="od.css" />
 </head>
 <body data-bs-spy="scroll" data-bs-target="#navbar-example">
-	<nav class="navbar navbar-expand-lg navbar-light">
-	<div class="container-fluid">
-		<div class="headline"><a href="../index.html"><img src="../Img/Title.png " style="width:85px ; height:66px "/></a></div>
-		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#linkbar">
-			<span class="navbar-toggler-icon"></span>
-		</button>
-		<div class="collapse navbar-collapse" id="linkbar">
-			<ul class="navbar-nav me-auto">
-				<li class="nav-item">
-				<a class="nav-link" href="../index.html">Home</a>
-				<li class="nav-item">
-				<a class="nav-link" href="order.html">Your Order</a>
-				</li>
-				<li class="nav-item">
-				<a class="nav-link" href="../Feedback/feedback.html">Feedback</a>
-				</li>
-				<li class="nav-item">
-				<a class="nav-link" href="../Productprice/productprice.html">Product Price</a>
-				</li>
-				<li class="nav-item">
-				<a class="nav-link" href="#">Google Forms</a>
-				</li>
-			</ul>
-			<div class="shoppingcart">
-				<a href="#" type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#shoppingcart">Shopping Cart</a>
-			</div>
-			<div class="spacer _24"></div>
-			<div class="modal fade" id="shoppingcart">
-				<div class="modal-dialog">
-					<div class="modal-content">
-						<!--header-->
-						<div class="modal-header">
-							<h3>Shopping Cart</h3>
-							<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-						</div>
-						<!--body-->
-						<div class="modal-body">
-						</div>
-						<!--footer-->
-						<div class="modal-footer">
+	<nav id="topbar" class="navbar navbar-expand-lg navbar-light">
+		<div class="container-fluid">
+			<div class="headline"><a href="../index.html"><img src="../Img/Title.png " style="width:85px ; height:66px "/></a></div>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#linkbar">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="linkbar">
+				<ul class="navbar-nav me-auto">
+					<li class="nav-item">
+					<a class="nav-link" href="../index.html">Home</a>
+					<li class="nav-item">
+					<a class="nav-link" href="order.html">Your Order</a>
+					</li>
+					<li class="nav-item">
+					<a class="nav-link" href="../Feedback/feedback.html">Feedback</a>
+					</li>
+					<li class="nav-item">
+					<a class="nav-link" href="../Productprice/productprice.html">Product Price</a>
+					</li>
+					<li class="nav-item">
+					<a class="nav-link" href="#">Google Forms</a>
+					</li>
+				</ul>
+				<div class="shoppingcart">
+					<a href="#" type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#shoppingcart">Shopping Cart</a>
+				</div>
+				<div class="spacer _24"></div>
+				<div class="modal fade" id="shoppingcart">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<!--header-->
+							<div class="modal-header">
+								<h3>Shopping Cart</h3>
+								<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+							</div>
+							<!--body-->
+							<div class="modal-body">
+							</div>
+							<!--footer-->
+							<div class="modal-footer">
+							</div>
 						</div>
 					</div>
 				</div>
+				<form style="width:300px;" class="input-group">
+					<input  class="form-control me-3" type="search" placeholder="搜尋">
+					<button  class="btn btn-success" type="submit">Search</button>
+				</form>
 			</div>
-			<form style="width:300px;" class="input-group">
-				<input  class="form-control me-3" type="search" placeholder="搜尋">
-				<button  class="btn btn-success" type="submit">Search</button>
-			</form>
 		</div>
-	</div>
-</nav>
-
-	<div class="container-grid">
-		<div class="left">
-			<aside class="bd-aside sticky-xl-top text-muted align-self-start mb-3 mb-xl-5 px-2">				
-				<nav class="small" id="toc">
-					<ul class="list-unstyled">
-						<li class="collapse-meals">
-						<button class="btn btn-outline-success d-inline-flex align-items-center collapsed" data-bs-toggle="collapse" aria-expanded="false" data-bs-target="#main-collapse" aria-controls="main-collapse">Main meals</button>
-							<ul class="list-unstyled ps-3 collapse" id="main-collapse">
-							<li><button class="btn btn-outline-success d-inline-flex align-items-center collapsed" data-bs-toggle="collapse" aria-expanded="false" data-bs-target="#noodles-collapse" aria-controls="noodles-collapse">Noodles</button></li>
-								<ul class="list-unstyled ps-3 collapse" id="noodles-collapse">
-									<li><a class="d-inline-flex align-items-center rounded" href="#fried noodles">fried noodles 炒麵</a></li>
-									<li><a class="d-inline-flex align-items-center rounded" href="#soup noodles">soup noodles 湯麵</a></li>
-									<li><a class="d-inline-flex align-items-center rounded" href="#dry noodles">dry noodles 乾麵</a></li>
-									<li><a class="d-inline-flex align-items-center rounded" href="#Fried instant noodles">Fried instant noodles 炒泡麵</a></li>
-									<li><a class="d-inline-flex align-items-center rounded" href="#powder">powder 酸辣粉</a></li>
-								</ul>
-							<li><button class="btn btn-outline-success d-inline-flex align-items-center collapsed" data-bs-toggle="collapse" aria-expanded="false" data-bs-target="#rice-collapse" aria-controls="rice-collapse">Rice</button></li>
-								<ul class="list-unstyled ps-3 collapse" id="rice-collapse">
-									<li><a class="d-inline-flex align-items-center rounded" href="#stewed rice">stewed rice 燉飯</a></li>
-									<li><a class="d-inline-flex align-items-center rounded" href="#Risotto">Risotto 燴飯</a></li>
-									<li><a class="d-inline-flex align-items-center rounded" href="#fried rice">fried rice 炒飯</a></li>
-									<li><a class="d-inline-flex align-items-center rounded" href="#Curry rice">Curry rice 咖哩飯</a></li>
-									<li><a class="d-inline-flex align-items-center rounded" href="#Donburi">Donburi 丼飯</a></li>
-								</ul>
-							<li><button class="btn btn-outline-success d-inline-flex align-items-center collapsed" data-bs-toggle="collapse" aria-expanded="false" data-bs-target="#vergetarian-collapse" aria-controls="vergetarian-collapse">vegetarian food</button></li>
-								<ul class="list-unstyled ps-3 collapse" id="vergetarian-collapse">
-									<li><a class="d-inline-flex align-items-center rounded" href="#hot pot">hot pot 火鍋</a></li>
-									<li><a class="d-inline-flex align-items-center rounded" href="#noodles">noodles 麵</a></li>
-									<li><a class="d-inline-flex align-items-center rounded" href="#rice">rice 飯</a></li>
-									<li><a class="d-inline-flex align-items-center rounded" href="#vegetarian meat cooking">vegetarian meat cooking 素肉料理</a></li>
-								</ul>
-							</ul>
-						</li>
-						<li class="collapse-meals">
-						<button class="btn btn-outline-success d-inline-flex align-items-center collapsed"  data-bs-toggle="collapse" aria-expanded="false" data-bs-target="#side-collapse" aria-controls="side-collapse">Side meals</button>
-						<ul class="list-unstyled ps-3 collapse" id="side-collapse">
-							<li><a class="d-inline-flex align-items-center rounded" href="#salad">salad 沙拉</a></li>
-							<li><a class="d-inline-flex align-items-center rounded" href="#thick soup">thick soup濃湯</a></li>
-							<li><a class="d-inline-flex align-items-center rounded" href="#fried food">fried food 炸物</a></li>
-							<li><a class="d-inline-flex align-items-center rounded" href="#lanched vegetables">blanched vegetables 燙青菜</a></li>
-							<li><a class="d-inline-flex align-items-center rounded" href="#lu wei">lu wei 滷味</a></li>
-						</ul>
-						</li>
-						<li class="collapse-meals">
-						<button class="btn btn-outline-success d-inline-flex align-items-center collapsed" data-bs-toggle="collapse" aria-expanded="false" data-bs-target="#drinks-collapse" aria-controls="drinks-collapse">Drinks</button>
-						<ul class="list-unstyled ps-3 collapse" id="drinks-collapse">
-							<li><a class="d-inline-flex align-items-center rounded" href="#tea">tea 茶類</a></li>
-							<li><a class="d-inline-flex align-items-center rounded" href="#juice">juice 果汁</a></li>
-							<li><a class="d-inline-flex align-items-center rounded" href="#coffee">coffee 咖啡</a></li>
-							<li><a class="d-inline-flex align-items-center rounded" href="#Carbonated drinks">Carbonated drinks 碳酸飲料</a></li>
-						</ul>
-						</li>
-						<li class="collapse-meals">
-							<button class="btn btn-outline-success d-inline-flex align-items-center collapsed" data-bs-toggle="collapse" aria-expanded="false" data-bs-target="#dessert-collapse" aria-controls="dessert-collapse">Dessert</button>
-							<ul class="list-unstyled ps-3 collapse" id="dessert-collapse">
-							<li><a class="d-inline-flex align-items-center rounded" href="#pudding">pudding布丁</a></li>
-							<li><a class="d-inline-flex align-items-center rounded" href="#cake">cake蛋糕</a></li>
-							<li><a class="d-inline-flex align-items-center rounded" href="#panna cotta">panna cotta 奶酪</a></li>
-							<li><a class="d-inline-flex align-items-center rounded" href="#cookie">cookie 餅乾</a></li>
-							</ul>
-						</li>
-						<li class="collapse-meals">
-							<button class="btn btn-outline-success d-inline-flex align-items-center collapsed" data-bs-toggle="collapse" aria-expanded="false" data-bs-target="#combo-collapse" aria-controls="combo-collapse">Combo meals</button>
-							<ul class="list-unstyled ps-3 collapse" id="combo-collapse">
-							<li><a class="d-inline-flex align-items-center rounded" href="#">Meal for two</a></li>
-							<li><a class="d-inline-flex align-items-center rounded" href="#">Recommended Package</a></li>
-							</ul>
-						</li>
+	</nav>
+<div class="container-all">
+	<div class="container-left">
+		<nav id="sidebar">
+			<button type="button" id="collapse" class="collapse-btn">
+				<i class="fas fa-align-left"></i>
+			</button>
+			<ul class="list-unstyled">
+				<p>Main meals</p>
+				<li><a href="#Recommended meal">Recommended meal</a></li>
+				<li><a href="#sublist" data-bs-toggle="collapse">Noodles</a></li>
+					<ul id="sublist" class="list-unstyled collapse">
+						<li><a href="#fried noodles">fried noodles</a></li>
+						<li><a href="#soup noodles">soup noodles</a></li>
+						<li><a href="#dry noodles">dry noodles</a></li>
+						<li><a href="#Fried instant noodles">Fried instant noodles</a></li>
+						<li><a href="#powder">powder</a></li>
 					</ul>
-				</nav>
-			</aside>
-			<button id="up" class="btn btn-outline-success d-inline-flex align-items-center bottom-0 end-0"><a href="#">up</a></button>
+				<li><a href="#Rice">Rice</a></li>
+				<li><a href="#Vegetarian food">Vegetarian food</a></li>
+				<li><a href="#Side meals">Side meals</a></li>
+				<li><a href="#Drinks">Drinks</a></li>
+				<li><a href="#Dessert">Dessert</a></li>
+				<li><a href="#Combo meals">Combo meals</a></li>
+			</ul>
+		</nav>
+		<button type="button" id="BackTop" class="toTop-arrow"></button>
 		</div>
-		<div class="middle">
+		<div class="container-right">
 			<ul class="am">
 				<li class="md">
-					<div class="ar">Recommended meal</div>
+					<div class="ar" id="Recommended meal">Recommended meal</div>
 					<div class="in"></div>
 					<ul class="mg">
 						<li class="un">							
@@ -152,7 +111,7 @@
 					</ul>
 				</li>
 				<li class="md">
-					<div class="ar">Noodles</div>
+					<div class="ar" id="Noodles">Noodles</div>
 					<div class="in"></div>
 					<ul class="mg">
 						<li class="un">
@@ -193,7 +152,7 @@
 					</ul>
 				</li>
 				<li class="md">
-					<div class="ar">Rice</div>
+					<div class="ar" id="Rice">Rice</div>
 					<div class="in"></div>
 					<ul class="mg">
 						<li class="un">
@@ -234,7 +193,7 @@
 					</ul>
 				</li>
 				<li class="md">
-					<div class="ar">vegetarian food</div>
+					<div class="ar" id="Vegetarian food">Vegetarian food</div>
 					<div class="in"></div>
 					<ul class="mg">
 						<li class="un">
@@ -268,7 +227,7 @@
 					</ul>
 				</li>
 				<li class="md">
-					<div class="ar">Side meals</div>
+					<div class="ar" id="Side meals">Side meals</div>
 					<div class="in"></div>
 					<ul class="mg">
 						<li class="un">
@@ -309,7 +268,7 @@
 					</ul>
 				</li>
 				<li class="md">
-					<div class="ar">Drinks</div>
+					<div class="ar" id="Drinks">Drinks</div>
 					<div class="in"></div>
 					<ul class="mg">
 						<li class="un">
@@ -343,7 +302,7 @@
 					</ul>
 				</li>
 				<li class="md">
-					<div class="ar">Dessert</div>
+					<div class="ar" id="Dessert">Dessert</div>
 					<div class="in"></div>
 					<ul class="mg">
 						<li class="un">
@@ -377,7 +336,7 @@
 					</ul>
 				</li>
 				<li class="md">
-					<div class="ar">Combo meals</div>
+					<div class="ar" id="Combo meals">Combo meals</div>
 					<div class="in"></div>
 					<ul class="mg">
 						<li class="un">
@@ -431,7 +390,7 @@
 			
 		</footer>
 	</div>
-
+</div>
 
 </body>
 </html>

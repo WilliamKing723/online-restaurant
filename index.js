@@ -22,9 +22,9 @@ app.get("/", function(req,res){
 
 
 
-app.use("/feedback.js", feedbackRouter);
-app.use("/order.js", orderRouter);
-app.use("/productprice.js", productpriceRouter);
+app.use("/feedbackRouter.js", feedbackRouter);
+app.use("/orderRouter.js", orderRouter);
+app.use("/productpriceRouter.js", productpriceRouter);
 
 
 app.listen(portNum,function(){

@@ -1,35 +1,120 @@
 .spacer._24{
     width: 24px;
 }
-body{
-    position: relative;
-}
-.container-grid{
-    width: 100%;
-    display: grid;
-    grid-template-columns: 30% 70% ;
-    padding-top: 50px;
-    justify-items: center;
-    align-items: center;
-}
-#up{
-    position: fixed;
-    padding: auto;
-    margin: 30px;
-}
-.left{
-    width: 100%;
-    min-height: 90%;
+
+
+.container-all {
+    display: flex;
+    align-items: stretch;
 }
 
-.middle{
-    width: 100%;
+#sidebar {
+    position: sticky ;
+    top:0;
+    width: 260px;
+    height: auto;
+    background-color: indigo;
+    color: white;
+    transition: 1s;
 }
+
+#sidebar.active {
+    margin-left: -210px;
+}
+
+.container-right {
+    width: 87%;
+    height: 1auto;
+    text-align: center;
+    padding: 30px;
+}
+
+.collapse-btn {
+    position: relative;
+    top: 1%;
+    left: 210px;
+    background-color: indigo;
+    color: white;
+    border: none;
+    font-size: 30px;
+    padding: 5px;
+}
+
+.collapse-btn:hover {
+    background-color: rgb(120, 5, 203);
+    transition: 0.4s;
+}
+
+#sidebar p {
+    text-align: start;
+    font-size: 30px;
+    font-style: italic;
+    padding: 10px;
+}
+
+#sidebar ul li a {
+    padding: 10px;
+    font-size: 20px;
+    display: block;
+    text-decoration: none;
+    color: white;
+}
+
+#sidebar ul li a:hover {
+    color: indigo;
+    background: #fff;
+}
+
+.fas,
+.far,
+.fab {
+    float: right;
+}
+
+ul ul li a {
+    background-color: rgb(203, 142, 247);
+    font-size: 20px;
+    font-style: italic;
+}
+
+
 ul{
     padding: 0;
     margin: 0;
     list-style: none;
 }
+.toTop-arrow {
+	width: 3rem;
+	height: 3rem;
+	padding: 0;
+	margin: 0;
+	border: 0;
+	border-radius: 33%;
+	opacity: 0.6;
+	background: #000;
+	cursor: pointer;
+	position:fixed;
+	right: 1rem;
+	bottom: 1rem;
+	display: none;
+}
+.toTop-arrow::before, .toTop-arrow::after {
+	width: 25px;
+	height: 6px;
+	border-radius: 3px;
+	background: #f90;
+	position: absolute;
+	content: "";
+}
+.toTop-arrow::before {
+	transform: rotate(-45deg) translate(0, -50%);
+	left: 0.42rem;
+}
+.toTop-arrow::after {
+	transform: rotate(45deg) translate(0, -50%);
+	right: 0.42rem;
+}
+.toTop-arrow:focus {outline: none;}
 
 .am{
     list-style: none;
@@ -40,6 +125,7 @@ ul{
     margin-top: 40px;
 }
 .ar{
+    text-align: start;
     line-height: 32px;
     font-size: 24px;
     font-weight: 700;
@@ -94,10 +180,7 @@ ul{
     padding: 72px 0px 88px;
     
 }
-.container{
-    display: flex;
-    width: 100%;
-}
+
 @media (max-width:990px){
     nav{
         height: auto;
@@ -109,4 +192,23 @@ ul{
         align-items: center;
     }
     
+}
+@media (max-width:600px) {
+    #sidebar {
+        margin-left: -100px;
+        width: 150px;
+        font-size: 20px;
+    }
+    .collapse-btn {
+        position: relative;
+        top: 1%;
+        left: 110px;
+    }
+    #sidebar.active {
+        margin-left: 0px;
+    }
+    #sidebar ul p {
+        font-size: 18px;
+        text-align: left;
+    }
 }

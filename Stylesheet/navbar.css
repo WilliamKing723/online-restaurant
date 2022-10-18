@@ -7,11 +7,11 @@ nav{
     background-color: rgb(40, 204, 136);
 }
 
-li a {
+#topbar li a {
     color:rgb(255, 0, 187) !important;
     font-size:20px;
 }
-li a:hover{
+#topbar li a:hover{
     color:black !important;
     background-color: lightyellow;
     height: 70;
