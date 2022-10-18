@@ -1,34 +1,35 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta mame="viewpoint" content="width=device-width, initial-scale=1.0">
-	<meta charset="utf-8">
-	<title>Online-Restaurant</title>
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
-	<link rel="stylesheet" href="pp.css">
-	<!--導覽列CSS-->
-	<link rel="stylesheet" href="../Stylesheet/navbar.css">
-</head>
-<body>
+<header>
+		<meta mame="viewpoint" content="width=device-width, initial-scale=1.0">
+		<meta charset="utf-8">
+		<title>Online-Restaurant</title>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="od.css">
+		<!--導覽列CSS-->
+		<link rel="stylesheet" href="../Stylesheet/navbar.css">
 	<nav class="navbar navbar-expand-lg navbar-light">
+
 		<div class="container-fluid">
 			<div class="headline"><a href="../index.html"><img src="../Img/Title.png " style="width:85px ; height:66px "></a></div>
+
 			<button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#linkbar" aria-expanded="false">
 				<span class="navbar-toggler-icon"></span>
 			</button>
+
 			<div class="navbar-collapse collapse" id="linkbar">
 				<ul class="navbar-nav me-auto">
 					<li class="nav-item">
 					<a class="nav-link" href="../index.html" "="">Home</a>
 					</li><li class="nav-item">
-					<a class="nav-link" href="../Order/order.html" "="">Your Order</a>
+					<a class="nav-link" href="order.html" "="">Your Order</a>
 					</li>
 					<li class="nav-item">
 					<a class="nav-link" href="../Feedback/feedback.html">Feedback</a>
 					</li>
 					<li class="nav-item">
-					<a class="nav-link" href="productprice.html">Product Price</a>
+					<a class="nav-link" href="../Productprice/productprice.html">Product Price</a>
 					</li>
 					<li class="nav-item">
 					<a class="nav-link" href="#">Google Forms</a>
@@ -38,84 +39,286 @@
 					<input class="form-control me-3" type="search" placeholder="搜尋">
 					<button class="btn btn-success" type="submit">Search</button>
 				</form>
+
+
 			</div>
 		</div>
 	</nav>
 
-
+</header>
 	<!--選單-->
-
-<div class="bottom-submenu-bar" id="primary-header3">
+</main>
+	<div class="bottom-submenu-bar" id="primary-header3">
     <div class="submenu-wrapper">
             <div id="scrollMenuArea" class="content mMenu">  
                     <ul>
                         <li name="ScrollMenu" class="active_second">
-                            <a name="scrollTab" href="javascript:void(0)" data-category="主餐" data-menuid="40" onclick="Func_Analytic_Click('主餐', 'subMenuNav');subMenuTabClick('hot-menu');event.preventDefault();" id="scrollLink1">主餐</a>
+                            <a name="scrollTab" href="javascript:void(0)" data-category="主餐" data-menuid="40" onclick="Func_Analytic_Click('主餐', 'subMenuNav');subMenuTabClick('hot-menu');event.preventDefault();" id="scrollLink1" style="margin:0; padding:0; list-style-type: none;">主餐</a>
                         </li>
                         <li name="ScrollMenu" class="">
-                            <a name="scrollTab" href="javascript:void(0)" data-category="配餐" data-menuid="116" onclick="Func_Analytic_Click('配餐', 'subMenuNav');subMenuTabClick('campaign');event.preventDefault();" id="scrollLink1">配餐</a>
+                            <a name="scrollTab" href="javascript:void(0)" data-category="配餐" data-menuid="116" onclick="Func_Analytic_Click('配餐', 'subMenuNav');subMenuTabClick('campaign');event.preventDefault();" id="scrollLink1" style="margin:0; padding:0; list-style-type: none;">配餐</a>
                         </li>
                         <li name="ScrollMenu" class="">
-                            <a name="scrollTab" href="javascript:void(0)" data-category="飲料" data-menuid="31" onclick="Func_Analytic_Click('飲料', 'subMenuNav');subMenuTabClick('promotion');event.preventDefault();" id="scrollLink1">飲料</a>
+                            <a name="scrollTab" href="javascript:void(0)" data-category="飲料" data-menuid="31" onclick="Func_Analytic_Click('飲料', 'subMenuNav');subMenuTabClick('promotion');event.preventDefault();" id="scrollLink1" style="margin:0; padding:0; list-style-type: none;">飲料</a>
                         </li>
                         <li name="ScrollMenu" class="">
-                            <a name="scrollTab" href="javascript:void(0)" data-category="甜點" data-menuid="129" onclick="Func_Analytic_Click('甜點', 'subMenuNav');subMenuTabClick('green-pepper-series');event.preventDefault();" id="scrollLink1">甜點</a>
+                            <a name="scrollTab" href="javascript:void(0)" data-category="甜點" data-menuid="129" onclick="Func_Analytic_Click('甜點', 'subMenuNav');subMenuTabClick('green-pepper-series');event.preventDefault();" id="scrollLink1" style="margin:0; padding:0; list-style-type: none;">甜點</a>
                         </li>
                         <li name="ScrollMenu" class="">
-                            <a name="scrollTab" href="javascript:void(0)" data-category="套餐" data-menuid="31" onclick="Func_Analytic_Click('套餐', 'subMenuNav');subMenuTabClick('promotion');event.preventDefault();" id="scrollLink1">套餐</a>
+                            <a name="scrollTab" href="javascript:void(0)" data-category="套餐" data-menuid="31" onclick="Func_Analytic_Click('套餐', 'subMenuNav');subMenuTabClick('promotion');event.preventDefault();" id="scrollLink1" style="margin:0; padding:0; list-style-type: none;">套餐</a>
                         </li>
                     </ul>
-            </div>
-<!-- 輪番大banner -->          
-<div class="container responsivegrid cmp-container--fixed cmp-container--padding pt-responsive aem-GridColumn aem-GridColumn--default--12">
-	<div id="container-2af2fb7eed" class="cmp-container">      
-		<div class="aem-Grid aem-Grid--3 aem-Grid--default--3 aem-Grid--phone--3 ">
-			<div class="title title-line-height-normal aem-GridColumn aem-GridColumn--default--3">
-				<div data-cmp-data-layer="{&quot;title-5686cae86c&quot;:{&quot;@type&quot;:&quot;mcdonalds/components/proxy/content/title&quot;,&quot;repo:modifyDate&quot;:&quot;2022-05-27T05:09:03Z&quot;,&quot;dc:title&quot;:&quot;企業永續&quot;}}" id="title-5686cae86c" class="cmp-title">
-					<h1 class="cmp-title__text">熱門餐點</h1>
-				</div>
-		<div class="banner">
-			<a href="#">
-				<img src="https://th.bing.com/th/id/R.705da38f178fc0b60d87a899bcdfbf82?rik=qz0TMaYsRCt%2fkA&riu=http%3a%2f%2fi1.hdslb.com%2fbfs%2farchive%2f674ea4bbe00c6b055b5356e35a6e2f5d402bd380.jpg&ehk=xR8MvmvyZAyyIoCL5dzzT2asa6BZmSuVU%2f5Pm3Cp5iI%3d&risl=&pid=ImgRaw&r=0" class="cmp-image__image"  width="500" height="300";align="right">
-			</a>
-		</div>
-	</div>
-</div>
-<!-- 餐點 -->
-
-<h2 style="font-weight: bold;">主餐</h2>
-<div class="meals">
-	<div class="meal_prd" gavp="y" gavp_id="40" gavp_name="炒麵" gavp_pid="84" gavp_pname="炒麵">
-		<a onclick="NI_CategoryTitleClick('炒麵', '1'); GA4_select_promotion('40', '炒麵', '84', '炒麵');" href="#">
-			<div class="prdimg">
-				<img class="index lazy" src="https://tokyo-kitchen.icook.network/uploads/recipe/cover/173155/7e7a24692d24d6d9.jpg" alt="炒麵" style=" width:50% ; height:50% ">
 			</div>
-			<p class="meal_ped_name">炒麵 </p>
-		</a>
 	</div>
+	</div>
+
+</main>
+
+<!-- 輪番大banner -->          
+<article>
+<div id="container-2af2fb7eed" class="cmp-container">
+        <div class="aem-Grid aem-Grid--3 aem-Grid--default--3 aem-Grid--phone--3 ">
+    	<h1 style=" font-size: 36px;font-weight: 700;line-height: 40px ;text-align: center;">熱門餐點</h1>
 </div>
-<h2 style="font-weight: bold;" id="menu_1">配餐</h2>
-<h2 style="font-weight: bold;" id="menu_2">飲料</h2>
-<h2 style="font-weight: bold;" id="menu_39">甜點</h2>
-<h2 style="font-weight: bold;" id="menu_5">套餐</h2>
+<div class="banner">
+	<a href="../Feedback/feedback.html">
+		<img src="https://th.bing.com/th/id/R.705da38f178fc0b60d87a899bcdfbf82?rik=qz0TMaYsRCt%2fkA&riu=http%3a%2f%2fi1.hdslb.com%2fbfs%2farchive%2f674ea4bbe00c6b055b5356e35a6e2f5d402bd380.jpg&ehk=xR8MvmvyZAyyIoCL5dzzT2asa6BZmSuVU%2f5Pm3Cp5iI%3d&risl=&pid=ImgRaw&r=0" style="display:block; margin:auto; height:300px; width: 500px; align:center;scroll: no;" >
+	</a>
+</div>
+</div>
+</article>
+<!-- 主餐 -->
+<article>
+		
+<h2 style="font-weight: bold;float:top;">主餐
+</article>
+	<style>
+		.card{
+		float:left;
+		display: block;
+		width: 350px;
+		border-color: black;
+		border: 10px solid rgba(0,0,0,.125);
+    	border-radius: 10px;
+		border-width: 10px;
+		margin:auto;
+		padding: 10px;
+		}
+		.card img{
+		float:middle;
+		display: block;
+		width: 270px;
+		padding:10px 10px 10px 10px;
+		margin:auto
+		}
+		.text{
+		float:middle;
+		display: block;
+		width: 270px;
+		padding:10px 10px 10px 10px;
+		margin:auto
+		}
+	</style>
+		<div class="card">
+		<card1 cols="35",35,35>
+		  <img src="https://th.bing.com/th/id/R.705da38f178fc0b60d87a899bcdfbf82?rik=qz0TMaYsRCt%2fkA&riu=http%3a%2f%2fi1.hdslb.com%2fbfs%2farchive%2f674ea4bbe00c6b055b5356e35a6e2f5d402bd380.jpg&ehk=xR8MvmvyZAyyIoCL5dzzT2asa6BZmSuVU%2f5Pm3Cp5iI%3d&risl=&pid=ImgRaw&r=0" alt="炒飯" />
+			<div class="text">
+			  <h1>炒飯  $100</h1>
+			  <p>蝦仁 肉絲 青蔥</p>
+			  <p>好吃好吃好吃好吃好吃好吃好吃!!!</p> 
+			</div>
+		</div>
 
-<!-- 備註 -->  
+<meta charset="utf-8" >
+<title>炒飯</title>
+	<style>
+		.card1{
+		float:left;
+		display: block;
+		width: 350px;
+		border-color: black;
+		border: 10px solid rgba(0,0,0,.125);
+    	border-radius: 10px;
+		border-width: 10px;
+		margin:auto;
+		padding: 10px;
+			}
+		.card1 img{
+		float:middle;
+		display: block;
+		width: 270px;
+		padding:10px 10px 10px 10px;
+		margin:auto
+		}
+		.text1{
+		float:middle;
+		display: block;
+		width: 270px;
+		padding:10px 10px 10px 10px;
+		margin:auto
+		}
+		</style>
+			<div class="card1">
+			<card cols="35",35,35>
+			  <img src="https://th.bing.com/th/id/R.705da38f178fc0b60d87a899bcdfbf82?rik=qz0TMaYsRCt%2fkA&riu=http%3a%2f%2fi1.hdslb.com%2fbfs%2farchive%2f674ea4bbe00c6b055b5356e35a6e2f5d402bd380.jpg&ehk=xR8MvmvyZAyyIoCL5dzzT2asa6BZmSuVU%2f5Pm3Cp5iI%3d&risl=&pid=ImgRaw&r=0" alt="生日卡" />
+			  	<div class="text1">
+				  <h1>炒飯  $100</h1>
+				  <p>蝦仁 肉絲 青蔥</p>
+				  <p>好吃好吃好吃好吃好吃好吃好吃!!!</p> 
+			    </div>
+			</card>
+			</div>
+	<style>
+		.card2{
+		float:left;
+		display: block;
+		width: 350px;
+		border-color: black;
+		border: 10px solid rgba(0,0,0,.125);
+    	border-radius: 10px;
+		border-width: 10px;
+		margin:auto;
+		padding: 10px;
+		}
+		.card2 img{
+		float:middle;
+		display: block;
+		width: 270px;
+		padding:10px 10px 10px 10px;
+		margin:auto
+		}
+		.text2{
+			float:middle;
+		display: block;
+		width: 270px;
+		padding:10px 10px 10px 10px;
+		margin:auto
+		}
+	</style>
+			<div class="card2">
+			<card1 cols="35",35,35>
+			  <img src="https://th.bing.com/th/id/R.705da38f178fc0b60d87a899bcdfbf82?rik=qz0TMaYsRCt%2fkA&riu=http%3a%2f%2fi1.hdslb.com%2fbfs%2farchive%2f674ea4bbe00c6b055b5356e35a6e2f5d402bd380.jpg&ehk=xR8MvmvyZAyyIoCL5dzzT2asa6BZmSuVU%2f5Pm3Cp5iI%3d&risl=&pid=ImgRaw&r=0" alt="生日卡" />
+			  	<div class="text2">
+				  <h1>炒飯  $100</h1>
+				  <p>蝦仁 肉絲 青蔥</p>
+				  <p>好吃好吃好吃好吃好吃好吃好吃!!!</p> 
+			    </div>
+		  	</div>
+		</article>
+		
 
-<ul id="ctl00_mainContent_ulNote" class="note">
-	<li>
-		至少要點一個主餐
-	</li>
-	<li>
-		一個主餐搭配一個配餐
-	</li>
-	<li>
-		配餐、飲料、甜點可以加購
-	</li>
-	<li>
-		消費滿固定金額可以贈送甜點或飲料
-	</li>
-	<li>
-		本店家保有隨時調整內容的權利
-	</li>
-</ul>
-</body>
+		
+		<content>		
+	<style>
+		.card3{
+		float:left;
+		display: block;
+		width: 350px;
+		border-color: black;
+		border: 10px solid rgba(0,0,0,.125);
+    	border-radius: 10px;
+		border-width: 10px;
+		margin:auto;
+		padding: 10px;
+		}
+		.card3 img{
+		float:middle;
+		display: block;
+		width: 270px;
+		padding:10px 10px 10px 10px;
+		margin:auto
+		}
+		.text3{
+		float:middle;
+		display: block;
+		width: 270px;
+		padding:10px 10px 10px 10px;
+		margin:auto
+		}
+	</style>
+		<div class="card3">
+			<card1 cols="35",35,35>
+				<img src="https://th.bing.com/th/id/R.705da38f178fc0b60d87a899bcdfbf82?rik=qz0TMaYsRCt%2fkA&riu=http%3a%2f%2fi1.hdslb.com%2fbfs%2farchive%2f674ea4bbe00c6b055b5356e35a6e2f5d402bd380.jpg&ehk=xR8MvmvyZAyyIoCL5dzzT2asa6BZmSuVU%2f5Pm3Cp5iI%3d&risl=&pid=ImgRaw&r=0" alt="生日卡" />
+					<div class="text3">
+					<h1>炒飯  $100</h1>
+					<p>蝦仁 肉絲 青蔥</p>
+					<p>好吃好吃好吃好吃好吃好吃好吃!!!</p> 
+					</div>
+		</div>		
+	<style>
+		.card4{
+		float:left;
+		display: block;
+		width: 350px;
+		border-color: black;
+		border: 10px solid rgba(0,0,0,.125);
+    	border-radius: 10px;
+		border-width: 10px;
+		margin:auto;
+		padding: 10px;
+		}
+		.card4 img{
+		float:left;
+		display: block;
+		width: 270px;
+		padding:10px 10px 10px 10px;
+		}
+		.text4{
+		float:middle;
+		display: block;
+		width: 270px;
+		padding:10px 10px 10px 10px;
+		margin:auto
+		}
+	</style>
+		<div class="card4">
+			<card1 cols="35",35,35>
+				<img src="https://th.bing.com/th/id/R.705da38f178fc0b60d87a899bcdfbf82?rik=qz0TMaYsRCt%2fkA&riu=http%3a%2f%2fi1.hdslb.com%2fbfs%2farchive%2f674ea4bbe00c6b055b5356e35a6e2f5d402bd380.jpg&ehk=xR8MvmvyZAyyIoCL5dzzT2asa6BZmSuVU%2f5Pm3Cp5iI%3d&risl=&pid=ImgRaw&r=0" alt="生日卡" />
+					<div class="text4">
+					<h1>炒飯  $100</h1>
+					<p>蝦仁 肉絲 青蔥</p>
+					<p>好吃好吃好吃好吃好吃好吃好吃!!!</p> 
+					</div>
+		</div>
+
+	<style>
+		.card5{
+		float:left;
+		display: block;
+		width: 350px;
+		border-color: black;
+		border: 10px solid rgba(0,0,0,.125);
+		border-radius: 10px;
+		border-width: 10px;
+		margin:auto;
+		padding: 10px;
+		}
+		.card5 img{
+		float:left;
+		display: block;
+		width: 270px;
+		padding:10px 10px 10px 10px;
+		}
+		.text5{
+		float:middle;
+		display: block;
+		width: 270px;
+		padding:10px 10px 10px 10px;
+		margin:auto
+		}
+	</style>
+		<div class="card5">
+			<card1 cols="35",35,35>
+				<img src="https://th.bing.com/th/id/R.705da38f178fc0b60d87a899bcdfbf82?rik=qz0TMaYsRCt%2fkA&riu=http%3a%2f%2fi1.hdslb.com%2fbfs%2farchive%2f674ea4bbe00c6b055b5356e35a6e2f5d402bd380.jpg&ehk=xR8MvmvyZAyyIoCL5dzzT2asa6BZmSuVU%2f5Pm3Cp5iI%3d&risl=&pid=ImgRaw&r=0" alt="生日卡" />
+					<div class="text5">
+					<h1>炒飯  $100</h1>
+					<p>蝦仁 肉絲 青蔥</p>
+					<p>好吃好吃好吃好吃好吃好吃好吃!!!!</p> 
+					</div>
+		</div>
+
+<article>
+	
+	<h3 style="font-weight: bold;float:top;overflow: hidden;">配餐<h3>
+		
+</article>
