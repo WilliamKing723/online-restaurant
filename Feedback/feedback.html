@@ -57,16 +57,6 @@
                 <label for="SexF">小姐</label>
             </div>
         </div>
-		<div class="row">
-            <div class="col-lg-1 col-md-1 col-xs-12">*姓名</div>
-            <div class="col-lg-10 col-md-6 col-xs-12">
-                <input class="McdTxtBox" id="Name" maxlength="10" name="Name" style="width: 120px;" type="text" value="">
-                <input type="radio" id="CustM" value="1" checked="" name="CustSex">
-                <label for="SexM">先生</label>
-                <input type="radio" id="CustF" value="2" name="CustSex">
-                <label for="SexF">小姐</label>
-            </div>
-        </div>
 		<span class="errormsg" id="errormsg_Name">請輸入姓名。</span>
 		<br>
 		<div id="QuestionLabel">
@@ -237,13 +227,6 @@
 				<br>
 			<div class="row">
 				<div class="col-lg-12 col-md-12 col-xs-12" style="margin-right: 10px;">
-					<label for="cbAgree">
-						<input class="cbAgree" data-val="true" data-val-required="TermChecked 欄位是必要項。" id="TermChecked" name="TermChecked" type="checkbox" value="true"><input name="TermChecked" type="hidden" value="false">
-						我已詳閱並同意
-						「<a href="/contact/index/WebInfo?Length=5" target="_blank">網路使用須知</a>」
-						及
-						「<a href="/contact/index/Privacy?Length=5" target="_blank">隱私權聲明</a>」
-					</label>
 				</div>
 			</div>
 			<span class="errormsg" id="errormsg_TermsOfService"></span>
@@ -273,14 +256,6 @@
 				$.mask.definitions['y'] = '[2]';
 				$.mask.definitions['m'] = '[01]';
 				$.mask.definitions['d'] = '[0-3]';
-				//$("#HappenDate").mask("y?999/m9/d9", { placeholder: "____/__/__" });
-				//$("#HappenTime").mask("9?9:99", { placeholder: "__:__" });
-				//$("#InvoiceNo").mask("a?a-99999999");
-				$("#AreaPhoneNumber").mask("9?999", { placeholder: "" });
-				$("#PhoneNumber").mask("9?999999999", { placeholder: "" });
-				$("#Ext").mask("9?999999999", { placeholder: "" });
-				$("#MobilePhone").mask("9?999999999", { placeholder: "" });
-			});
 	
 			$('input[name="InvoiceType"]').on("click", function (e) {
 	
