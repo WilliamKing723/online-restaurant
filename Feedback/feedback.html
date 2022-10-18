@@ -53,6 +53,7 @@
                 <input class="McdTxtBox" id="Name" maxlength="10" name="Name" style="width: 120px;" type="text" value="">
                 <input type="radio" id="CustM" value="1" checked="" name="CustSex">
                 <label for="SexM">先生</label>
+				<!-- <label for="SexM" style="font-size:40px">先生</label> -->
                 <input type="radio" id="CustF" value="2" name="CustSex">
                 <label for="SexF">小姐</label>
             </div>
@@ -111,14 +112,14 @@
 							</div>
 						</div>
 						</div>
-						<span class="errormsg" id="errormsg_WrongEmail">Email格式不正確。</span>
+						<span class="errormsg" id="errormsg_WrongEmail" style="color:red">Email格式不正確。</span>
 						<span class="errormsg" id="errormsg_Email">請輸入Email。</span>
 					</div>
 					<br>
 					<div class="row">
 						<div class="col-lg-1 col-md-1 col-xs-12">*建議事項</div>
 						<div class="col-lg-10 col-md-9 col-xs-12">
-							<small>最大字數: 500 ，還剩: <span id="chLeft">500</span></small>
+							<small >最大字數: 500 ，還剩: <span id="chLeft">500</span></small>
 							<br>
 							<textarea class="McdTxtArea" cols="20" id="Suggestion" maxlength="500" name="Suggestion" onkeyup="checkLength(this);" rows="4"></textarea>
                     </div>

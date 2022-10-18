@@ -11,7 +11,6 @@
     align-items: center;
 }
 .left{
-    padding-top: 30px;
     width: 100%;
     min-height: 90%;
 }
@@ -24,9 +23,7 @@ ul{
     margin: 0;
     list-style: none;
 }
-li{
-    display: block;
-}
+
 .am{
     list-style: none;
     display: block;
@@ -87,5 +84,21 @@ li{
     border-top: 1px solid #E2E2E2;
     margin-top: 80px;
     padding: 72px 0px 88px;
+    
+}
+.container{
+    display: flex;
+    width: 100%;
+}
+@media (max-width:990px){
+    nav{
+        height: auto;
+    }
+    .nav-link {
+        padding:10px;
+    }
+    .form{
+        align-items: center;
+    }
     
 }
