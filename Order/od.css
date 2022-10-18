@@ -12,6 +12,11 @@ body{
     justify-items: center;
     align-items: center;
 }
+#up{
+    position: fixed;
+    padding: auto;
+    margin: 30px;
+}
 .left{
     width: 100%;
     min-height: 90%;
