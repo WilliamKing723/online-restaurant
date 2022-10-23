@@ -4,9 +4,9 @@ const portNum = 1234;
 const fs = require("fs");
 
 
-const feedbackRouter = require("./router/feedback.js");
-const orderRouter = require("./router/order.js");
-const productpriceRouter = require("./router/productprice.js");
+const feedbackRouter = require("./router/feedbackRouter.js");
+const orderRouter = require("./router/orderRouter.js");
+const productpriceRouter = require("./router/productpriceRouter.js");
 
 app.use('/Img', express.static(__dirname + '/Img'));
 app.use('/Stylesheet', express.static(__dirname + '/Stylesheet'));
