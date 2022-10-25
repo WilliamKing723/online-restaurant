@@ -1,11 +1,21 @@
 .spacer._24{
     width: 24px;
 }
-
-
+.space{
+    padding: 50px;
+}
+.col-sm-3{
+    padding-left:0;
+}
+.col-sm-6{
+    padding: 20px;
+}
 .container-all {
     display: flex;
     align-items: stretch;
+    width:1170px ;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 #sidebar {
@@ -20,13 +30,6 @@
 
 #sidebar.active {
     margin-left: -210px;
-}
-
-.container-right {
-    width: 87%;
-    height: 1auto;
-    text-align: center;
-    padding: 30px;
 }
 
 .collapse-btn {
@@ -64,19 +67,6 @@
     color: indigo;
     background: #fff;
 }
-
-.fas,
-.far,
-.fab {
-    float: right;
-}
-
-ul ul li a {
-    background-color: rgb(203, 142, 247);
-    font-size: 20px;
-    font-style: italic;
-}
-
 
 ul{
     padding: 0;
@@ -119,7 +109,6 @@ ul{
 .am{
     list-style: none;
     display: block;
-    margin-top: 24px;
 }
 .md{
     margin-top: 40px;
@@ -137,7 +126,7 @@ ul{
 }
 .mg{
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(4,1fr);
     grid-gap:40px 24px;
 }
 .un{
@@ -177,8 +166,8 @@ ul{
 .footer{
     border-top: 1px solid #E2E2E2;
     margin-top: 80px;
-    padding: 72px 0px 88px;
-    
+    padding: 80px 0px 80px;
+    height: 200px;
 }
 
 @media (max-width:990px){
