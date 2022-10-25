@@ -58,7 +58,7 @@ nav li:hover {
 .inline-block-nav {
     text-align: center;
     font-size: 0;   
-    position: fixed;
+    position: block;
     top:0;
     width: 100%;
     transition: all 0.5s;
