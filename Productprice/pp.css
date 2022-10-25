@@ -274,7 +274,12 @@ display: block;
     display: block;
 }
 .card4{
-    height: 875px;
+    height: 500px;
     margin-left: 80px;
     display: block;
+}
+.fistNote{
+    margin-bottom: 2rem;
+    font-size: 0.875em;
+    color: #363636;
 }
