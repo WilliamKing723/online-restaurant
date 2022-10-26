@@ -40,27 +40,27 @@
 					<a class="nav-link" href="#">Google Forms</a>
 					</li>
 				</ul>
+				<!--
 				<div class="shoppingcart">
 					<a href="#" type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#shoppingcart">Shopping Cart</a>
 				</div>
-				<div class="spacer _24"></div>
 				<div class="modal fade" id="shoppingcart">
 					<div class="modal-dialog">
 						<div class="modal-content">
-							<!--header-->
+							
 							<div class="modal-header">
 								<h3>Shopping Cart</h3>
 								<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
 							</div>
-							<!--body-->
+							
 							<div class="modal-body">
 							</div>
-							<!--footer-->
+							
 							<div class="modal-footer">
 							</div>
 						</div>
 					</div>
-				</div>
+				</div> -->
 				<form style="width:300px;" class="input-group">
 					<input  class="form-control me-3" type="search" placeholder="搜尋">
 					<button  class="btn btn-success" type="submit">Search</button>
@@ -76,13 +76,60 @@
 				<ul class="list-unstyled">
 					<p>Main meals</p>
 					<li><a href="#Recommended meal">Recommended meal</a></li>
-					<li><a href="#Noodles">Noodles</a></li>
-					<li><a href="#Rice">Rice</a></li>
-					<li><a href="#Vegetarian food">Vegetarian food</a></li>
-					<li><a href="#Side meals">Side meals</a></li>
-					<li><a href="#Drinks">Drinks</a></li>
-					<li><a href="#Dessert">Dessert</a></li>
-					<li><a href="#Combo meals">Combo meals</a></li>
+					<li><a href="#Noodleslist"  data-bs-toggle="collapse">Noodles</a></li>
+						<ul id="Noodleslist" class="list-unstyled collapse">
+							<li><a href="#">炒麵 Fried noodles</a></li>
+							<li><a href="#">湯麵 Soup noodles</a></li>
+							<li><a href="#">乾麵 Dry noodles</a></li>
+							<li><a href="#">炒泡麵 Fried instant noodles</a></li>
+							<li><a href="#">酸辣粉 Powder</a></li>
+						</ul>
+					<li><a href="#Ricelist" data-bs-toggle="collapse">Rice</a></li>
+						<ul id="Ricelist" class="list-unstyled collapse">
+							<li><a href="#">燴飯 Risotto</a></li>
+							<li><a href="#">炒飯 Fried rice</a></li>
+							<li><a href="#">燉飯 Stewed rice</a></li>
+							<li><a href="#">咖哩飯 Curry rice</a></li>
+							<li><a href="#">丼飯 Donburi</a></li>
+						</ul>
+					<li><a href="#Vegetarianlist" data-bs-toggle="collapse">Vegetarian food</a></li>
+						<ul id="Vegetarianlist" class="list-unstyled collapse">
+							<li><a href="#">火鍋 Vegetarian Hot Pot</a></li>
+							<li><a href="#">麵類 Vegetarian noodles</a></li>
+							<li><a href="#">飯類 Vegetarian rice</a></li>
+							<li><a href="#">素肉料理 Vegetarian meat cooking</a></li>
+						</ul>
+					<li><a href="#Sidelist" data-bs-toggle="collapse">Side meals</a></li>
+						<ul id="Sidelist" class="list-unstyled collapse">
+							<li><a href="#">沙拉 Salad</a></li>
+							<li><a href="#">濃湯 Thick soup</a></li>
+							<li><a href="#">炸物 Fried food</a></li>
+							<li><a href="#">蔬菜 Vegetables</a></li>
+							<li><a href="#">滷味 Lu Wei</a></li>
+						</ul>
+					<li><a href="#Drinkslist" data-bs-toggle="collapse">Drinks</a></li>
+						<ul id="Drinkslist" class="list-unstyled collapse">
+							<li><a href="#">茶類 Tea</a></li>
+							<li><a href="#">果汁 Juice</a></li>
+							<li><a href="#">咖啡 Coffee</a></li>
+							<li><a href="#">碳酸飲料 Carbonated drinks</a></li>
+						</ul>
+					<li><a href="#Dessertlist" data-bs-toggle="collapse">Dessert</a></li>
+						<ul id="Dessertlist" class="list-unstyled collapse">
+							<li><a href="#">布丁 Pudding</a></li>
+							<li><a href="#">蛋糕 Cake</a></li>
+							<li><a href="#">奶酪 panna cotta</a></li>
+							<li><a href="#">餅乾 Cookies</a></li>
+							<li><a href="#">鬆餅 Muffin</a></li>
+						</ul>
+					<li><a href="#Combolist" data-bs-toggle="collapse">Combo meals</a></li>
+						<ul id="Combolist" class="list-unstyled collapse">
+							<li><a href="#">雙人餐</a></li>
+							<li><a href="#">123</a></li>
+							<li><a href="#">123</a></li>
+							<li><a href="#">123</a></li>
+							<li><a href="#">123</a></li>
+						</ul>
 				</ul>
 			</nav>
 			<button type="button" id="BackTop" class="toTop-arrow"></button>

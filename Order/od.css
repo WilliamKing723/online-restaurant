@@ -1,6 +1,3 @@
-.spacer._24{
-    width: 24px;
-}
 .space{
     padding: 50px;
 }
@@ -21,31 +18,11 @@
 #sidebar {
     position: sticky ;
     top:0;
-    width: 260px;
+    width:300px;
     height: auto;
     background-color: indigo;
     color: white;
     transition: 1s;
-}
-
-#sidebar.active {
-    margin-left: -210px;
-}
-
-.collapse-btn {
-    position: relative;
-    top: 1%;
-    left: 210px;
-    background-color: indigo;
-    color: white;
-    border: none;
-    font-size: 30px;
-    padding: 5px;
-}
-
-.collapse-btn:hover {
-    background-color: rgb(120, 5, 203);
-    transition: 0.4s;
 }
 
 #sidebar p {
@@ -72,6 +49,10 @@ ul{
     padding: 0;
     margin: 0;
     list-style: none;
+}
+ul ul li a{
+    background-color: rgba(158, 4, 166, 0.802);
+    font-size: 20px;
 }
 .toTop-arrow {
 	width: 3rem;
