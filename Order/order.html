@@ -8,7 +8,7 @@
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
 	<!-- JQuery連結 -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 	<!-- FontAwesome 連結 -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 	<script src="/Order/order.js"></script>
@@ -71,7 +71,7 @@
 	<div class="space"></div>
 <div class="container-all">
 	<div class="row">
-		<div class="col-sm-3">
+		<div class="side col-sm-3">
 			<nav id="sidebar">
 				<ul class="list-unstyled">
 					<p>Main meals</p>
@@ -84,7 +84,7 @@
 							<li><a href="#">炒泡麵 Fried instant noodles</a></li>
 							<li><a href="#">酸辣粉 Powder</a></li>
 						</ul>
-					<li><a href="#Ricelist" data-bs-toggle="collapse">Rice</a></li>
+					<li><a href="#Ricelist" data-bs -toggle="collapse">Rice</a></li>
 						<ul id="Ricelist" class="list-unstyled collapse">
 							<li><a href="#">燴飯 Risotto</a></li>
 							<li><a href="#">炒飯 Fried rice</a></li>
@@ -135,7 +135,7 @@
 			<button type="button" id="BackTop" class="toTop-arrow"></button>
 			</div>
 		</div>
-		<div class="col-sm-6">
+		<div class="mid col-sm-6">
 			<ul class="am">
 				<li class="md">
 					<div class="ar" id="Recommended meal">Recommended meal</div>
@@ -155,10 +155,8 @@
 					<div class="in"></div>
 					<ul class="mg">
 						<li class="un">
-							<div tabindex="0" class="tb">
-								<div class="ln" id="fried noodles">
-									<span>炒麵</span>
-								</div>
+							<div id="button1">
+								<button>炒麵</button>
 							</div>
 						</li>
 						<li class="un">
@@ -425,8 +423,10 @@
 				</li>
 			</ul>	
 		</div>
-		<div class="col-sm-6">
-			shopping
+		<div class="shoppingcart col-sm-3">
+			<div class="send-box">
+				<button type="button" class="btnSendCart" onclick="shoppingcart()"><img src="../Img/shoppingcart.png"></button>
+			</div> 
 		</div>
 	</div>
 	<footer id="footer" class="footer">

@@ -1,11 +1,18 @@
 .space{
     padding: 50px;
 }
-.col-sm-3{
+.side{
     padding-left:0;
 }
-.col-sm-6{
+.mid{
     padding: 20px;
+}
+.shoppingcart{
+    margin: 0;
+    box-shadow: 0 0 10px 0 rgb(0 0 0 / 45%);
+    font-size: 0.8em;
+    padding: 15px;
+    background-color: #FFF;
 }
 .container-all {
     display: flex;
@@ -14,7 +21,9 @@
     margin-right: auto;
     margin-left: auto;
 }
-
+/* body{
+    background-color: #ebc000;
+} */
 #sidebar {
     position: sticky ;
     top:0;
@@ -113,36 +122,21 @@ ul ul li a{
 .un{
     grid-column: span 2;
     min-width: 0;
-    border: red solid;
 }
-.tb{
-    cursor: pointer;
-    text-decoration: none;
-    display: flex;
-    flex: 1;
-}
-.of{
-    display: flex;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    flex-direction: column;
-    position: relative;
-}
-.ol{
-    display: flex;
-    flex:1;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    flex-direction: row;
-}
-.ln{
+#button1 button{
+    display: block;
+    float: left;
+    color:#ebc000;
+    background-color: red;
+    /* flex: 1; */
     font-size: 16px;
-    line-height: 20px;
-    font-weight: 500;
-    color: #000000;
+    border: none;
+    border-radius: 20px;
+    padding: 0;
+    width: 100%;
+    /* line-height: 20px; */
+    /* font-weight: 500; */
+
 }
 .footer{
     border-top: 1px solid #E2E2E2;
@@ -163,7 +157,7 @@ ul ul li a{
     }
     
 }
-@media (max-width:600px) {
+/* @media (max-width:600px) {
     #sidebar {
         margin-left: -100px;
         width: 150px;
@@ -181,4 +175,4 @@ ul ul li a{
         font-size: 18px;
         text-align: left;
     }
-}
+} */

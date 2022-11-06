@@ -1,13 +1,6 @@
-// sidebar
-$(document).ready(function() {
-            
-    $("#collapse").on("click", function() {
+function shoppingcart() { 
 
-        $("#sidebar").toggleClass("active");
-        $(".fa-align-left").toggleClass("fa-chevron-circle-right");
-    })
-})
-
+} 
 //backTop
 $(function(){
 	$('#BackTop').click(function(){ 
@@ -21,3 +14,22 @@ $(function(){
 		}
 	}).scroll();
 });
+
+//button
+$(function(){
+	var duration=300;
+	$('#button1 button')
+		.on('mouseover', function(){
+			$(this).stop(true).animate({
+				backgroundColor:'#ae5e9b',
+				color: '#fff'
+			}, duration);
+		})
+		.on('mouseout button', function(){
+			$(this).stop(true).animate({
+				backgroundColor:'#fff',
+				color: '#ebc000'
+			}, duration);
+		});
+});
+
