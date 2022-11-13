@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<header>
+		<meta mame="viewpoint" content="width=device-width, initial-scale=1.0">
+		<meta charset="utf-8">
+		<title>Online-Restaurant</title>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="pp.css">
+		<!--導覽列CSS-->
+		<link rel="stylesheet" href="../Stylesheet/navbar.css">
+	<nav id="topbar" class="navbar navbar-expand-lg navbar-light">
+
+		<div class="container-fluid">
+			<div class="headline"><a href="../index.html"><img src="../Img/Title.png " style="width:85px ; height:66px "></a></div>
+
+			<button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#linkbar" aria-expanded="false">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="navbar-collapse collapse" id="linkbar">
+				<ul class="navbar-nav me-auto">
+					<li class="nav-item">
+					<a class="nav-link" href="../index.html">Home</a>
+					</li><li class="nav-item">
+					<a class="nav-link" href="../Order/order.html">Your Order</a>
+					</li>
+					<li class="nav-item">
+					<a class="nav-link" href="../Feedback/feedback.html">Feedback</a>
+					</li>
+					<li class="nav-item">
+					<a class="nav-link" href="productprice.html">Product Price</a>
+					</li>
+					<li class="nav-item">
+					<a class="nav-link" href="#">Google Forms</a>
+					</li>
+				</ul>
+				<form style="width:300px;" class="input-group">
+					<input class="form-control me-3" type="search" placeholder="搜尋">
+					<button class="btn btn-success" type="submit">Search</button>
+				</form>
+
+
+			</div>
+		</div>
+	</nav>
+
+</header>
+<html>
+<head>
+<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=big5">
+</head>
+
+<article>
+<h2 style="font-size: 36px;font-weight: 700;margin-top: 30PX;text-align: center;">取貨方式</h2>
+</article>
+<body>
+    <body style="background-color: bisque;">
+    <div class= "card1" style="  width: 700px; height:800px; float: none; margin-top: 50px; margin-right: auto; margin-bottom: 30px; margin-left: auto; padding: 30px; border: solid 1px #dddddd;background-color: rgb(255, 255, 255);">
+        <div style="color: #f509f5; font-size: 1.4em; line-height: 30px;">
+            本餐廳服務提供時間為 AM 11:00 ~ PM 10:00
+        </div>
+    <div class="card2" style="font-size: 1.4em; line-height: 40px;">
+        <p></p>
+        <form>
+        姓 氏 <em>*</em>
+        <br>
+       <input type="text" name="firstname">
+       <br>
+        名 字 <em>*</em>
+        <br>
+       <input type="text" name="lastname">
+       </form> 
+    <p>
+    <div>
+    性 別：
+    <input type="radio" name="gender" id="male" checked>
+    <label for="male">男性</label>
+    <input type="radio" name="gender" id="female">
+    <label for="female">女性</label>
+    </div>
+    <p>
+    <div>
+      <label for="phone">電 話：</label>
+      <input type="tel" id="phone">
+      -
+      <input type="tel" id="phone">
+    </div>
+    <p>
+    <div>
+        用餐方式：
+        <input type="radio" name="meal way" id="out" checked>
+        <label for="out">外送</label>
+        <input type="radio" name="meal way" id="inside">
+        <label for="inside">自取</label>
+    </div>
+    <p>
+    <div>
+      <label for="email">Email：</label>
+      <input type="email" id="email">
+    </div>
+    <p>
+    <div>
+        地 址 
+        <p>
+        <select name="ddlCity" id="ctl00_ddlCity" class="txtRegister" ;style="height:30px;">
+            <option value="台北市">台北市</option>
+            <option value="基隆市">基隆市</option>
+            <option selected="selected" value="新北市">新北市</option>
+            <option value="宜蘭縣">宜蘭縣</option>
+        
+        </select>
+        <select name="ddlArea" id="ctl00_ddlArea" class="txtRegister" style="height:30px;">
+            <option value="220">板橋區</option>
+            <option value="221">汐止區</option>
+            <option value="223">石碇區</option>
+            <option value="231">新店區</option>
+            <option value="234">永和區</option>
+            <option value="235">中和區</option>
+            <option value="236">土城區</option>
+            <option value="238">樹林區</option>
+            <option value="241">三重區</option>
+            <option value="242">新莊區</option>
+            <option value="243">泰山區</option>
+            <option value="244">林口區</option>
+            <option value="247">蘆洲區</option>
+            <option selected="selected" value="251">淡水區</option>
+        
+        </select>
+        <input type="text" name="address">
+    </div>
+    <p></p>
+    <div>
+      <label for="date">取餐日期：</label>
+      <input type="date" id="date">
+    </div>
+    <p></p>
+    <div>
+        <label for="time">取餐時間：</label>
+        <select name="lHour" onchange="javascript:setTimeout('__doPostBack(\'ctl00$ContentPlaceHolder1$ucDeliverTime$ddlHour\',\'\')', 0)" id="ctl00_ContentPlaceHolder1_ucDeliverTime_ddlHour" class="DeliverTime">
+    <option selected="selected" value="12">12</option>
+    <option value="13">13</option>
+    <option value="14">14</option>
+    <option value="15">15</option>
+    <option value="16">16</option>
+    <option value="17">17</option>
+    <option value="18">18</option>
+    <option value="19">19</option>
+    <option value="20">20</option>
+    <option value="21">21</option>
+    <option value="22">22</option>
+    </select>
+        :
+        <select name="lminute" id="ddlminute" class="DeliverTime">
+    <option selected="selected" value="00">00</option>
+    <option value="31">01</option>
+    <option value="32">02</option>
+    <option value="33">03</option>
+    <option value="34">04</option>
+    <option value="35">05</option>
+    <option value="36">06</option>
+    <option value="37">07</option>
+    <option value="38">08</option>
+    <option value="39">09</option>
+    <option value="40">10</option>
+    <option value="41">11</option>
+    <option value="42">12</option>
+    <option value="43">13</option>
+    <option value="44">14</option>
+    <option value="45">15</option>
+    <option value="46">16</option>
+    <option value="47">17</option>
+    <option value="48">18</option>
+    <option value="49">19</option>
+    <option value="50">20</option>
+    <option value="51">21</option>
+    <option value="52">22</option>
+    <option value="53">23</option>
+    <option value="54">24</option>
+    <option value="55">25</option>
+    <option value="56">26</option>
+    <option value="57">27</option>
+    <option value="58">28</option>
+    <option value="59">29</option>
+    <option value="31">31</option>
+    <option value="32">32</option>
+    <option value="33">33</option>
+    <option value="34">34</option>
+    <option value="35">35</option>
+    <option value="36">36</option>
+    <option value="37">37</option>
+    <option value="38">38</option>
+    <option value="39">39</option>
+    <option value="40">40</option>
+    <option value="41">41</option>
+    <option value="42">42</option>
+    <option value="43">43</option>
+    <option value="44">44</option>
+    <option value="45">45</option>
+    <option value="46">46</option>
+    <option value="47">47</option>
+    <option value="48">48</option>
+    <option value="49">49</option>
+    <option value="50">50</option>
+    <option value="51">51</option>
+    <option value="52">52</option>
+    <option value="53">53</option>
+    <option value="54">54</option>
+    <option value="55">55</option>
+    <option value="56">56</option>
+    <option value="57">57</option>
+    <option value="58">58</option>
+    <option value="59">59</option>
+
+    </select>
+    </div>
+    <p></p>
+    <div>
+        <button type="submit">送出訂單</button>
+    </div>
+</div>
+    </div>
+</body>
+</html>

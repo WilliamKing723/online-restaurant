@@ -96,6 +96,23 @@ ul ul li a{
 }
 .toTop-arrow:focus {outline: none;}
 
+.modal-body{
+    display: flex;
+}
+
+
+
+.prodImg{
+    width: 70% ; 
+    height: 70%  ;
+    display: none;
+}
+
+.form-check{
+    display: block;
+    float: left;
+}
+
 .am{
     list-style: none;
     display: block;
@@ -123,7 +140,7 @@ ul ul li a{
     grid-column: span 2;
     min-width: 0;
 }
-#button1 button{
+#button1 {
     display: block;
     float: left;
     color:#ebc000;
