@@ -21,40 +21,7 @@
 	<link rel="stylesheet" href="../Stylesheet/navbar.css" />
 </head>
 <body>
-	<nav class="navbar navbar-expand-lg navbar-light">
 
-		<div class="container-fluid">
-			<div class="headline"><a href="../index.html"><img src="../Img/Title.png " style="width:85px ; height:66px "/></a></div>
-
-			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#linkbar">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-
-			<div class="collapse navbar-collapse" id="linkbar">
-				<ul class="navbar-nav me-auto">
-					<li class="nav-item">
-					<a class="nav-link" href="../index.html">Home</a>
-					<li class="nav-item">
-					<a class="nav-link" href="../Order/order.html">Your Order</a>
-					</li>
-					<li class="nav-item">
-					<a class="nav-link" href="feedback.html">Feedback</a>
-					</li>
-					<li class="nav-item">
-					<a class="nav-link" href="../Productprice/productprice.html">Product Price</a>
-					</li>
-					<li class="nav-item">
-					<a class="nav-link" href="#">Google Forms</a>
-					</li>
-				</ul>
-				<form style="width:300px;" class="input-group">
-					<input  class="form-control me-3" type="search" placeholder="搜尋">
-					<button  class="btn btn-success" type="submit">Search</button>
-				</form>
-			</div>
-		</div>
-	</nav>
-	<!--標題目錄-->
 	<div class="title">
 		<br> 
 		<div class="row">
@@ -77,11 +44,11 @@
                 <div class="col-lg-10 col-md-11 col-xs-12">
                     <select class="form-control" id="sQuestionName" name="QuestionName" onchange="SetLabel(this);">
 						<option value="">請選擇</option>
-<option value="1">餐廳產品.服務相關問題及意見</option>
-<option value="2">相關意見及詢問</option>
-<option value="3">給我們的鼓勵</option>
-<option value="4">員工和服務相關</option>
-<option value="5">其他</option>
+<option value="1">VISA信用卡</option>
+<option value="2">LINE Pay</option>
+<option value="3">APPLE Pay</option>
+<option value="4">GOOGle Pay</option>
+<option value="5">貨到付款</option>
 </select>
                 </div>
             </div>
@@ -90,49 +57,12 @@
 
 
 
-
-				<br>
-				<div class="row">
-					<!--<div class="col-lg-1 col-md-1 col-xs-12">*建議事項</div>-->
-					<div class="col-lg-10 col-md-9 col-xs-12">
-						<small>最大字數: 500 ，還剩: <span id="chLeft">500</span></small>
-						<br>
-						<div style="text-align:center;">
-
-							<textarea style="width:500px;height:150px;" class="McdTxtArea" cols="20" id="Suggestion" maxlength="500" name="Suggestion" onkeyup="checkLength(this);" rows="4"></textarea>
-						</div>
-
-					</div>
-				</div>
-				<!--<span class="errormsg" id="errormsg_Suggestion">請輸入建議事項。</span>-->
-				<br>
-				<br>
-
-
 				<span class="errormsg" id="errormsg_TermsOfService"></span>
 
-				<!--<div class="row">
-
-	<div class="col-lg-2 col-md-2 col-xs-6"  style="text-align: right">
-	<input id="submitbutton" style="float:right" class="btn-lg btn-sm btn-xs btn-block"
-	name="submitbutton" type="submit" value="確認送出" onclick="
-	return CheckInput();">-->
 				<div style="text-align:right">
 					<input type="button" onclick="disp_alert()" value="送出" />
 				</div>
 
-			<!--<div class="row">
-			<div class="col-lg-3 col-md-2 col-xs-6">
-            <input id="submitbutton" class="btn-lg btn-sm btn-xs btn-block" 
-			name="submitbutton" type="submit" value="確認送出" onclick="
-			return CheckInput();">
-			<button class="btn" onclick="c();">確認視窗</button>
-
-			</div>
-			</div>
-
-			</div>
-			<!--</form>-->
 			<hr>
 			<footer> </footer>
         </div>
@@ -174,46 +104,7 @@
 	
 			});
 	
-			function ShowErrorMsg() {
-				//debugger;
-	
-				var ErrorMsg = '';
-				if (ErrorMsg.length > 0) {
-					alert(ErrorMsg);
-					CheckInput();
-				}
-			}
-			function SelectCustSex() {
-				
-				var CustSex = 0;
-				if (CustSex == 1) 
-				{
-					var CustM = document.getElementById("CustM");
-					CustM.checked=true;
-				}else if (CustSex == 2) 
-				{
-					var CustF = document.getElementById("CustF");
-					CustF.checked=true;
-				}else if (CustSex == 3) 
-				{
-					var CustOther = document.getElementById("CustOther");
-					CustOther.checked=true;
-				}
-			}
-	
-			$(document).ready(function () {
-				
-	
-				SelectCustSex();
-				
-				var isInit = '';
-				if (isInit == "True") {
-					var errormsg_Valid = document.getElementById("errormsg_Valid");
-					errormsg_Valid.style.display = "none";
-				}
-	
-				ShowErrorMsg();
-			});
+
 	
 			function SetLabel(Qlist) {
 				var MainLabel = document.getElementById("MainLabel");
@@ -253,23 +144,6 @@
 				}
 			}
 	
-
-	
-	
-	
-			function checkLength(which) {
-	
-				var maxChars = 500;
-	
-				if (which.value.length > maxChars)
-	
-					which.value = which.value.substring(0, maxChars);
-	
-				var curr = maxChars - which.value.length;
-	
-				document.getElementById("chLeft").innerHTML = curr.toString();
-	
-			}
 	
 		</script>
 		<script type="text/javascript">
