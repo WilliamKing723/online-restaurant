@@ -136,7 +136,7 @@
 			</div>
 		</div>
 		<div class="mid col-sm-6">
-			<ul class="am">
+			<ul class="am" >
 				<li class="md">
 					<div class="ar" id="Recommended meal">Recommended meal</div>
 					<div class="in"></div>
@@ -159,94 +159,106 @@
 								<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" id="button1">炒麵</button>
 								<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
 									<div class="modal-dialog modal-dialog-centered ">
-									<div class="modal-content">
-										<div class="modal-header">
-										<h5 class="modal-title" id="exampleModalLabel">炒麵</h5>
-										<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-										</div>
-										<div class="modal-body">
-											<div class="leftbox col-6">
-												<ul class="prodPic" >
-													<li><img src="https://tokyo-kitchen.icook.network/uploads/recipe/cover/254179/d1d69593d2f4fb80.jpg" class="prodImg" id="ss1"  style="display: none;" /></li>
-													<li><img src="https://img-global.cpcdn.com/recipes/982fed7110ce1e0c/1200x630cq70/photo.jpg" class="prodImg" id="ss2"  style="display: none;" /></li>
-													<li><img src="https://img.ltn.com.tw/Upload/food/page/2016/09/06/160906-3133-00-b5Pq1.jpg" class="prodImg" id="ss3"  style="display: none;" /></li>
-													<li><img src="https://bussfood.com/Data/Images/20161006/13/440cd465a88295860b52160be5faa617.jpg" class="prodImg" id="ss4"  style="display: none;" /></li>
-													<li><img src="https://tokyo-kitchen.icook.network/uploads/recipe/cover/371764/291b9f8fae5c7bbb.jpg" class="prodImg" is="ss5"  style="display: none;" /></li>
-												</ul>
+										<div class="modal-content">
+											<div class="modal-header">
+												<h5 class="modal-title" id="exampleModalLabel"></h5>
+												<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 											</div>
-											<div class="rightbox col-6">
-												<div class="clearfix">
-													<select class="selectStyle" id="bodytlist_friedNoddles" name="productInfo">
-														<option class="selectChange" value="0">請選擇</option>
-														<option value="1">海鮮蛋炒麵</option>
-														<option value="2">沙茶肉絲炒麵</option>
-														<option value="3">蝦仁炒麵</option>
-														<option value="4">什錦炒麵</option>
-														<option value="5">咖哩肉絲炒麵</option>
-													</select>
-													
+											<div class="modal-body">
+												<div class="leftbox col-6">
+													<div class="prodPic" >
+														<!-- 炒麵 -->
+														<img src="https://tokyo-kitchen.icook.network/uploads/recipe/cover/254179/d1d69593d2f4fb80.jpg" class="prodImg" id="friedNoodlesImg1"/>
+														<img src="https://img-global.cpcdn.com/recipes/982fed7110ce1e0c/1200x630cq70/photo.jpg" class="prodImg" id="friedNoodlesImg2"  />
+														<img src="https://img.ltn.com.tw/Upload/food/page/2016/09/06/160906-3133-00-b5Pq1.jpg" class="prodImg" id="friedNoodlesImg3" />
+														<img src="https://bussfood.com/Data/Images/20161006/13/440cd465a88295860b52160be5faa617.jpg" class="prodImg" id="friedNoodlesImg4"  />
+														<img src="https://tokyo-kitchen.icook.network/uploads/recipe/cover/371764/291b9f8fae5c7bbb.jpg" class="prodImg" id="friedNoodlesImg5"  />
+														<!-- 湯麵 -->
+														<img src="https://img-global.cpcdn.com/012_recipes/b3edf7a9cb25c9807d846622cd5eb0f1/1200x630cq70/photo.jpg" class="prodImg" id="soupNoodlesImg1"   />
+														<img src="https://www.alberthsieh.com/webp/wp-content/uploads/flickr/16138214706_865773bebe_b.jpg.webp" class="prodImg" id="soupNoodlesImg2"   />
+														<img src="https://4.share.photo.xuite.net/w230219/147ffa7/4745991/181127840_l.jpg" class="prodImg" id="soupNoodlesImg3"  />
+														<img src="https://lazypackonline.com/wp-content/uploads/2021/01/img_3800.jpeg" class="prodImg" id="soupNoodlesImg4"   />
+														<img src="https://7.share.photo.xuite.net/ca062/17475e1/19812444/1121155717_l.jpg" class="prodImg" id="soupNoodlesImg5"  />
+														<img src="https://www.8way.com.tw/8WayApi/document/c57ebb05-72a7-4596-b255-ffc3c720a80f.png" class="prodImg" id="soupNoodlesImg6"   />
+														<img src="https://d3l76hx23vw40a.cloudfront.net/recipe/bk76-023d.jpg" class="prodImg" id="soupNoodlesImg7"   />
+													</div>
 												</div>
-												<div class="form-check">
-													<input class="form-check-input" type="radio" name="spicyChoice" id="spicyChoice1">
-													<label class="form-check-label" for="spicyChoice1">
-														不辣
-													</label>
-												</div>
-												<div class="form-check">
-													<input class="form-check-input" type="radio" name="spicyChoice" id="spicyChoice2">
-													<label class="form-check-label" for="spicyChoice2">
-														小辣
-													</label>
-												</div>
-												<div class="form-check">
-													<input class="form-check-input" type="radio" name="spicyChoice" id="spicyChoice3">
-													<label class="form-check-label" for="spicyChoice3">
-														中辣
-													</label>
-												</div>
-												<div class="form-check">
-													<input class="form-check-input" type="radio" name="spicyChoice" id="spicyChoice4">
-													<label class="form-check-label" for="spicyChoice4">
-														大辣
-													</label>
+												<div class="rightbox col-6">
+													<div class="clearfix">
+														<select class="selectStyle" id="bodytlist_friedNoodles" name="productInfo">
+															<option value="0">請選擇</option>
+															<option value="1">海鮮蛋炒麵</option>
+															<option value="2">沙茶肉絲炒麵</option>
+															<option value="3">蝦仁炒麵</option>
+															<option value="4">什錦炒麵</option>
+															<option value="5">咖哩肉絲炒麵</option>
+														</select>
+													</div>
+													<div class="clearfix">
+														<select class="selectStyle" id="bodytlist_soupNoodles" name="productInfo">
+															<option value="0">請選擇</option>
+															<option value="1">牛肉湯麵</option>
+															<option value="2">麻辣牛肉湯麵</option>
+															<option value="3">餛飩湯麵</option>
+															<option value="4">豬排湯麵</option>
+															<option value="5">榨菜肉絲湯麵</option>
+															<option value="6">酸辣湯麵</option>
+															<option value="7">排骨湯麵</option>
+														</select>
+													</div>
+													<div class="form-check">
+														<input class="form-check-input" type="radio" name="spicyChoice" id="spicyChoice1">
+														<label class="form-check-label" for="spicyChoice1">
+															不辣
+														</label>
+													</div>
+													<div class="form-check">
+														<input class="form-check-input" type="radio" name="spicyChoice" id="spicyChoice2">
+														<label class="form-check-label" for="spicyChoice2">
+															小辣
+														</label>
+													</div>
+													<div class="form-check">
+														<input class="form-check-input" type="radio" name="spicyChoice" id="spicyChoice3">
+														<label class="form-check-label" for="spicyChoice3">
+															中辣
+														</label>
+													</div>
+													<div class="form-check">
+														<input class="form-check-input" type="radio" name="spicyChoice" id="spicyChoice4">
+														<label class="form-check-label" for="spicyChoice4">
+															大辣
+														</label>
+													</div>
 												</div>
 											</div>
-										</div>
-										<div class="modal-footer">
-										<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-										<button type="button" class="btn btn-primary">add shoppingCart</button>
+											<div class="modal-footer">
+											<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+											<button type="button" class="btn btn-primary">add shoppingCart</button>
+											</div>
 										</div>
 									</div>
-									</div>
 								</div>
 							</div>
 						</li>
 						<li class="un">
-							<div tabindex="0" class="tb">
-								<div class="ln" id="soup noodles">
-									<span>湯麵</span>
-								</div>
+							<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" id="button1">湯麵</button>
+							<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
 							</div>
 						</li>
 						<li class="un">
-							<div tabindex="0" class="tb">
-								<div class="ln" id="dry noodles">
-									<span>乾麵</span>
-								</div>
+							<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" id="button1">乾麵</button>
+							<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
 							</div>
 						</li>
 						<li class="un">
-							<div tabindex="0" class="tb">
-								<div class="ln" id="Fried instant noodles">
-									<span>炒泡麵</span>
-								</div>
+							<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" id="button1">炒泡麵</button>
+							<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
 							</div>
 						</li>
 						<li class="un">
-							<div tabindex="0" class="tb">
-								<div class="ln" id="powder">
-									<span>酸辣粉</span>
-								</div>
+							<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" id="button1">酸辣粉</button>
+							<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
 							</div>
 						</li>
 					</ul>

@@ -37,15 +37,61 @@ $(function(){
 });
 
 $(function(){
-	$("select").change(function(){
-		$("select option:selected").each(function(){
-			var n=
-			$(".prodPic").show()
+	$(".am").each(function(){
+		$("button").on('click',function(){
+			$("#exampleModalLabel").text($(this).text());
+			$(".selectStyle").each(function(){
+				$(this).hide();
+			});
+			switch($(this).text()){
+				case "炒麵": {
+					$("#bodytlist_friedNoodles").show();
+					break;
+				}
+				case "湯麵": {
+					$("#bodytlist_soupNoodles").show();
+					break;
+				}
+				case "乾麵": {
+					break;
+				}
+				case "炒泡麵": {
+					break;
+				}
+				case "酸辣粉": {
+					break;
+				}
+			}
 		});
+		
 	});
+});
 
-})
-
+$(function(){
+    $(".selectStyle").change(function(){
+		$(".prodImg").each(function(){
+			$(this).hide();
+		});
+		switch($("#exampleModalLabel").text()){
+			case"炒麵":{
+				$("#bodytlist_friedNoodles").each(function(index){
+					if(index === $(".selectStyle")[0].selectedIndex) {
+						$("#friedNoodlesImg"+index).show();
+					}
+				});
+				break;
+			}
+			case"湯麵":{
+				$("#bodytlist_soupNoodles").each(function(index){
+					if(index === $(".selectStyle")[0].selectedIndex) {
+						$("#soupNoodlesImg"+index).show();
+					} 
+				});
+				break;
+			}
+		}
+	});
+});
 
 // $(function(){
 // 	$('#bodytlist_friedNoddles select option:selected').mouseover(function(){

@@ -100,9 +100,12 @@ ul ul li a{
     display: flex;
 }
 
+
+
 .prodImg{
     width: 70% ; 
     height: 70%  ;
+    display: none;
 }
 
 .form-check{
