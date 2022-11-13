@@ -39,9 +39,15 @@ $(function(){
 $(function(){
 	$(".am").each(function(){
 		$("button").on('click',function(){
+			if($(this).attr("id") === "shopSendBtn" || $(this).attr("id") === "shopQuit") {
+                return;
+            }
+			$(".prodImg").each(function(){
+				$(this).hide();
+			});
 			$("#exampleModalLabel").text($(this).text());
 			$(".selectStyle").each(function(){
-				$(this).hide();
+				$(this).val(0).hide();
 			});
 			switch($(this).text()){
 				case "炒麵": {
@@ -73,23 +79,23 @@ $(function(){
 			$(this).hide();
 		});
 		switch($("#exampleModalLabel").text()){
-			case"炒麵":{
-				$("#bodytlist_friedNoodles").each(function(index){
-					if(index === $(".selectStyle")[0].selectedIndex) {
-						$("#friedNoodlesImg"+index).show();
-					}
-				});
-				break;
-			}
-			case"湯麵":{
-				$("#bodytlist_soupNoodles").each(function(index){
-					if(index === $(".selectStyle")[0].selectedIndex) {
-						$("#soupNoodlesImg"+index).show();
-					} 
-				});
-				break;
-			}
-		}
+            case"炒麵":{
+                $("#bodytlist_friedNoodles").find("option").each(function(index){
+                    if(index === $("#bodytlist_friedNoodles")[0].selectedIndex) {
+                        $("#friedNoodlesImg"+index).show();
+                    }
+                });
+                break;
+            }
+            case"湯麵":{
+                $("#bodytlist_soupNoodles").find("option").each(function(index){
+                    if(index === $("#bodytlist_soupNoodles")[0].selectedIndex) {
+                        $("#soupNoodlesImg"+index).show();
+                    } 
+                });
+                break;
+            }
+        }
 	});
 });
 

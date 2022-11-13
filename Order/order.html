@@ -157,7 +157,7 @@
 						<li class="un">
 							<div>
 								<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" id="button1">炒麵</button>
-								<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+								<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" data-bs-backdrop="static" aria-hidden="true">
 									<div class="modal-dialog modal-dialog-centered ">
 										<div class="modal-content">
 											<div class="modal-header">
@@ -181,6 +181,14 @@
 														<img src="https://7.share.photo.xuite.net/ca062/17475e1/19812444/1121155717_l.jpg" class="prodImg" id="soupNoodlesImg5"  />
 														<img src="https://www.8way.com.tw/8WayApi/document/c57ebb05-72a7-4596-b255-ffc3c720a80f.png" class="prodImg" id="soupNoodlesImg6"   />
 														<img src="https://d3l76hx23vw40a.cloudfront.net/recipe/bk76-023d.jpg" class="prodImg" id="soupNoodlesImg7"   />
+														<!-- 乾麵 -->
+														<img src="https://www.taichungdesign.com/wp-content/uploads/2019/01/48396004_1156121237899273_2778476006627868672_o.jpg" class="prodImg" id="dryNoddlesImg"/>
+														<!-- 炒泡麵 -->
+														<img src="https://picdn.gomaji.com/uploads/stores/161/160161/257374/IMG_3960.jpg" class="prodImg" id="friedInstantNoodlesImg"/>
+														<img src="https://img.i17fun.com/20171122231313_84.jpg" class="prodImg" id="friedInstantNoodlesImg"/>
+														<img src="https://farm7.static.flickr.com/6119/6263086582_d136902643_o.jpg" class="prodImg" id="friedInstantNoodlesImg"/>
+														<!-- 酸辣粉 -->
+														<img src="https://dimg.jiagle.com/media/2021/03/22/a57e7d482c7955c1a92d5215aa35667d.jpg" class="prodImg" id="PowderImg"/>
 													</div>
 												</div>
 												<div class="rightbox col-6">
@@ -204,6 +212,36 @@
 															<option value="5">榨菜肉絲湯麵</option>
 															<option value="6">酸辣湯麵</option>
 															<option value="7">排骨湯麵</option>
+														</select>
+													</div>
+													<div class="clearfix">
+														<select class="selectStyle" id="bodytlist_dryNoodles" name="productInfo">
+															<option value="0">請選擇</option>
+															<option value="1">海鮮蛋炒麵</option>
+															<option value="2">沙茶肉絲炒麵</option>
+															<option value="3">蝦仁炒麵</option>
+															<option value="4">什錦炒麵</option>
+															<option value="5">咖哩肉絲炒麵</option>
+														</select>
+													</div>
+													<div class="clearfix">
+														<select class="selectStyle" id="bodytlist_friedInstantNoodles" name="productInfo">
+															<option value="0">請選擇</option>
+															<option value="1">海鮮蛋炒麵</option>
+															<option value="2">沙茶肉絲炒麵</option>
+															<option value="3">蝦仁炒麵</option>
+															<option value="4">什錦炒麵</option>
+															<option value="5">咖哩肉絲炒麵</option>
+														</select>
+													</div>
+													<div class="clearfix">
+														<select class="selectStyle" id="bodytlist_Powder" name="productInfo">
+															<option value="0">請選擇</option>
+															<option value="1">海鮮蛋炒麵</option>
+															<option value="2">沙茶肉絲炒麵</option>
+															<option value="3">蝦仁炒麵</option>
+															<option value="4">什錦炒麵</option>
+															<option value="5">咖哩肉絲炒麵</option>
 														</select>
 													</div>
 													<div class="form-check">
@@ -233,8 +271,8 @@
 												</div>
 											</div>
 											<div class="modal-footer">
-											<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-											<button type="button" class="btn btn-primary">add shoppingCart</button>
+											<button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="shopQuit">Close</button>
+											<button type="button" class="btn btn-primary" id="shopSendBtn">add shoppingCart</button>
 											</div>
 										</div>
 									</div>
@@ -243,22 +281,22 @@
 						</li>
 						<li class="un">
 							<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" id="button1">湯麵</button>
-							<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+							<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" data-bs-backdrop="static" aria-hidden="true">
 							</div>
 						</li>
 						<li class="un">
 							<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" id="button1">乾麵</button>
-							<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+							<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" data-bs-backdrop="static" aria-hidden="true">
 							</div>
 						</li>
 						<li class="un">
 							<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" id="button1">炒泡麵</button>
-							<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+							<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" data-bs-backdrop="static" aria-hidden="true">
 							</div>
 						</li>
 						<li class="un">
 							<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" id="button1">酸辣粉</button>
-							<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+							<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" data-bs-backdrop="static" aria-hidden="true">
 							</div>
 						</li>
 					</ul>
@@ -268,39 +306,25 @@
 					<div class="in"></div>
 					<ul class="mg">
 						<li class="un">
-							<div tabindex="0" class="tb">
-								<div class="ln" id="stewed rice">
-									<span>燉飯</span>
-								</div>
+							<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" id="button1">燉飯</button>
+							<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" data-bs-backdrop="static" aria-hidden="true">
 							</div>
 						</li>
 						<li class="un">
-							<div tabindex="0" class="tb">
-								<div class="ln" id="Risotto">
-									<span>燴飯</span>
-								</div>
-							</div>
+							<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" id="button1">燴飯</button>
+							<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" data-bs-backdrop="static" aria-hidden="true">
 						</li>
 						<li class="un">
-							<div tabindex="0" class="tb">
-								<div class="ln" id="fried rice">
-									<span>炒飯</span>
-								</div>
-							</div>
+							<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" id="button1">炒飯</button>
+							<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" data-bs-backdrop="static" aria-hidden="true">
 						</li>
 						<li class="un">
-							<div tabindex="0" class="tb">
-								<div class="ln" id="Curry rice">
-									<span>咖哩飯</span>
-								</div>
-							</div>
+							<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" id="button1">咖哩飯</button>
+							<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" data-bs-backdrop="static" aria-hidden="true">
 						</li>
 						<li class="un">
-							<div tabindex="0" class="tb">
-								<div class="ln" id="Donburi">
-									<span>丼飯</span>
-								</div>
-							</div>
+							<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" id="button1">丼飯</button>
+							<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" data-bs-backdrop="static" aria-hidden="true">
 						</li>
 					</ul>
 				</li>
@@ -309,32 +333,20 @@
 					<div class="in"></div>
 					<ul class="mg">
 						<li class="un">
-							<div tabindex="0" class="tb">
-								<div class="ln" id="hot pot">
-									<span>火鍋</span>
-								</div>
-							</div>
+							<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" id="button1">火鍋</button>
+							<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" data-bs-backdrop="static" aria-hidden="true">
 						</li>
 						<li class="un">
-							<div tabindex="0" class="tb">
-								<div class="ln" id="noodles">
-									<span>麵</span>
-								</div>
-							</div>
+							<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" id="button1">麵</button>
+							<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" data-bs-backdrop="static" aria-hidden="true">
 						</li>
 						<li class="un">
-							<div tabindex="0" class="tb">
-								<div class="ln" id="rice">
-									<span>飯</span>
-								</div>
-							</div>
+							<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" id="button1">飯</button>
+							<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" data-bs-backdrop="static" aria-hidden="true">
 						</li>
 						<li class="un">
-							<div tabindex="0" class="tb">
-								<div class="ln" id="vegetarian meat cooking">
-									<span>素肉料理</span>
-								</div>
-							</div>
+							<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" id="button1">素肉料理</button>
+							<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" data-bs-backdrop="static" aria-hidden="true">
 						</li>
 					</ul>
 				</li>
@@ -343,39 +355,24 @@
 					<div class="in"></div>
 					<ul class="mg">
 						<li class="un">
-							<div tabindex="0" class="tb">
-								<div class="ln" id="salad">
-									<span>沙拉</span>
-								</div>
-							</div>
+							<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" id="button1">沙拉</button>
+							<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" data-bs-backdrop="static" aria-hidden="true">
 						</li>
 						<li class="un">
-							<div tabindex="0" class="tb">
-								<div class="ln" id="thick soup">
-									<span>濃湯</span>
-								</div>
-							</div>
+							<<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" id="button1">濃湯</button>
+							<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" data-bs-backdrop="static" aria-hidden="true">
 						</li>
 						<li class="un">
-							<div tabindex="0" class="tb">
-								<div class="ln" id="fried food">
-									<span>炸物</span>
-								</div>
-							</div>
+							<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" id="button1">炸物</button>
+							<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" data-bs-backdrop="static" aria-hidden="true">
 						</li>
 						<li class="un">
-							<div tabindex="0" class="tb">
-								<div class="ln" id="lanched vegetables">
-									<span>燙青菜</span>
-								</div>
-							</div>
+							<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" id="button1">燙青菜</button>
+							<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" data-bs-backdrop="static" aria-hidden="true">
 						</li>
 						<li class="un">
-							<div tabindex="0" class="tb">
-								<div class="ln" id="lu wei">
-									<span>滷味</span>
-								</div>
-							</div>
+							<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" id="button1">滷味</button>
+							<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" data-bs-backdrop="static" aria-hidden="true">
 						</li>
 					</ul>
 				</li>
@@ -384,32 +381,20 @@
 					<div class="in"></div>
 					<ul class="mg">
 						<li class="un">
-							<div tabindex="0" class="tb">
-								<div class="ln" id="tea">
-									<span>茶類</span>
-								</div>
-							</div>
+							<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" id="button1">茶類</button>
+							<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" data-bs-backdrop="static" aria-hidden="true">
 						</li>
 						<li class="un">
-							<div tabindex="0" class="tb">
-								<div class="ln" id="juice">
-									<span>果汁</span>
-								</div>
-							</div>
+							<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" id="button1">果汁</button>
+							<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" data-bs-backdrop="static" aria-hidden="true">
 						</li>
 						<li class="un">
-							<div tabindex="0" class="tb">
-								<div class="ln" id="coffee">
-									<span>咖啡</span>
-								</div>
-							</div>
+							<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" id="button1">咖啡</button>
+							<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" data-bs-backdrop="static" aria-hidden="true">
 						</li>
 						<li class="un">
-							<div tabindex="0" class="tb">
-								<div class="ln" id="Carbonated drinks">
-									<span>碳酸飲料</span>
-								</div>
-							</div>
+							<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" id="button1">碳酸飲料</button>
+							<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" data-bs-backdrop="static" aria-hidden="true">
 						</li>
 					</ul>
 				</li>
@@ -418,32 +403,20 @@
 					<div class="in"></div>
 					<ul class="mg">
 						<li class="un">
-							<div tabindex="0" class="tb">
-								<div class="ln" id="pudding">
-									<span>布丁</span>
-								</div>
-							</div>
+							<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" id="button1">布丁</button>
+							<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" data-bs-backdrop="static" aria-hidden="true">
 						</li>
 						<li class="un">
-							<div tabindex="0" class="tb">
-								<div class="ln" id="cake">
-									<span>蛋糕</span>
-								</div>
-							</div>
+							<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" id="button1">蛋糕</button>
+							<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" data-bs-backdrop="static" aria-hidden="true">
 						</li>
 						<li class="un">
-							<div tabindex="0" class="tb">
-								<div class="ln" id="panna cotta">
-									<span>奶酪</span>
-								</div>
-							</div>
+							<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" id="button1">奶酪</button>
+							<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" data-bs-backdrop="static" aria-hidden="true">
 						</li>
 						<li class="un">
-							<div tabindex="0" class="tb">
-								<div class="ln" id="cookie">
-									<span>餅乾</span>
-								</div>
-							</div>
+							<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" id="button1">餅乾</button>
+							<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" data-bs-backdrop="static" aria-hidden="true">
 						</li>
 					</ul>
 				</li>
