@@ -375,4 +375,10 @@ function checkLength(which) {
     document.getElementById("chLeft").innerHTML = curr.toString();
 
 }
+function c() {
+    m = confirm('這是彈跳確認視窗');
+    // 可透過真假值去做不同的變化
+    if(m == true)
+      alert("按下確定");
+  }
 })
