@@ -1,3 +1,6 @@
+// (document).ready(function(){
+
+// })
 function shoppingcart() { 
 
 } 
@@ -18,14 +21,14 @@ $(function(){
 //button
 $(function(){
 	var duration=300;
-	$('#button1 button')
+	$('#button1')
 		.on('mouseover', function(){
 			$(this).stop(true).animate({
 				backgroundColor:'#ae5e9b',
 				color: '#fff'
 			}, duration);
 		})
-		.on('mouseout button', function(){
+		.on('mouseout', function(){
 			$(this).stop(true).animate({
 				backgroundColor:'#fff',
 				color: '#ebc000'
@@ -33,3 +36,19 @@ $(function(){
 		});
 });
 
+$(function(){
+	$("select").change(function(){
+		$("select option:selected").each(function(){
+			var n=
+			$(".prodPic").show()
+		});
+	});
+
+})
+
+
+// $(function(){
+// 	$('#bodytlist_friedNoddles select option:selected').mouseover(function(){
+// 		$("#")
+// 	})
+// })
