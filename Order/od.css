@@ -13,11 +13,10 @@ select{
 }
 .shoppingcart{
     margin: 0;
-    box-shadow: 0 0 10px 0 rgb(0 0 0 / 45%);
-    font-size: 0.8em;
     padding: 15px;
-    background-color: #FFF;
+    background-color: bisque;
 }
+
 .container-all {
     display: flex;
     align-items: stretch;

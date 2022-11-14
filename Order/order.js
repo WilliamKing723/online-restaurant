@@ -21,7 +21,7 @@ $(function(){
 $(function(){
 	$(".am").each(function(){
 		$("button").on('click',function(){
-			if($(this).attr("id") === "shopSendBtn" || $(this).attr("id") === "shopQuit") {
+			if($(this).attr("id") === "shopSendBtn") {
                 return;
             }
 			$(".prodImg").each(function(){
@@ -33,42 +33,93 @@ $(function(){
 			});
 			switch($(this).text()){
 				case "炒麵": {
-					$("#bodytlist_friedNoodles").show();
+					$("#bodylist_friedNoodles").show();
 					break;
 				}
 				case "湯麵": {
-					$("#bodytlist_soupNoodles").show();
+					$("#bodylist_soupNoodles").show();
 					break;
 				}
 				case "乾麵": {
-					$("#bodytlist_dryNoodles").show();
+					$("#bodylist_dryNoodles").show();
 					break;
 				}
 				case "炒泡麵": {
-					$("#bodytlist_friedInstantNoodles").show();
+					$("#bodylist_friedInstantNoodles").show();
 					break;
 				}
 				case "酸辣粉": {
-					$("#bodytlist_powder").show();
+					$("#bodylist_powder").show();
 					break;
 				}
 				case "燴飯": {
-					$("#bodytlist_risotto").show();
+					$("#bodylist_risotto").show();
 					break;
 				}
 				case "炒飯": {
-					$("#bodytlist_friedRice").show();
+					$("#bodylist_friedRice").show();
 					break;
 				}
 				case "咖哩飯": {
-					$("#bodytlist_curryRice").show();
+					$("#bodylist_curryRice").show();
 					break;
 				}
 				case "丼飯": {
-					$("#bodytlist_donburi").show();
+					$("#bodylist_donburi").show();
 					break;
 				}
-
+                case "沙拉": {
+					$("#bodylist_salad").show();
+					break;
+				}
+                case "濃湯": {
+					$("#bodylist_thickSoup").show();
+					break;
+				}
+                case "炸物": {
+					$("#bodylist_friedfood").show();
+					break;
+				}
+                case "燙青菜": {
+					$("#bodylist_vegetables").show();
+					break;
+				}
+                case "滷味": {
+					$("#bodylist_luWei").show();
+					break;
+				}
+                case "茶類": {
+					$("#bodylist_tea").show();
+					break;
+				}
+                case "果汁": {
+					$("#bodylist_juice").show();
+					break;
+				}
+                case "咖啡": {
+					$("#bodylist_coffee").show();
+					break;
+				}
+                case "碳酸飲料": {
+					$("#bodylist_carbonatedDrinks").show();
+					break;
+				}
+                case "布丁": {
+					$("#bodylist_pudding").show();
+					break;
+				}
+                case "蛋糕": {
+					$("#bodylist_cake").show();
+					break;
+				}
+                case "奶酪": {
+					$("#bodylist_salad").show();
+					break;
+				}
+                case "餅乾": {
+					$("#bodylist_salad").show();
+					break;
+				}
 			}
 		});
 		
@@ -82,86 +133,183 @@ $(function(){
 		});
 		switch($("#exampleModalLabel").text()){
             case"炒麵":{
-                $("#bodytlist_friedNoodles").find("option").each(function(index){
-                    if(index === $("#bodytlist_friedNoodles")[0].selectedIndex) {
+                $("#bodylist_friedNoodles").find("option").each(function(index){
+                    if(index === $("#bodylist_friedNoodles")[0].selectedIndex) {
                         $("#friedNoodlesImg"+index).show();
                     }
                 });
                 break;
             }
             case"湯麵":{
-                $("#bodytlist_soupNoodles").find("option").each(function(index){
-                    if(index === $("#bodytlist_soupNoodles")[0].selectedIndex) {
+                $("#bodylist_soupNoodles").find("option").each(function(index){
+                    if(index === $("#bodylist_soupNoodles")[0].selectedIndex) {
                         $("#soupNoodlesImg"+index).show();
                     } 
                 });
                 break;
             }
 			case"乾麵":{
-                $("#bodytlist_dryNoodles").find("option").each(function(index){
-                    if(index === $("#bodytlist_dryNoodles")[0].selectedIndex) {
+                $("#bodylist_dryNoodles").find("option").each(function(index){
+                    if(index === $("#bodylist_dryNoodles")[0].selectedIndex) {
                         $("#dryNoodlesImg"+index).show();
                     } 
                 });
                 break;
             }
 			case"炒泡麵":{
-                $("#bodytlist_friedInstantNoodles").find("option").each(function(index){
-                    if(index === $("#bodytlist_friedInstantNoodles")[0].selectedIndex) {
+                $("#bodylist_friedInstantNoodles").find("option").each(function(index){
+                    if(index === $("#bodylist_friedInstantNoodles")[0].selectedIndex) {
                         $("#friedInstantNoodlesImg"+index).show();
                     } 
                 });
                 break;
             }
 			case"酸辣粉":{
-                $("#bodytlist_powder").find("option").each(function(index){
-                    if(index === $("#bodytlist_powder")[0].selectedIndex) {
+                $("#bodylist_powder").find("option").each(function(index){
+                    if(index === $("#bodylist_powder")[0].selectedIndex) {
                         $("#powderImg"+index).show();
                     } 
                 });
                 break;
             }
 			case"燴飯":{
-                $("#bodytlist_risotto").find("option").each(function(index){
-                    if(index === $("#bodytlist_risotto")[0].selectedIndex) {
+                $("#bodylist_risotto").find("option").each(function(index){
+                    if(index === $("#bodylist_risotto")[0].selectedIndex) {
                         $("#risottoImg"+index).show();
                     } 
                 });
                 break;
             }
 			case"炒飯":{
-                $("#bodytlist_friedRice").find("option").each(function(index){
-                    if(index === $("#bodytlist_friedRice")[0].selectedIndex) {
+                $("#bodylist_friedRice").find("option").each(function(index){
+                    if(index === $("#bodylist_friedRice")[0].selectedIndex) {
                         $("#friedRiceImg"+index).show();
                     } 
                 });
                 break;
             }
 			case"咖哩飯":{
-                $("#bodytlist_curryRice").find("option").each(function(index){
-                    if(index === $("#bodytlist_curryRice")[0].selectedIndex) {
+                $("#bodylist_curryRice").find("option").each(function(index){
+                    if(index === $("#bodylist_curryRice")[0].selectedIndex) {
                         $("#curryRiceImg"+index).show();
                     } 
                 });
                 break;
             }
 			case"丼飯":{
-                $("#bodytlist_donburi").find("option").each(function(index){
-                    if(index === $("#bodytlist_donburi")[0].selectedIndex) {
+                $("#bodylist_donburi").find("option").each(function(index){
+                    if(index === $("#bodylist_donburi")[0].selectedIndex) {
                         $("#donburiImg"+index).show();
                     } 
                 });
                 break;
             }
 			case"沙拉":{
-                $("#bodytlist_powder").find("option").each(function(index){
-                    if(index === $("#bodytlist_powder")[0].selectedIndex) {
+                $("#bodylist_powder").find("option").each(function(index){
+                    if(index === $("#bodylist_powder")[0].selectedIndex) {
                         $("#powderImg"+index).show();
                     } 
                 });
                 break;
             }
+            case"濃湯":{
+                $("#bodylist_thickSou").find("option").each(function(index){
+                    if(index === $("#bodylist_thickSoup")[0].selectedIndex) {
+                        $("#thickSouImg"+index).show();
+                    }
+                });
+                break;
+            }
+            case"炸物":{
+                $("#bodylist_friedfood").find("option").each(function(index){
+                    if(index === $("#bodylist_friedfood")[0].selectedIndex) {
+                        $("#friedfoodImg"+index).show();
+                    }
+                });
+                break;
+            }
+            case"燙青菜":{
+                $("#bodylist_vegetables").find("option").each(function(index){
+                    if(index === $("#bodylist_vegetables")[0].selectedIndex) {
+                        $("#vegetablesImg"+index).show();
+                    }
+                });
+                break;
+            }
+            case"滷味":{
+                $("#bodylist_luWei").find("option").each(function(index){
+                    if(index === $("#bodylist_luWei")[0].selectedIndex) {
+                        $("#luWeiImg"+index).show();
+                    }
+                });
+                break;
+            }
+            case"茶類":{
+                $("#bodylist_tea").find("option").each(function(index){
+                    if(index === $("#bodylist_tea")[0].selectedIndex) {
+                        $("#teaImg"+index).show();
+                    }
+                });
+                break;
+            }
+            case"果汁":{
+                $("#bodylist_juice").find("option").each(function(index){
+                    if(index === $("#bodylist_juice")[0].selectedIndex) {
+                        $("#juiceImg"+index).show();
+                    }
+                });
+                break;
+            }
+            case"咖啡":{
+                $("#bodylist_coffee").find("option").each(function(index){
+                    if(index === $("#bodylist_coffee")[0].selectedIndex) {
+                        $("#coffeeImg"+index).show();
+                    }
+                });
+                break;
+            }
+            case"碳酸飲料":{
+                $("#bodylist_carbonatedDrinks").find("option").each(function(index){
+                    if(index === $("#bodylist_carbonatedDrinks")[0].selectedIndex) {
+                        $("#carbonatedDrinksImg"+index).show();
+                    }
+                });
+                break;
+            }
+            case"布丁":{
+                $("#bodylist_pudding").find("option").each(function(index){
+                    if(index === $("#bodylist_pudding")[0].selectedIndex) {
+                        $("#puddingImg"+index).show();
+                    }
+                });
+                break;
+            }
+            case"蛋糕":{
+                $("#bodylist_cake").find("option").each(function(index){
+                    if(index === $("#bodylist_cake")[0].selectedIndex) {
+                        $("#cakeImg"+index).show();
+                    }
+                });
+                break;
+            }
+            case"奶酪":{
+                $("#bodylist_pannaCotta").find("option").each(function(index){
+                    if(index === $("#bodylist_pannaCotta")[0].selectedIndex) {
+                        $("#pannaCottaImg"+index).show();
+                    }
+                });
+                break;
+            }
+            case"餅乾":{
+                $("#bodylist_cookies").find("option").each(function(index){
+                    if(index === $("#bodylist_cookies")[0].selectedIndex) {
+                        $("#cookiesImg"+index).show();
+                    }
+                });
+                break;
+            }
         }
-	});
+    })
 });
+
 
