@@ -25,9 +25,9 @@ select{
     margin-right: auto;
     margin-left: auto;
 }
-/* body{
-    background-color: #ebc000;
-} */
+body{
+    background-color: bisque;
+}
 #sidebar {
     position: sticky ;
     top:0;
@@ -123,6 +123,12 @@ ul ul li a{
     width: 100%;
     padding: 5px;
 }
+
+.pagination{
+    align-items: center;
+    justify-content: center;
+}
+
 .am{
     list-style: none;
     display: block;
