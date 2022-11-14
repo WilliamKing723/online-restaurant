@@ -18,24 +18,6 @@ $(function(){
 	}).scroll();
 });
 
-//button
-$(function(){
-	var duration=300;
-	$('#button1')
-		.on('mouseover', function(){
-			$(this).stop(true).animate({
-				backgroundColor:'#ae5e9b',
-				color: '#fff'
-			}, duration);
-		})
-		.on('mouseout', function(){
-			$(this).stop(true).animate({
-				backgroundColor:'#fff',
-				color: '#ebc000'
-			}, duration);
-		});
-});
-
 $(function(){
 	$(".am").each(function(){
 		$("button").on('click',function(){
@@ -59,14 +41,34 @@ $(function(){
 					break;
 				}
 				case "乾麵": {
+					$("#bodytlist_dryNoodles").show();
 					break;
 				}
 				case "炒泡麵": {
+					$("#bodytlist_friedInstantNoodles").show();
 					break;
 				}
 				case "酸辣粉": {
+					$("#bodytlist_powder").show();
 					break;
 				}
+				case "燴飯": {
+					$("#bodytlist_risotto").show();
+					break;
+				}
+				case "炒飯": {
+					$("#bodytlist_friedRice").show();
+					break;
+				}
+				case "咖哩飯": {
+					$("#bodytlist_curryRice").show();
+					break;
+				}
+				case "丼飯": {
+					$("#bodytlist_donburi").show();
+					break;
+				}
+
 			}
 		});
 		
@@ -95,12 +97,71 @@ $(function(){
                 });
                 break;
             }
+			case"乾麵":{
+                $("#bodytlist_dryNoodles").find("option").each(function(index){
+                    if(index === $("#bodytlist_dryNoodles")[0].selectedIndex) {
+                        $("#dryNoodlesImg"+index).show();
+                    } 
+                });
+                break;
+            }
+			case"炒泡麵":{
+                $("#bodytlist_friedInstantNoodles").find("option").each(function(index){
+                    if(index === $("#bodytlist_friedInstantNoodles")[0].selectedIndex) {
+                        $("#friedInstantNoodlesImg"+index).show();
+                    } 
+                });
+                break;
+            }
+			case"酸辣粉":{
+                $("#bodytlist_powder").find("option").each(function(index){
+                    if(index === $("#bodytlist_powder")[0].selectedIndex) {
+                        $("#powderImg"+index).show();
+                    } 
+                });
+                break;
+            }
+			case"燴飯":{
+                $("#bodytlist_risotto").find("option").each(function(index){
+                    if(index === $("#bodytlist_risotto")[0].selectedIndex) {
+                        $("#risottoImg"+index).show();
+                    } 
+                });
+                break;
+            }
+			case"炒飯":{
+                $("#bodytlist_friedRice").find("option").each(function(index){
+                    if(index === $("#bodytlist_friedRice")[0].selectedIndex) {
+                        $("#friedRiceImg"+index).show();
+                    } 
+                });
+                break;
+            }
+			case"咖哩飯":{
+                $("#bodytlist_curryRice").find("option").each(function(index){
+                    if(index === $("#bodytlist_curryRice")[0].selectedIndex) {
+                        $("#curryRiceImg"+index).show();
+                    } 
+                });
+                break;
+            }
+			case"丼飯":{
+                $("#bodytlist_donburi").find("option").each(function(index){
+                    if(index === $("#bodytlist_donburi")[0].selectedIndex) {
+                        $("#donburiImg"+index).show();
+                    } 
+                });
+                break;
+            }
+			case"沙拉":{
+                $("#bodytlist_powder").find("option").each(function(index){
+                    if(index === $("#bodytlist_powder")[0].selectedIndex) {
+                        $("#powderImg"+index).show();
+                    } 
+                });
+                break;
+            }
         }
 	});
 });
 
-// $(function(){
-// 	$('#bodytlist_friedNoddles select option:selected').mouseover(function(){
-// 		$("#")
-// 	})
-// })
