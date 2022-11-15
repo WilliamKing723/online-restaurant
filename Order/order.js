@@ -1,9 +1,7 @@
 // (document).ready(function(){
 
 // })
-function shoppingcart() { 
 
-} 
 //backTop
 $(function(){
 	$('#BackTop').click(function(){ 
@@ -17,7 +15,7 @@ $(function(){
 		}
 	}).scroll();
 });
-
+// 選單
 $(function(){
 	$(".am").each(function(){
 		$("button").on('click',function(){
@@ -25,8 +23,13 @@ $(function(){
                 return;
             }
 			$(".prodImg").each(function(){
-				$(this).hide();
+                $(this).hide();
 			});
+            $("#" + $(this).attr("id") + "Img").show();
+            console.log("#" + $(this).attr("id") + "Img");
+            // if($(this).attr("id") === "salad") {
+            //     $("#saladImg").show();
+            // }
 			$("#exampleModalLabel").text($(this).text());
 			$(".selectStyle").each(function(){
 				$(this).val(0).hide();
@@ -113,11 +116,11 @@ $(function(){
 					break;
 				}
                 case "奶酪": {
-					$("#bodylist_salad").show();
+					$("#bodylist_pannaCotta").show();
 					break;
 				}
                 case "餅乾": {
-					$("#bodylist_salad").show();
+					$("#bodylist_cookies").show();
 					break;
 				}
 			}
@@ -125,7 +128,7 @@ $(function(){
 		
 	});
 });
-
+// 根據選單切換圖片
 $(function(){
     $(".selectStyle").change(function(){
 		$(".prodImg").each(function(){
@@ -205,27 +208,15 @@ $(function(){
                 break;
             }
 			case"沙拉":{
-                $("#bodylist_powder").find("option").each(function(index){
-                    if(index === $("#bodylist_powder")[0].selectedIndex) {
-                        $("#powderImg"+index).show();
-                    } 
-                });
+                    $("#saladImg").show();
                 break;
             }
             case"濃湯":{
-                $("#bodylist_thickSou").find("option").each(function(index){
-                    if(index === $("#bodylist_thickSoup")[0].selectedIndex) {
-                        $("#thickSouImg"+index).show();
-                    }
-                });
+                    $("#thickSoupImg").show();
                 break;
             }
             case"炸物":{
-                $("#bodylist_friedfood").find("option").each(function(index){
-                    if(index === $("#bodylist_friedfood")[0].selectedIndex) {
-                        $("#friedfoodImg"+index).show();
-                    }
-                });
+                    $("#friedfoodImg").show();
                 break;
             }
             case"燙青菜":{

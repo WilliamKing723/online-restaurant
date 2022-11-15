@@ -14,6 +14,8 @@ app.use('/index.html', express.static(__dirname + "/index.html"));
 app.use('/Order', express.static(__dirname + "/Order"));
 app.use('/Feedback', express.static(__dirname + "/Feedback"));
 app.use('/Productprice', express.static(__dirname + "/Productprice"));
+app.use('/Payment', express.static(__dirname + "/Payment"));
+app.use('/takeMeal', express.static(__dirname + "/takeMeal"));
 
 
 app.get("/", function(req,res){
