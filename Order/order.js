@@ -1,3 +1,5 @@
+
+
 //backTop
 $(function(){
 	$('#BackTop').click(function(){ 
@@ -21,11 +23,17 @@ $(function(){
 			$(".prodImg").each(function(){
                 $(this).hide();
 			});
+            $(".prodText").each(function(){
+                $(this).hide();
+			});
             $("#" + $(this).attr("id") + "Img").show();
             console.log("#" + $(this).attr("id") + "Img");
             
 			$("#exampleModalLabel").text($(this).text());
 			$(".selectStyle").each(function(){
+				$(this).val(0).hide();
+			});
+            $(".prodPrice").each(function(){
 				$(this).val(0).hide();
 			});
             
@@ -130,6 +138,12 @@ $(function(){
 					$("#bodylist_cookies").show();
 					break;
 				}
+                case "雙人餐": {
+					$("#bodylist_friedNoodles").show();
+                    $("#bodylist_friedRice").show() ;
+                    $(".spicyCheck").show();
+					break;
+				}
 			}
 		});
 		
@@ -141,11 +155,19 @@ $(function(){
 		$(".prodImg").each(function(){
 			$(this).hide();
 		});
+        $(".prodPrice").each(function(){
+			$(this).hide();
+		});
+        $(".prodText").each(function(){
+            $(this).hide();
+        });
 		switch($("#exampleModalLabel").text()){
             case"炒麵":{
                 $("#bodylist_friedNoodles").find("option").each(function(index){
                     if(index === $("#bodylist_friedNoodles")[0].selectedIndex) {
                         $("#friedNoodlesImg"+index).show();
+                        $("#friedNoodlesText"+index).show();
+                        $("#friedNoodlesPrice"+index).show();
                     }
                 });
                 break;
@@ -154,6 +176,7 @@ $(function(){
                 $("#bodylist_soupNoodles").find("option").each(function(index){
                     if(index === $("#bodylist_soupNoodles")[0].selectedIndex) {
                         $("#soupNoodlesImg"+index).show();
+                        $("#soupNoodlesPrice"+index).show();
                     } 
                 });
                 break;
@@ -162,6 +185,7 @@ $(function(){
                 $("#bodylist_dryNoodles").find("option").each(function(index){
                     if(index === $("#bodylist_dryNoodles")[0].selectedIndex) {
                         $("#dryNoodlesImg"+index).show();
+                        $("#dryNoodlesPrice"+index).show();
                     } 
                 });
                 break;
@@ -170,6 +194,7 @@ $(function(){
                 $("#bodylist_friedInstantNoodles").find("option").each(function(index){
                     if(index === $("#bodylist_friedInstantNoodles")[0].selectedIndex) {
                         $("#friedInstantNoodlesImg"+index).show();
+                        $("#friedInstantNoodlesPrice"+index).show();
                     } 
                 });
                 break;
@@ -178,6 +203,7 @@ $(function(){
                 $("#bodylist_powder").find("option").each(function(index){
                     if(index === $("#bodylist_powder")[0].selectedIndex) {
                         $("#powderImg"+index).show();
+                        $("#powderPrice"+index).show();
                     } 
                 });
                 break;
@@ -186,6 +212,7 @@ $(function(){
                 $("#bodylist_risotto").find("option").each(function(index){
                     if(index === $("#bodylist_risotto")[0].selectedIndex) {
                         $("#risottoImg"+index).show();
+                        $("#risottoPrice"+index).show();
                     } 
                 });
                 break;
@@ -194,6 +221,7 @@ $(function(){
                 $("#bodylist_friedRice").find("option").each(function(index){
                     if(index === $("#bodylist_friedRice")[0].selectedIndex) {
                         $("#friedRiceImg"+index).show();
+                        $("#friedRicePrice"+index).show();
                     } 
                 });
                 break;
@@ -202,6 +230,7 @@ $(function(){
                 $("#bodylist_curryRice").find("option").each(function(index){
                     if(index === $("#bodylist_curryRice")[0].selectedIndex) {
                         $("#curryRiceImg"+index).show();
+                        $("#curryRicePrice"+index).show();
                     } 
                 });
                 break;
@@ -210,99 +239,99 @@ $(function(){
                 $("#bodylist_donburi").find("option").each(function(index){
                     if(index === $("#bodylist_donburi")[0].selectedIndex) {
                         $("#donburiImg"+index).show();
+                        $("#donburiPrice"+index).show();
                     } 
                 });
                 break;
             }
 			case"沙拉":{
                     $("#saladImg").show();
+                    $("#saladText").show();
+                    $("#saladPrice").show();
                 break;
             }
             case"濃湯":{
                     $("#thickSoupImg").show();
+                    $("#thickSoupText").show();
+                    $("#thickSoupPrice").show();
                 break;
             }
             case"炸物":{
-                    $("#friedfoodImg").show();
+                    $("#friedFoodImg").show();
+                    $("#friedFoodText").show();
+                    $("#friedFoodPrice").show();
                 break;
             }
             case"燙青菜":{
-                $("#bodylist_vegetables").find("option").each(function(index){
-                    if(index === $("#bodylist_vegetables")[0].selectedIndex) {
-                        $("#vegetablesImg"+index).show();
-                    }
-                });
+                    $("#vegetablesImg").show();
+                    $("#vegetablesText").show();
+                    $("#vegetablesPrice").show();
                 break;
             }
             case"滷味":{
-                $("#bodylist_luWei").find("option").each(function(index){
-                    if(index === $("#bodylist_luWei")[0].selectedIndex) {
-                        $("#luWeiImg"+index).show();
-                    }
-                });
+                    $("#luWeiImg").show();
+                    $("#luWeiText").show();
+                    $("#luWeiPrice").show();
                 break;
             }
             case"茶類":{
-                $("#bodylist_tea").find("option").each(function(index){
-                    if(index === $("#bodylist_tea")[0].selectedIndex) {
-                        $("#teaImg"+index).show();
-                    }
-                });
+                    $("#teaImg").show();
+                    $("#teaText").show();
+                    $("#teaPrice").show();
                 break;
             }
             case"果汁":{
-                $("#bodylist_juice").find("option").each(function(index){
-                    if(index === $("#bodylist_juice")[0].selectedIndex) {
-                        $("#juiceImg"+index).show();
-                    }
-                });
+                    $("#juiceImg").show();
+                    $("#juiceText").show();
+                    $("#juicePrice").show();
                 break;
             }
             case"咖啡":{
-                $("#bodylist_coffee").find("option").each(function(index){
-                    if(index === $("#bodylist_coffee")[0].selectedIndex) {
-                        $("#coffeeImg"+index).show();
-                    }
-                });
+                    $("#coffeeImg").show();
+                    $("#coffeeText").show();
+                    $("#coffeePrice").show();
                 break;
             }
             case"碳酸飲料":{
-                $("#bodylist_carbonatedDrinks").find("option").each(function(index){
-                    if(index === $("#bodylist_carbonatedDrinks")[0].selectedIndex) {
-                        $("#carbonatedDrinksImg"+index).show();
-                    }
-                });
+                    $("#carbonatedDrinksImg").show();
+                    $("#carbonatedDrinksText").show();
+                    $("#carbonatedDrinksPrice").show();
                 break;
             }
             case"布丁":{
-                $("#bodylist_pudding").find("option").each(function(index){
-                    if(index === $("#bodylist_pudding")[0].selectedIndex) {
-                        $("#puddingImg"+index).show();
-                    }
-                });
+                    $("#puddingImg").show();
+                    $("#puddingText").show();
+                    $("#puddingPrice").show();
                 break;
             }
             case"蛋糕":{
-                $("#bodylist_cake").find("option").each(function(index){
-                    if(index === $("#bodylist_cake")[0].selectedIndex) {
-                        $("#cakeImg"+index).show();
-                    }
-                });
+                    $("#cakeImg").show();
+                    $("#cakeText").show();
+                    $("#cakePrice").show();
                 break;
             }
             case"奶酪":{
-                $("#bodylist_pannaCotta").find("option").each(function(index){
-                    if(index === $("#bodylist_pannaCotta")[0].selectedIndex) {
-                        $("#pannaCottaImg"+index).show();
-                    }
-                });
+                    $("#pannaCottaImg").show();
+                    $("#pannaCottaText").show();
+                    $("#pannaCottaPrice").show();
                 break;
             }
             case"餅乾":{
-                $("#bodylist_cookies").find("option").each(function(index){
-                    if(index === $("#bodylist_cookies")[0].selectedIndex) {
-                        $("#cookiesImg"+index).show();
-                    }
+                    $("#cookiesImg").show();
+                    $("#cookiesText").show();
+                    $("#cookiesPrice").show();
+                break;
+            }
+            case"雙人餐":{
+                $("#bodylist_friedNoodles").find("option").each(function(index){
+                    if(index === $("#bodylist_friedNoodles")[0].selectedIndex) {
+                    $("#friedNoodlesImg"+index).show();
+                    } 
+                });
+                $("#bodylist_friedRice").find("option").each(function(index){
+                    if(index === $("#bodylist_friedRice")[0].selectedIndex) {
+                    $("#friedRiceImg"+index).show();
+                    } 
                 });
                 break;
             }
@@ -317,6 +346,7 @@ shoplist.time = "2020/12/30"
 shoplist.list = [
 
 ]
+
 
 function showlist(){
     $("#items_list").html("")
