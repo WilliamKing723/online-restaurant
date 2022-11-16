@@ -95,7 +95,7 @@ $(function(){
 					break;
 				}
                 case "炸物": {
-					$("#bodylist_friedfood").show();
+					$("#bodylist_friedFood").show();
 					break;
 				}
                 case "燙青菜": {
@@ -176,6 +176,7 @@ $(function(){
                 $("#bodylist_soupNoodles").find("option").each(function(index){
                     if(index === $("#bodylist_soupNoodles")[0].selectedIndex) {
                         $("#soupNoodlesImg"+index).show();
+                        $("#soupNoodlesText"+index).show();
                         $("#soupNoodlesPrice"+index).show();
                     } 
                 });
@@ -185,6 +186,7 @@ $(function(){
                 $("#bodylist_dryNoodles").find("option").each(function(index){
                     if(index === $("#bodylist_dryNoodles")[0].selectedIndex) {
                         $("#dryNoodlesImg"+index).show();
+                        $("#dryNoodlesText"+index).show();
                         $("#dryNoodlesPrice"+index).show();
                     } 
                 });
@@ -194,6 +196,7 @@ $(function(){
                 $("#bodylist_friedInstantNoodles").find("option").each(function(index){
                     if(index === $("#bodylist_friedInstantNoodles")[0].selectedIndex) {
                         $("#friedInstantNoodlesImg"+index).show();
+                        $("#friedInstantNoodlesText"+index).show();
                         $("#friedInstantNoodlesPrice"+index).show();
                     } 
                 });
@@ -203,6 +206,7 @@ $(function(){
                 $("#bodylist_powder").find("option").each(function(index){
                     if(index === $("#bodylist_powder")[0].selectedIndex) {
                         $("#powderImg"+index).show();
+                        $("#powderText"+index).show();
                         $("#powderPrice"+index).show();
                     } 
                 });
@@ -212,6 +216,7 @@ $(function(){
                 $("#bodylist_risotto").find("option").each(function(index){
                     if(index === $("#bodylist_risotto")[0].selectedIndex) {
                         $("#risottoImg"+index).show();
+                        $("#risottoText"+index).show();
                         $("#risottoPrice"+index).show();
                     } 
                 });
@@ -221,6 +226,7 @@ $(function(){
                 $("#bodylist_friedRice").find("option").each(function(index){
                     if(index === $("#bodylist_friedRice")[0].selectedIndex) {
                         $("#friedRiceImg"+index).show();
+                        $("#friedRiceText"+index).show();
                         $("#friedRicePrice"+index).show();
                     } 
                 });
@@ -230,6 +236,7 @@ $(function(){
                 $("#bodylist_curryRice").find("option").each(function(index){
                     if(index === $("#bodylist_curryRice")[0].selectedIndex) {
                         $("#curryRiceImg"+index).show();
+                        $("#curryRiceText"+index).show();
                         $("#curryRicePrice"+index).show();
                     } 
                 });
@@ -239,6 +246,7 @@ $(function(){
                 $("#bodylist_donburi").find("option").each(function(index){
                     if(index === $("#bodylist_donburi")[0].selectedIndex) {
                         $("#donburiImg"+index).show();
+                        $("#donburiText"+index).show();
                         $("#donburiPrice"+index).show();
                     } 
                 });

@@ -50,8 +50,8 @@
 	<div class="title">
 		<br> 
 		<div class="row">
-            <div class="col-lg-1 col-md-1 col-xs-12">*姓名</div>
-            <div class="col-lg-10 col-md-6 col-xs-12">
+            <div>*姓名</div>
+            <div>
                 <input class="McdTxtBox" id="Name" maxlength="10" name="Name" style="width: 120px;" type="text" value="">
                 <input type="radio" id="CustM" value="1" checked="" name="CustSex">
                 <label for="SexM">先生</label>
@@ -65,8 +65,8 @@
 		<br>
 		<div id="QuestionLabel">
             <div class="row">
-                <div class="col-lg-1 col-md-1 col-xs-12">*問題種類</div>
-                <div class="col-lg-10 col-md-11 col-xs-12">
+                <div>*問題種類</div>
+                <div>
                     <select class="form-control" id="sQuestionName" name="QuestionName" onchange="SetLabel(this);">
 						<option value="">請選擇</option>
 						<option value="1">餐廳產品.服務相關問題及意見</option>
@@ -126,7 +126,7 @@
         </div>
 		<br>
 		<br>
-	    </div>
+	</div>
 		<script>
 			jQuery(function ($) {
 				$.mask.definitions['y'] = '[2]';

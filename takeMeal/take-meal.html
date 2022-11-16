@@ -172,10 +172,19 @@
         </select>
     </div>
     <p></p>
-    <!-- <div>
-        <button class="submit" type="submit">下一步</button>
-    </div> -->
-</div>
+    <div id="QuestionLabel">
+        <div class="row">
+            <label>付款方式 <em>*</em></label> 
+                <select class="form-control" id="sQuestionName" name="QuestionName">
+                    <option value="">請選擇</option>
+                    <option value="1">VISA信用卡</option>
+                    <option value="2">LINE Pay</option>
+                    <option value="3">APPLE Pay</option>
+                    <option value="4">GOOGle Pay</option>
+                    <option value="5">貨到付款</option>
+                </select>
+        </div>
+    </div>
     <footer id="footer" class="footer">
 		<nav aria-label="...">
 			<ul class="pagination  pagination-lg">
@@ -183,8 +192,7 @@
 				<li class="page-item" ><a class="page-link">1</a></li>
 				<li class="page-item active"  aria-current="page"><a class="page-link">2</a></li>
 				<li class="page-item"><a class="page-link" >3</a></li>
-                <li class="page-item"><a class="page-link">4</a></li>
-				<li class="page-item"><a class="page-link" href="../Payment/payment.html">Next</a></li>
+				<li class="page-item"><a class="page-link" href="#">Next</a></li>
 			</ul>
 		</nav>
 	</footer>
