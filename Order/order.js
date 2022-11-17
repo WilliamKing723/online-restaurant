@@ -27,7 +27,6 @@ $(function(){
                 $(this).hide();
 			});
             $("#" + $(this).attr("id") + "Img").show();
-            console.log("#" + $(this).attr("id") + "Img");
             
 			$("#exampleModalLabel").text($(this).text());
 			$(".selectStyle").each(function(){
@@ -37,13 +36,22 @@ $(function(){
 				$(this).val(0).hide();
 			});
             
-            $("#spicyChoose1").each(function(){
-				$(this).val(null);
+            $(".spicyCheck").each(function(){
+				$(this).hide();
 			});
 			switch($(this).text()){
 				case "炒麵": {
 					$("#bodylist_friedNoodles").show();
-                    $(".spicyCheck").show();
+                    $(("#spicyChoose")).find(".selectText").each(function(index){
+                        if(index === $("#spicyChoose")[0].selectedIndex) {
+                            $(this).show();
+                        }
+                    })
+                    console.log($(("#spicyChoose")).find(".selectText").each(function(index){
+                        if(index === $("#spicyChoose")[0].selectedIndex) {
+                            $(this+index).show();
+                        }
+                    }));
 					break;
 				}
 				case "湯麵": {
@@ -161,6 +169,7 @@ $(function(){
         $(".prodText").each(function(){
             $(this).hide();
         });
+        
 		switch($("#exampleModalLabel").text()){
             case"炒麵":{
                 $("#bodylist_friedNoodles").find("option").each(function(index){
