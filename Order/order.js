@@ -26,9 +26,7 @@ $(function(){
             $(".prodText").each(function(){
                 $(this).hide();
 			});
-            $("#" + $(this).attr("id") + "Img").show();
-            console.log("#" + $(this).attr("id") + "Img");
-            
+            $("#" + $(this).attr("id") + "Img").show();            
 			$("#exampleModalLabel").text($(this).text());
 			$(".selectStyle").each(function(){
 				$(this).val(0).hide();
@@ -36,19 +34,15 @@ $(function(){
             $(".prodPrice").each(function(){
 				$(this).val(0).hide();
 			});
-            
-            $("#spicyChoose1").each(function(){
-				$(this).val(null);
-			});
+            $(".spicyCheck").hide();
+			$(".addCheck").hide();
 			switch($(this).text()){
 				case "炒麵": {
 					$("#bodylist_friedNoodles").show();
-                    $(".spicyCheck").show();
 					break;
 				}
 				case "湯麵": {
 					$("#bodylist_soupNoodles").show();
-                    $(".spicyCheck").show();
 					break;
 				}
 				case "乾麵": {
@@ -168,8 +162,13 @@ $(function(){
                         $("#friedNoodlesImg"+index).show();
                         $("#friedNoodlesText"+index).show();
                         $("#friedNoodlesPrice"+index).show();
+                        $(".spicyCheck").show();
+                        $("#addXL").show();
                     }
+                    
                 });
+                
+                
                 break;
             }
             case"湯麵":{
@@ -178,6 +177,7 @@ $(function(){
                         $("#soupNoodlesImg"+index).show();
                         $("#soupNoodlesText"+index).show();
                         $("#soupNoodlesPrice"+index).show();
+                        $(".spicyCheck").show();
                     } 
                 });
                 break;
