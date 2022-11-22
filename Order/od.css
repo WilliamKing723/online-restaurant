@@ -183,6 +183,13 @@ ul ul li a{
     height: 200px;
 }
 
+.send-box{text-align:center;}
+.badge-notify{
+    background:red;
+    width: 90%;
+}
+
+
 @media (max-width:990px){
     nav{
         height: auto;

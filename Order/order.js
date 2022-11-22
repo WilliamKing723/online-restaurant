@@ -16,8 +16,8 @@ $(function(){
 // 選單
 $(function(){
 	$(".am").each(function(){
-		$("button").on('click',function(){
-			if($(this).attr("id") === "shopSendBtn") {
+		$(".buttonJs").on('click',function(){
+			if($(this).attr("id") === "shopSendBtn" ) {
                 return;
             }
 			$(".prodImg").each(function(){
@@ -35,23 +35,17 @@ $(function(){
             $(".prodPrice").each(function(){
 				$(this).val(0).hide();
 			});
-            
             $(".spicyCheck").each(function(){
 				$(this).hide();
 			});
+            $(".my-cart-btn").each(function(){
+				$(this).hide();
+			});
+
 			switch($(this).text()){
 				case "炒麵": {
 					$("#bodylist_friedNoodles").show();
-                    $(("#spicyChoose")).find(".selectText").each(function(index){
-                        if(index === $("#spicyChoose")[0].selectedIndex) {
-                            $(this).show();
-                        }
-                    })
-                    console.log($(("#spicyChoose")).find(".selectText").each(function(index){
-                        if(index === $("#spicyChoose")[0].selectedIndex) {
-                            $(this+index).show();
-                        }
-                    }));
+                    $((".spicyCheck")).show();
 					break;
 				}
 				case "湯麵": {
@@ -154,7 +148,7 @@ $(function(){
 				}
 			}
 		});
-		
+        
 	});
 });
 // 根據選單切換圖片
@@ -169,6 +163,9 @@ $(function(){
         $(".prodText").each(function(){
             $(this).hide();
         });
+        $(".my-cart-btn").each(function(){
+            $(this).hide();
+        });
         
 		switch($("#exampleModalLabel").text()){
             case"炒麵":{
@@ -177,6 +174,7 @@ $(function(){
                         $("#friedNoodlesImg"+index).show();
                         $("#friedNoodlesText"+index).show();
                         $("#friedNoodlesPrice"+index).show();
+                        $("#friedNoodlesCart"+index).show();
                     }
                 });
                 break;
@@ -356,68 +354,73 @@ $(function(){
     })
 });
 
-var shoplist = {}
+// //shoppingcart
+// $(function(){
+//     $.ajax({
+//         url:"data.json",
+//         success:function(arr){
+//             for(var i=0; i<arr.lengh;i++){
+//                 var node = $(`<li class='goodItem'>
+//                     <div class="goodPic">
+//                         <img src="${arr[i].img}" alt=""/>
+//                     </div>
+//                     <div class="goodTitle">
+//                         <p>test</p>
+//                     </div>
+//                     <div class="sc">
+//                         <div id="${arr[i].id}" class="sc_btn"/> 加入購物車</div>
+//                     </div>
+//                     </li>`);
+//                     node.appendTo(".items_list ul")
+//                 }
+//         },
+//         error:function(msg){
+//             console.log(msg);
+//         } 
+//     })
+// });
 
-shoplist.name = "MyBuylist 購物清單"
-shoplist.time = "2020/12/30"
-shoplist.list = [
+//shoppingcart
+$(function () {
+    var goToCartIcon = function($addTocartBtn){
+    var $cartIcon = $(".my-cart-icon");
+    var $image = $('<img width="30px" height="30px" src="' + $addTocartBtn.data("image") + '"/>').css({"position": "fixed", "z-index": "999"});
+    $addTocartBtn.prepend($image);
+    var position = $cartIcon.position();
+    $image.animate({
+    top: position.top,
+    left: position.left
+    }, 500 , "linear", function() {
+    $image.remove();
+    });
+    }
 
-]
-
-
-function showlist(){
-    $("#items_list").html("")
-    
-    let total_price = 0
-
-for(let i=0; i<shoplist.list.length; i++){
-    let item = shoplist.list[i]
-
-    let id = 0,num = 0,name = 0,price = 0,del_id = 0
-
-    id = `buyItem${i+1}`
-    num = i+1
-    name = item.name
-    price = item.price
-    del_id = `delItem${i+1}`
-    total_price += parseInt(item.price) 
-
-    let item_html=`<li id=${id} class="buy_item">${num}.${name}
-        <div class="price">${price}</div>
-        <div id=${del_id} class="del_btn">X</div>
-    </li>`
-
-
-
-    $("#items_list").append(item_html)
-    $(`#${del_id}`).click(function(){
-    removeItem(i)
+    $('.my-cart-btn').myCart({
+    currencySymbol: '$',
+    classCartIcon: 'my-cart-icon',
+    classCartBadge: 'my-cart-badge',
+    classProductQuantity: 'my-product-quantity',
+    classProductRemove: 'my-product-remove',
+    classCheckoutCart: 'my-cart-checkout',
+    affixCartIcon: true,
+    showCheckoutModal: true,
+    numberOfDecimals: 2,
+    clickOnAddToCart: function($addTocart){
+        goToCartIcon($addTocart);
+    },
+    afterAddOnCart: function(products, totalPrice, totalQuantity) {
+        console.log("afterAddOnCart", products, totalPrice, totalQuantity);
+    },
+    // clickOnCartIcon: function($cartIcon, products, totalPrice, totalQuantity) {
+    //     console.log("cart icon clicked", $cartIcon, products, totalPrice, totalQuantity);
+    // },
+    checkoutCart: function(products, totalPrice, totalQuantity) {
+        
+    },
+    // getDiscountPrice: function(products, totalPrice, totalQuantity) {
+    //     console.log("calculating discount", products, totalPrice, totalQuantity);
+    //     return totalPrice * 0.5;
+    // }
     })
-}
-
-let total = `<li class="buy_item total">總價
-    <div class="price">${total_price}</div>
-</li>`
-$("#items_list").append(total)
-}
-showlist()
-
-
-
-$(".addbtn").click(function(){
-shoplist.list.push({
-    name:$("#input_name").val(),
-    price:$("#input_price").val()
-})
-
-$("#input_name").val("")
-$("#input_price").val("")
-
-showlist()
-})
-
-function removeItem(id){
-shoplist.list.splice(id,1)
-showlist()
-}
-
+    ;
+    });

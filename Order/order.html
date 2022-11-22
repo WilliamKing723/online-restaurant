@@ -4,13 +4,15 @@
 	<meta mame="viewpoint" content="width=device-width, initial-scale=1.0">
 	<meta charset="utf-8" />
 	<title>Online-Restaurant</title>
+	<!-- JQuery連結 -->
+	<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+	<script src="https://mwt.tw/lib/js/jquery-2.2.3.min.js"></script>
+    <script src="https://mwt.tw/lib/js/jquery.mycart.js"></script>
+    <script src="https://mwt.tw/lib/js/bootstrap.min.js"></script>
 	<!-- Bootstrap 連結 -->
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
-	<!-- JQuery連結 -->
-	<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
-	<script src="https://cdn.staticfile.org/jquery/3.4.0/jquery.min.js"></script>
-	<script src="https://cdn.staticfile.org/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+	<script src="https://mwt.tw/lib/js/bootstrap.min.js"></script>
 	<!-- FontAwesome 連結 -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 	<script src="/Order/order.js"></script>
@@ -42,27 +44,6 @@
 					<a class="nav-link" href="#">Google Forms</a>
 					</li>
 				</ul>
-				<!--
-				<div class="shoppingcart">
-					<a href="#" type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#shoppingcart">Shopping Cart</a>
-				</div>
-				<div class="modal fade" id="shoppingcart">
-					<div class="modal-dialog">
-						<div class="modal-content">
-							
-							<div class="modal-header">
-								<h3>Shopping Cart</h3>
-								<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-							</div>
-							
-							<div class="modal-body">
-							</div>
-							
-							<div class="modal-footer">
-							</div>
-						</div>
-					</div>
-				</div> -->
 				<form style="width:300px;" class="input-group">
 					<input  class="form-control me-3" type="search" placeholder="搜尋">
 					<button  class="btn btn-success" type="submit">Search</button>
@@ -157,7 +138,7 @@
 					<ul class="mg">
 						<li class="un">
 							<div>
-								<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" >炒麵</button>
+								<button type="button" class="btn btn-primary buttonJs" data-bs-toggle="modal" data-bs-target="#exampleModal">炒麵</button>
 								<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" data-bs-backdrop="static" aria-hidden="true">
 									<div class="modal-dialog modal-dialog-centered ">
 										<div class="modal-content">
@@ -619,7 +600,11 @@
 												</div>
 											</div>
 											<div class="modal-footer">
-											<button type="button" class="btn btn-primary" id="shopSendBtn">add shoppingCart</button>
+											<button class="btn btn-danger my-cart-btn" id="friedNoodlesCart1" data-id="1" data-name="product 1" data-summary="summary 1" data-price="110" data-quantity="1" data-image="https://tokyo-kitchen.icook.network/uploads/recipe/cover/254179/d1d69593d2f4fb80.jpg">add shoppingCart</button>
+											<button class="btn btn-danger my-cart-btn" id="friedNoodlesCart2" data-id="2" data-name="product 2" data-summary="summary 2" data-price="120" data-quantity="1" data-image="https://img-global.cpcdn.com/recipes/982fed7110ce1e0c/1200x630cq70/photo.jpg">add shoppingCart</button>
+											<button class="btn btn-danger my-cart-btn" id="friedNoodlesCart3" data-id="3" data-name="product 3" data-summary="summary 3" data-price="100" data-quantity="1" data-image="https://img.ltn.com.tw/Upload/food/page/2016/09/06/160906-3133-00-b5Pq1.jpg">add shoppingCart</button>
+											<button class="btn btn-danger my-cart-btn" id="friedNoodlesCart4" data-id="4" data-name="product 4" data-summary="summary 4" data-price="100" data-quantity="1" data-image="https://bussfood.com/Data/Images/20161006/13/440cd465a88295860b52160be5faa617.jpg">add shoppingCart</button>
+											<button class="btn btn-danger my-cart-btn" id="friedNoodlesCart5" data-id="5" data-name="product 5" data-summary="summary 5" data-price="90" data-quantity="1" data-image="https://tokyo-kitchen.icook.network/uploads/recipe/cover/371764/291b9f8fae5c7bbb.jpg">add shoppingCart</button>
 											</div>
 										</div>
 									</div>
@@ -627,22 +612,22 @@
 							</div>
 						</li>
 						<li class="un">
-							<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" >湯麵</button>
+							<button type="button" class="btn btn-primary buttonJs" data-bs-toggle="modal" data-bs-target="#exampleModal" >湯麵</button>
 							<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" data-bs-backdrop="static" aria-hidden="true">
 							</div>
 						</li>
 						<li class="un">
-							<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" >乾麵</button>
+							<button type="button" class="btn btn-primary buttonJs" data-bs-toggle="modal" data-bs-target="#exampleModal" >乾麵</button>
 							<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" data-bs-backdrop="static" aria-hidden="true">
 							</div>
 						</li>
 						<li class="un">
-							<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" >炒泡麵</button>
+							<button type="button" class="btn btn-primary buttonJs" data-bs-toggle="modal" data-bs-target="#exampleModal" >炒泡麵</button>
 							<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" data-bs-backdrop="static" aria-hidden="true">
 							</div>
 						</li>
 						<li class="un">
-							<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" >酸辣粉</button>
+							<button type="button" class="btn btn-primary buttonJs" data-bs-toggle="modal" data-bs-target="#exampleModal" >酸辣粉</button>
 							<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" data-bs-backdrop="static" aria-hidden="true">
 							</div>
 						</li>
@@ -653,19 +638,19 @@
 					<div class="in"></div>
 					<ul class="mg">
 						<li class="un">
-							<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" >燴飯</button>
+							<button type="button" class="btn btn-primary buttonJs" data-bs-toggle="modal" data-bs-target="#exampleModal" >燴飯</button>
 							<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" data-bs-backdrop="static" aria-hidden="true">
 						</li>
 						<li class="un">
-							<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" >炒飯</button>
+							<button type="button" class="btn btn-primary buttonJs" data-bs-toggle="modal" data-bs-target="#exampleModal" >炒飯</button>
 							<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" data-bs-backdrop="static" aria-hidden="true">
 						</li>
 						<li class="un">
-							<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" >咖哩飯</button>
+							<button type="button" class="btn btn-primary buttonJs" data-bs-toggle="modal" data-bs-target="#exampleModal" >咖哩飯</button>
 							<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" data-bs-backdrop="static" aria-hidden="true">
 						</li>
 						<li class="un">
-							<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" >丼飯</button>
+							<button type="button" class="btn btn-primary buttonJs" data-bs-toggle="modal" data-bs-target="#exampleModal" >丼飯</button>
 							<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" data-bs-backdrop="static" aria-hidden="true">
 						</li>
 					</ul>
@@ -697,23 +682,23 @@
 					<div class="in"></div>
 					<ul class="mg">
 						<li class="un">
-							<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" id="salad" >沙拉</button>
+							<button type="button" class="btn btn-primary buttonJs" data-bs-toggle="modal" data-bs-target="#exampleModal" id="salad" >沙拉</button>
 							<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" data-bs-backdrop="static" aria-hidden="true">
 						</li>
 						<li class="un">
-							<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" id="thickSoup" >濃湯</button>
+							<button type="button" class="btn btn-primary buttonJs" data-bs-toggle="modal" data-bs-target="#exampleModal" id="thickSoup" >濃湯</button>
 							<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" data-bs-backdrop="static" aria-hidden="true">
 						</li>
 						<li class="un">
-							<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" id="friedFood" >炸物</button>
+							<button type="button" class="btn btn-primary buttonJs" data-bs-toggle="modal" data-bs-target="#exampleModal" id="friedFood" >炸物</button>
 							<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" data-bs-backdrop="static" aria-hidden="true">
 						</li>
 						<li class="un">
-							<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" id="vegetables" >燙青菜</button>
+							<button type="button" class="btn btn-primary buttonJs" data-bs-toggle="modal" data-bs-target="#exampleModal" id="vegetables" >燙青菜</button>
 							<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" data-bs-backdrop="static" aria-hidden="true">
 						</li>
 						<li class="un">
-							<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" id="luWei" >滷味</button>
+							<button type="button" class="btn btn-primar buttonJs" data-bs-toggle="modal" data-bs-target="#exampleModal" id="luWei" >滷味</button>
 							<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" data-bs-backdrop="static" aria-hidden="true">
 						</li>
 					</ul>
@@ -723,19 +708,19 @@
 					<div class="in"></div>
 					<ul class="mg">
 						<li class="un">
-							<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" id="tea" >茶類</button>
+							<button type="button" class="btn btn-primary buttonJs" data-bs-toggle="modal" data-bs-target="#exampleModal" id="tea" >茶類</button>
 							<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" data-bs-backdrop="static" aria-hidden="true">
 						</li>
 						<li class="un">
-							<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" id="juice" >果汁</button>
+							<button type="button" class="btn btn-primary buttonJs" data-bs-toggle="modal" data-bs-target="#exampleModal" id="juice" >果汁</button>
 							<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" data-bs-backdrop="static" aria-hidden="true">
 						</li>
 						<li class="un">
-							<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" id="coffee" >咖啡</button>
+							<button type="button" class="btn btn-primary buttonJs" data-bs-toggle="modal" data-bs-target="#exampleModal" id="coffee" >咖啡</button>
 							<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" data-bs-backdrop="static" aria-hidden="true">
 						</li>
 						<li class="un">
-							<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" id="carbonatedDrinks" >碳酸飲料</button>
+							<button type="button" class="btn btn-primary buttonJs" data-bs-toggle="modal" data-bs-target="#exampleModal" id="carbonatedDrinks" >碳酸飲料</button>
 							<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" data-bs-backdrop="static" aria-hidden="true">
 						</li>
 					</ul>
@@ -745,19 +730,19 @@
 					<div class="in"></div>
 					<ul class="mg">
 						<li class="un">
-							<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" id="pudding" >布丁</button>
+							<button type="button" class="btn btn-primary buttonJs" data-bs-toggle="modal" data-bs-target="#exampleModal" id="pudding" >布丁</button>
 							<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" data-bs-backdrop="static" aria-hidden="true">
 						</li>
 						<li class="un">
-							<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" id="cake" >蛋糕</button>
+							<button type="button" class="btn btn-primary buttonJs" data-bs-toggle="modal" data-bs-target="#exampleModal" id="cake" >蛋糕</button>
 							<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" data-bs-backdrop="static" aria-hidden="true">
 						</li>
 						<li class="un">
-							<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" id="pannaCotta" >奶酪</button>
+							<button type="button" class="btn btn-primary buttonJs" data-bs-toggle="modal" data-bs-target="#exampleModal" id="pannaCotta" >奶酪</button>
 							<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" data-bs-backdrop="static" aria-hidden="true">
 						</li>
 						<li class="un">
-							<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" id="cookies" >餅乾</button>
+							<button type="button" class="btn btn-primary buttonJs" data-bs-toggle="modal" data-bs-target="#exampleModal" id="cookies" >餅乾</button>
 							<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" data-bs-backdrop="static" aria-hidden="true">
 						</li>
 					</ul>
@@ -767,7 +752,7 @@
 					<div class="in"></div>
 					<ul class="mg">
 						<li class="un">
-							<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"  >雙人餐</button>
+							<button type="button" class="btn btn-primary buttonJs" data-bs-toggle="modal" data-bs-target="#exampleModal"  >雙人餐</button>
 							<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" data-bs-backdrop="static" aria-hidden="true">
 						</li>
 						<li class="un">
@@ -812,12 +797,12 @@
 		<div class="shoppingcart col-sm-3">
 			<div class="row">
 					<div class="send-box">
-						<button type="button" class="btnSendCart"><img src="../Img/shoppingcart.png"></button>
+						<span class="my-cart-icon"><img src="../Img/shoppingcart.png"><span class="badge badge-notify my-cart-badge"></span></span>
 					</div> 
 				<div class="row">
 					<div class="shoppingcontent">
 						<div id="items_list">
-							存放購物車資料	
+							
 						</div>
 							
 					</div>
