@@ -183,12 +183,18 @@ ul ul li a{
     height: 200px;
 }
 
+
 .send-box{text-align:center;}
-.badge-notify{
+.badge{
     background:red;
     width: 90%;
 }
-
+.my-cart-icon {
+    height: auto;
+}
+/* #myModalLabel{
+    float: left;
+} */
 
 @media (max-width:990px){
     nav{
