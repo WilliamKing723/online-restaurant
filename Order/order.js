@@ -44,11 +44,13 @@ $(function(){
             $(".my-cart-btn").each(function(){
 				$(this).hide();
 			});
-
+            $("input:radio").attr("checked", false);
+            $("input:checkbox").attr("checked", false);
 			switch($(this).text()){
 				case "炒麵": {
 					$("#bodylist_friedNoodles").show();
                     $(".spicyCheck").show();
+                    $(".addCheck").show();
 					break;
 				}
 				case "湯麵": {
@@ -178,6 +180,8 @@ $(function(){
                         $("#friedNoodlesText"+index).show();
                         $("#friedNoodlesPrice"+index).show();
                         $("#friedNoodlesCart"+index).show();
+                        $("input:radio").attr("checked", false);
+                        $("input:checkbox").attr("checked", false);
                     }
                     
                 });
@@ -366,7 +370,7 @@ $(function(){
 //     $.ajax({
 //         url:"data.json",
 //         success:function(arr){
-//             for(var i=0; i<arr.lengh;i++){
+//             for(var i=0; i<arr.length;i++){
 //                 var node = $(`<li class='goodItem'>
 //                     <div class="goodPic">
 //                         <img src="${arr[i].img}" alt=""/>
@@ -378,7 +382,7 @@ $(function(){
 //                         <div id="${arr[i].id}" class="sc_btn"/> 加入購物車</div>
 //                     </div>
 //                     </li>`);
-//                     node.appendTo(".items_list ul")
+//                     node.appendTo("#items_list ul")
 //                 }
 //         },
 //         error:function(msg){
