@@ -50,7 +50,7 @@ $(function(){
 				}
 				case "湯麵": {
 					$("#bodylist_soupNoodles").show();
-                    $(".spicyCheck").show();
+                    $((".spicyCheck")).show();
 					break;
 				}
 				case "乾麵": {
@@ -176,7 +176,10 @@ $(function(){
                         $("#friedNoodlesPrice"+index).show();
                         $("#friedNoodlesCart"+index).show();
                     }
+                    
                 });
+                
+                
                 break;
             }
             case"湯麵":{
@@ -185,6 +188,7 @@ $(function(){
                         $("#soupNoodlesImg"+index).show();
                         $("#soupNoodlesText"+index).show();
                         $("#soupNoodlesPrice"+index).show();
+                        
                     } 
                 });
                 break;
