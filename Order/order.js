@@ -38,6 +38,9 @@ $(function(){
             $(".spicyCheck").each(function(){
 				$(this).hide();
 			});
+            $(".addCheck").each(function(){
+				$(this).hide();
+			});
             $(".my-cart-btn").each(function(){
 				$(this).hide();
 			});
@@ -45,12 +48,12 @@ $(function(){
 			switch($(this).text()){
 				case "炒麵": {
 					$("#bodylist_friedNoodles").show();
-                    $((".spicyCheck")).show();
+                    $(".spicyCheck").show();
 					break;
 				}
 				case "湯麵": {
 					$("#bodylist_soupNoodles").show();
-                    $((".spicyCheck")).show();
+                    $(".spicyCheck").show();
 					break;
 				}
 				case "乾麵": {
