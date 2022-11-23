@@ -185,8 +185,6 @@ $(function(){
                     }
                     
                 });
-                
-                
                 break;
             }
             case"湯麵":{
@@ -195,7 +193,9 @@ $(function(){
                         $("#soupNoodlesImg"+index).show();
                         $("#soupNoodlesText"+index).show();
                         $("#soupNoodlesPrice"+index).show();
-                        
+                        $("#soupNoodlesCart"+index).show();
+                        $("input:radio").attr("checked", false);
+                        $("input:checkbox").attr("checked", false);
                     } 
                 });
                 break;
@@ -206,6 +206,9 @@ $(function(){
                         $("#dryNoodlesImg"+index).show();
                         $("#dryNoodlesText"+index).show();
                         $("#dryNoodlesPrice"+index).show();
+                        $("#dryNoodlesCart"+index).show();
+                        $("input:radio").attr("checked", false);
+                        $("input:checkbox").attr("checked", false);
                     } 
                 });
                 break;
@@ -216,6 +219,9 @@ $(function(){
                         $("#friedInstantNoodlesImg"+index).show();
                         $("#friedInstantNoodlesText"+index).show();
                         $("#friedInstantNoodlesPrice"+index).show();
+                        $("#friedInstantNoodlesCart"+index).show();
+                        $("input:radio").attr("checked", false);
+                        $("input:checkbox").attr("checked", false);
                     } 
                 });
                 break;
@@ -226,6 +232,9 @@ $(function(){
                         $("#powderImg"+index).show();
                         $("#powderText"+index).show();
                         $("#powderPrice"+index).show();
+                        $("#powderCart"+index).show();
+                        $("input:radio").attr("checked", false);
+                        $("input:checkbox").attr("checked", false);
                     } 
                 });
                 break;
@@ -236,6 +245,9 @@ $(function(){
                         $("#risottoImg"+index).show();
                         $("#risottoText"+index).show();
                         $("#risottoPrice"+index).show();
+                        $("#risottoCart"+index).show();
+                        $("input:radio").attr("checked", false);
+                        $("input:checkbox").attr("checked", false);
                     } 
                 });
                 break;
@@ -246,6 +258,9 @@ $(function(){
                         $("#friedRiceImg"+index).show();
                         $("#friedRiceText"+index).show();
                         $("#friedRicePrice"+index).show();
+                        $("#friedRiceCart"+index).show();
+                        $("input:radio").attr("checked", false);
+                        $("input:checkbox").attr("checked", false);
                     } 
                 });
                 break;
@@ -256,6 +271,9 @@ $(function(){
                         $("#curryRiceImg"+index).show();
                         $("#curryRiceText"+index).show();
                         $("#curryRicePrice"+index).show();
+                        $("#curryRiceCart"+index).show();
+                        $("input:radio").attr("checked", false);
+                        $("input:checkbox").attr("checked", false);
                     } 
                 });
                 break;
@@ -266,6 +284,9 @@ $(function(){
                         $("#donburiImg"+index).show();
                         $("#donburiText"+index).show();
                         $("#donburiPrice"+index).show();
+                        $("#donburiCart"+index).show();
+                        $("input:radio").attr("checked", false);
+                        $("input:checkbox").attr("checked", false);
                     } 
                 });
                 break;
@@ -274,78 +295,117 @@ $(function(){
                     $("#saladImg").show();
                     $("#saladText").show();
                     $("#saladPrice").show();
+                    $("#saladCart").show();
+                    $("input:radio").attr("checked", false);
+                    $("input:checkbox").attr("checked", false);
                 break;
             }
             case"濃湯":{
                     $("#thickSoupImg").show();
                     $("#thickSoupText").show();
                     $("#thickSoupPrice").show();
+                    $("#thickSoupCart").show();
+                    $("input:radio").attr("checked", false);
+                    $("input:checkbox").attr("checked", false);
                 break;
             }
             case"炸物":{
                     $("#friedFoodImg").show();
                     $("#friedFoodText").show();
                     $("#friedFoodPrice").show();
+                    $("#friedFoodCart"+index).show();
+                    $("input:radio").attr("checked", false);
+                    $("input:checkbox").attr("checked", false);
                 break;
             }
             case"燙青菜":{
                     $("#vegetablesImg").show();
                     $("#vegetablesText").show();
                     $("#vegetablesPrice").show();
+                    $("#vegetablesCart").show();
+                    $("input:radio").attr("checked", false);
+                    $("input:checkbox").attr("checked", false);
                 break;
             }
             case"滷味":{
                     $("#luWeiImg").show();
                     $("#luWeiText").show();
                     $("#luWeiPrice").show();
+                    $("#luWeiCart").show();
+                    $("input:radio").attr("checked", false);
+                    $("input:checkbox").attr("checked", false);
                 break;
             }
             case"茶類":{
                     $("#teaImg").show();
                     $("#teaText").show();
                     $("#teaPrice").show();
+                    $("#teaCart").show();
+                    $("input:radio").attr("checked", false);
+                    $("input:checkbox").attr("checked", false);
                 break;
             }
             case"果汁":{
                     $("#juiceImg").show();
                     $("#juiceText").show();
                     $("#juicePrice").show();
+                    $("#juiceCart").show();
+                    $("input:radio").attr("checked", false);
+                    $("input:checkbox").attr("checked", false);
                 break;
             }
             case"咖啡":{
                     $("#coffeeImg").show();
                     $("#coffeeText").show();
                     $("#coffeePrice").show();
+                    $("#coffeeCart").show();
+                    $("input:radio").attr("checked", false);
+                    $("input:checkbox").attr("checked", false);
                 break;
             }
             case"碳酸飲料":{
                     $("#carbonatedDrinksImg").show();
                     $("#carbonatedDrinksText").show();
                     $("#carbonatedDrinksPrice").show();
+                    $("#carbonatedDrinksCart"+index).show();
+                    $("input:radio").attr("checked", false);
+                    $("input:checkbox").attr("checked", false);
                 break;
             }
             case"布丁":{
                     $("#puddingImg").show();
                     $("#puddingText").show();
                     $("#puddingPrice").show();
+                    $("#puddingCart").show();
+                    $("input:radio").attr("checked", false);
+                    $("input:checkbox").attr("checked", false);
                 break;
             }
             case"蛋糕":{
                     $("#cakeImg").show();
                     $("#cakeText").show();
                     $("#cakePrice").show();
+                    $("#cakeCart").show();
+                    $("input:radio").attr("checked", false);
+                    $("input:checkbox").attr("checked", false);
                 break;
             }
             case"奶酪":{
                     $("#pannaCottaImg").show();
                     $("#pannaCottaText").show();
                     $("#pannaCottaPrice").show();
+                    $("#pannaCottaCart").show();
+                    $("input:radio").attr("checked", false);
+                    $("input:checkbox").attr("checked", false);
                 break;
             }
             case"餅乾":{
                     $("#cookiesImg").show();
                     $("#cookiesText").show();
                     $("#cookiesPrice").show();
+                    $("#cookiesCart").show();
+                    $("input:radio").attr("checked", false);
+                    $("input:checkbox").attr("checked", false);
                 break;
             }
             case"雙人餐":{
