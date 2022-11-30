@@ -526,12 +526,11 @@ $(function(){
             })
             sc_msg();
             console.log(sc_msg());
-            // alert($.cookie("goods"));
         }
     })
     
     function sc_msg(){
-        // $("#items_list ul").empty();
+        $("#items_list ul").empty();
         $.ajax({
             url:"data.json",
             success:function(arr){
