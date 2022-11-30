@@ -14,6 +14,7 @@ var OptionManager = (function () {
     classProductQuantity: 'my-product-quantity',
     classProductRemove: 'my-product-remove',
     classCheckoutCart: 'my-cart-checkout',
+    
     affixCartIcon: true,
     showCheckoutModal: true,
     numberOfDecimals: 2,
@@ -220,7 +221,7 @@ var loadMyCartEvent = function (targetSelector) {
         '<table class="table table-hover table-responsive" id="' + idCartTable + '"></table>' +
         '</div>' +
         '<div class="modal-footer">' +
-        '<button type="button" class="btn btn-default" data-bs-dismiss="modal">Close</button>' +
+        '<button type="button" class="btn btn-default data-bs-dismiss="modal">close</button>' +
         '<button type="button" class="btn btn-primary ' + classCheckoutCart + '">Confirm</button>' +
         '</div>' +
         '</div>' +
@@ -346,14 +347,13 @@ var loadMyCartEvent = function (targetSelector) {
         return;
     }
     updateCart();
-    var isCheckedOut = options.checkoutCart(ProductManager.getAllProducts(), ProductManager.getTotalPrice(), ProductManager.getTotalQuantity());
-    if (isCheckedOut !== false) {
-        // ProductManager.clearProduct();
+    var isConfirm = options.checkoutCart(ProductManager.getAllProducts(), ProductManager.getTotalPrice(), ProductManager.getTotalQuantity());
+    if (isConfirm !== false) {
         $cartBadge.text(ProductManager.getTotalQuantity());
         $("#" + idCartModal).modal("hide");
     }
     });
-
+    
     $(document).on('click', targetSelector, function () {
     var $target = $(this);
     options.clickOnAddToCart($target);
