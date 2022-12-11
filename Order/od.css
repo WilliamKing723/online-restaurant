@@ -30,7 +30,6 @@ body{
 #sidebar {
     position: sticky ;
     top:0;
-    width:300px;
     height: auto;
     background-color: indigo;
     color: white;
@@ -187,7 +186,7 @@ ul ul li a{
 .send-box{text-align:center;}
 .badge{
     background:red;
-    width: 90%;
+    width: 233px;
 }
 .my-cart-icon {
     height: auto;

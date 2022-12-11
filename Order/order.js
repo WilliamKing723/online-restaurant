@@ -1,5 +1,19 @@
-
-
+//sidenavbar
+$(function(){
+    $(".navmenu").mouseup(function(){
+        $(".navlist").stop(false, true).hide();
+        var navlist = $(this).parent().next();
+        navlist.stop().slideDown(300);
+        navlist.mouseleave(function(){
+            $(this).sildeUp(300);
+        });
+    });
+});
+$(function(){
+    $(".my-cart-btn").click(function(){
+        $("input:(:checked)").replaceWith("friedNoodlesSummary1");
+    });
+});
 //backTop
 $(function(){
 	$('#BackTop').click(function(){ 
@@ -48,14 +62,14 @@ $(function(){
             $("input:radio").attr("checked", false);
             $("input:checkbox").attr("checked", false);
 			switch($(this).text()){
-				case "炒麵": {
+				case "炒麵 Fried noodles": {
 					$("#bodylist_friedNoodles").show();
                     $(".spicyCheck").show();
                     $("#addEgg").show();
                     $("#addXL").show();
 					break;
 				}
-				case "湯麵": {
+				case "湯麵 Soup noodles": {
 					$("#bodylist_soupNoodles").show();
                     $(".spicyCheck").show();
                     $("#addEgg").show();
@@ -63,14 +77,14 @@ $(function(){
                     $("#addSoup").show();
 					break;
 				}
-				case "乾麵": {
+				case "乾麵 Dry noodles": {
 					$("#bodylist_dryNoodles").show();
                     $(".spicyCheck").show();
                     $("#addEgg").show();
                     $("#addXL").show();
 					break;
 				}
-				case "炒泡麵": {
+				case "炒泡麵 Fried instant noodles": {
 					$("#bodylist_friedInstantNoodles").show();
                     $(".spicyCheck").show();
                     $("#addXL").show();
@@ -78,28 +92,28 @@ $(function(){
                     $("#addSauce").show();
 					break;
 				}
-				case "酸辣粉": {
+				case "酸辣粉 Powder": {
 					$("#bodylist_powder").show();
                     $(".spicyCheck").show();
                     $("#addXL").show();
                     $("#addEgg").show();
 					break;
 				}
-				case "燴飯": {
+				case "燴飯 Risotto": {
 					$("#bodylist_risotto").show();
                     $(".spicyCheck").show();
                     $("#addXL").show();
                     $("#addEgg").show();
 					break;
 				}
-				case "炒飯": {
+				case "炒飯 Fried rice": {
 					$("#bodylist_friedRice").show();
                     $(".spicyCheck").show();
                     $("#addXL").show();
                     $("#addEgg").show();
 					break;
 				}
-				case "咖哩飯": {
+				case "咖哩飯 Curry rice": {
 					$("#bodylist_curryRice").show();
                     $(".spicyCheck").show();
                     $("#addXL").show();
@@ -107,62 +121,62 @@ $(function(){
                     $("#addSauce").show();
 					break;
 				}
-				case "丼飯": {
+				case "丼飯 Donburi": {
 					$("#bodylist_donburi").show();
                     $(".spicyCheck").show();
                     $("#addXL").show();
                     $("#addEgg").show();
 					break;
 				}
-                case "沙拉": {
+                case "沙拉 Salad": {
 					$("#bodylist_salad").show();
 					break;
 				}
-                case "濃湯": {
+                case "濃湯 Thick soup": {
 					$("#bodylist_thickSoup").show();
 					break;
 				}
-                case "炸物": {
+                case "炸物 Fried food": {
 					$("#bodylist_friedFood").show();
 					break;
 				}
-                case "燙青菜": {
+                case "燙青菜 Vegetables": {
 					$("#bodylist_vegetables").show();
 					break;
 				}
-                case "滷味": {
+                case "滷味 Lu Wei": {
 					$("#bodylist_luWei").show();
 					break;
 				}
-                case "茶類": {
+                case "茶類 Tea": {
 					$("#bodylist_tea").show();
 					break;
 				}
-                case "果汁": {
+                case "果汁 Juice": {
 					$("#bodylist_juice").show();
 					break;
 				}
-                case "咖啡": {
+                case "咖啡 Coffee": {
 					$("#bodylist_coffee").show();
 					break;
 				}
-                case "碳酸飲料": {
+                case "碳酸飲料 Carbonated drinks": {
 					$("#bodylist_carbonatedDrinks").show();
 					break;
 				}
-                case "布丁": {
+                case "布丁 Pudding": {
 					$("#bodylist_pudding").show();
 					break;
 				}
-                case "蛋糕": {
+                case "蛋糕 Cake": {
 					$("#bodylist_cake").show();
 					break;
 				}
-                case "奶酪": {
+                case "奶酪 Panna cotta": {
 					$("#bodylist_pannaCotta").show();
 					break;
 				}
-                case "餅乾": {
+                case "餅乾 Cookies": {
 					$("#bodylist_cookies").show();
 					break;
 				}
@@ -194,7 +208,7 @@ $(function(){
         });
         
 		switch($("#exampleModalLabel").text()){
-            case"炒麵":{
+            case"炒麵 Fried noodles":{
                 $("#bodylist_friedNoodles").find("option").each(function(index){
                     if(index === $("#bodylist_friedNoodles")[0].selectedIndex) {
                         $("#friedNoodlesImg"+index).show();
@@ -208,7 +222,7 @@ $(function(){
                 });
                 break;
             }
-            case"湯麵":{
+            case"湯麵 Soup noodles":{
                 $("#bodylist_soupNoodles").find("option").each(function(index){
                     if(index === $("#bodylist_soupNoodles")[0].selectedIndex) {
                         $("#soupNoodlesImg"+index).show();
@@ -221,7 +235,7 @@ $(function(){
                 });
                 break;
             }
-			case"乾麵":{
+			case"乾麵 Dry noodles":{
                 $("#bodylist_dryNoodles").find("option").each(function(index){
                     if(index === $("#bodylist_dryNoodles")[0].selectedIndex) {
                         $("#dryNoodlesImg"+index).show();
@@ -234,7 +248,7 @@ $(function(){
                 });
                 break;
             }
-			case"炒泡麵":{
+			case"炒泡麵 Fried instant noodles":{
                 $("#bodylist_friedInstantNoodles").find("option").each(function(index){
                     if(index === $("#bodylist_friedInstantNoodles")[0].selectedIndex) {
                         $("#friedInstantNoodlesImg"+index).show();
@@ -247,7 +261,7 @@ $(function(){
                 });
                 break;
             }
-			case"酸辣粉":{
+			case"酸辣粉 Powder":{
                 $("#bodylist_powder").find("option").each(function(index){
                     if(index === $("#bodylist_powder")[0].selectedIndex) {
                         $("#powderImg"+index).show();
@@ -260,7 +274,7 @@ $(function(){
                 });
                 break;
             }
-			case"燴飯":{
+			case"燴飯 Risotto":{
                 $("#bodylist_risotto").find("option").each(function(index){
                     if(index === $("#bodylist_risotto")[0].selectedIndex) {
                         $("#risottoImg"+index).show();
@@ -273,7 +287,7 @@ $(function(){
                 });
                 break;
             }
-			case"炒飯":{
+			case"炒飯 Fried rice":{
                 $("#bodylist_friedRice").find("option").each(function(index){
                     if(index === $("#bodylist_friedRice")[0].selectedIndex) {
                         $("#friedRiceImg"+index).show();
@@ -286,7 +300,7 @@ $(function(){
                 });
                 break;
             }
-			case"咖哩飯":{
+			case"咖哩飯 Curry rice":{
                 $("#bodylist_curryRice").find("option").each(function(index){
                     if(index === $("#bodylist_curryRice")[0].selectedIndex) {
                         $("#curryRiceImg"+index).show();
@@ -299,7 +313,7 @@ $(function(){
                 });
                 break;
             }
-			case"丼飯":{
+			case"丼飯 Donburi":{
                 $("#bodylist_donburi").find("option").each(function(index){
                     if(index === $("#bodylist_donburi")[0].selectedIndex) {
                         $("#donburiImg"+index).show();
@@ -312,7 +326,7 @@ $(function(){
                 });
                 break;
             }
-			case"沙拉":{
+			case"沙拉 Salad":{
                 $("#saladImg").show();
                 $("#saladText").show();
                 $("#saladPrice").show();
@@ -323,7 +337,7 @@ $(function(){
                 });
                 break;
             }
-            case"濃湯":{
+            case"濃湯 Thick soup":{
                     $("#thickSoupImg").show();
                     $("#thickSoupText").show();
                     $("#thickSoupPrice").show();
@@ -334,7 +348,7 @@ $(function(){
                     });
                 break;
             }
-            case"炸物":{
+            case"炸物 Fried food":{
                     $("#friedFoodImg").show();
                     $("#friedFoodText").show();
                     $("#friedFoodPrice").show();
@@ -345,7 +359,7 @@ $(function(){
                     });
                 break;
             }
-            case"燙青菜":{
+            case"燙青菜 Vegetables":{
                     $("#vegetablesImg").show();
                     $("#vegetablesText").show();
                     $("#vegetablesPrice").show();
@@ -356,7 +370,7 @@ $(function(){
                     });
                 break;
             }
-            case"滷味":{
+            case"滷味 Lu Wei":{
                     $("#luWeiImg").show();
                     $("#luWeiText").show();
                     $("#luWeiPrice").show();
@@ -367,7 +381,7 @@ $(function(){
                     });
                 break;
             }
-            case"茶類":{
+            case"茶類 Tea":{
                     $("#teaImg").show();
                     $("#teaText").show();
                     $("#teaPrice").show();
@@ -400,7 +414,7 @@ $(function(){
                     });
                 break;
             }
-            case"碳酸飲料":{
+            case"碳酸飲料  Carbonated drinks":{
                     $("#carbonatedDrinksImg").show();
                     $("#carbonatedDrinksText").show();
                     $("#carbonatedDrinksPrice").show();
@@ -411,7 +425,7 @@ $(function(){
                     });
                 break;
             }
-            case"布丁":{
+            case"布丁  Pudding":{
                     $("#puddingImg").show();
                     $("#puddingText").show();
                     $("#puddingPrice").show();
@@ -422,7 +436,7 @@ $(function(){
                     });
                 break;
             }
-            case"蛋糕":{
+            case"蛋糕 Cake":{
                     $("#cakeImg").show();
                     $("#cakeText").show();
                     $("#cakePrice").show();
@@ -433,7 +447,7 @@ $(function(){
                     });
                 break;
             }
-            case"奶酪":{
+            case"奶酪 Panna cotta":{
                     $("#pannaCottaImg").show();
                     $("#pannaCottaText").show();
                     $("#pannaCottaPrice").show();
@@ -444,7 +458,7 @@ $(function(){
                     });
                 break;
             }
-            case"餅乾":{
+            case"餅乾 Cookies":{
                     $("#cookiesImg").show();
                     $("#cookiesText").show();
                     $("#cookiesPrice").show();
