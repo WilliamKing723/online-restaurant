@@ -9,11 +9,7 @@ $(function(){
         });
     });
 });
-$(function(){
-    $(".my-cart-btn").click(function(){
-        $("input:(:checked)").replaceWith("friedNoodlesSummary1");
-    });
-});
+
 //backTop
 $(function(){
 	$('#BackTop').click(function(){ 
