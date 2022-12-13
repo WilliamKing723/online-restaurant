@@ -485,97 +485,97 @@ $(function(){
 });
 
 //shoppingcart
-$(function(){
-    sc_msg();
-    $.ajax({
-        url:"data.json",
-        success:function(arr){
-            for(var i=0; i<arr.length;i++){
-                $(`<li class='goodItem'>
-                    <div class="goodTitle">
-                        <p>test</p>
-                    </div>
-                    <div class="sc">
-                        <div id="${arr[i].id}" class="sc_btn"/> 加入購物車</div>
-                    </div>
-                    </li>`);
-                }
-        },
-        error:function(msg){
-            console.log(msg);
-        } 
-    })
-    $(".my-cart-btn").on("click", function(){
-        var id = this.id;
+// $(function(){
+//     sc_msg();
+//     $.ajax({
+//         url:"data.json",
+//         success:function(arr){
+//             for(var i=0; i<arr.length;i++){
+//                 $(`<li class='goodItem'>
+//                     <div class="goodTitle">
+//                         <p>test</p>
+//                     </div>
+//                     <div class="sc">
+//                         <div id="${arr[i].id}" class="sc_btn"/> 加入購物車</div>
+//                     </div>
+//                     </li>`);
+//                 }
+//         },
+//         error:function(msg){
+//             console.log(msg);
+//         } 
+//     })
+//     $(".my-cart-btn").on("click", function(){
+//         var id = this.id;
         
-        var first = $.cookie("goods") ==  null ? true :false;
-        if(first){
-            var arr = [{id: id, num:1}]
-            $.cookie("goods",JSON.stringify(arr),{
-                expires: 7
-            })
-        }else{
-            var cookieStr = $.cookie("goods");
-            var cookieArr = JSON.parse(cookieStr);
+//         var first = $.cookie("goods") ==  null ? true :false;
+//         if(first){
+//             var arr = [{id: id, num:1}]
+//             $.cookie("goods",JSON.stringify(arr),{
+//                 expires: 7
+//             })
+//         }else{
+//             var cookieStr = $.cookie("goods");
+//             var cookieArr = JSON.parse(cookieStr);
 
-            var same = false;
-            for(var i = 0; i < cookieArr.length; i++){
-                if(id == cookieArr[i].id){
-                    same = true;
-                    cookieArr[i].num++;
-                    break;
-                }
-            }
+//             var same = false;
+//             for(var i = 0; i < cookieArr.length; i++){
+//                 if(id == cookieArr[i].id){
+//                     same = true;
+//                     cookieArr[i].num++;
+//                     break;
+//                 }
+//             }
 
-            if (!same){
-                cookieArr.push({id:id, num:1});
-            }
+//             if (!same){
+//                 cookieArr.push({id:id, num:1});
+//             }
 
-            $.cookie("goods", JSON.stringify(cookieArr),{
-                expires: 7
-            })
-            sc_msg();
-            console.log(sc_msg());
-        }
-    })
+//             $.cookie("goods", JSON.stringify(cookieArr),{
+//                 expires: 7
+//             })
+//             sc_msg();
+//             console.log(sc_msg());
+//         }
+//     })
     
-    function sc_msg(){
-        $("#items_list ul").empty();
-        $.ajax({
-            url:"data.json",
-            success:function(arr){
-                var cookieStr = $.cookie("goods");
-                var newArr = [] ;
-                if(cookieStr){
-                    var cookieArr = JSON.parse(cookieStr);
-                    for(var i = 0; i < arr.length; i++){
-                        for(var j = 0; j < cookieArr.length; j++){
-                            // 在cookie商品有紀錄
-                            if(arr[i].id == cookieArr[j].id){
-                                arr[i].num = cookieArr[j].num;
-                                newArr.push(arr[i]);
-                            }
-                        }
-                    }
-                }
-                for(var i = 0; i<newArr.length; i++){
-                    var node = $(`<li>
-                    <div class="sc_goodsPic">
-                        <img src="${newArr[i].img}" alt=""/>
-                    </div>
-                    <div class="sc_goodsTitle">
-                        <p>123</p>
-                    </div>
-                    <div class="sc_goodsDetail"></div>
-                    <div class="sc_goodsNum">商品數量:${newArr[i].num}</div>
-                    </li>`);
+//     function sc_msg(){
+//         $("#items_list ul").empty();
+//         $.ajax({
+//             url:"data.json",
+//             success:function(arr){
+//                 var cookieStr = $.cookie("goods");
+//                 var newArr = [] ;
+//                 if(cookieStr){
+//                     var cookieArr = JSON.parse(cookieStr);
+//                     for(var i = 0; i < arr.length; i++){
+//                         for(var j = 0; j < cookieArr.length; j++){
+//                             // 在cookie商品有紀錄
+//                             if(arr[i].id == cookieArr[j].id){
+//                                 arr[i].num = cookieArr[j].num;
+//                                 newArr.push(arr[i]);
+//                             }
+//                         }
+//                     }
+//                 }
+//                 for(var i = 0; i<newArr.length; i++){
+//                     var node = $(`<li>
+//                     <div class="sc_goodsPic">
+//                         <img src="${newArr[i].img}" alt=""/>
+//                     </div>
+//                     <div class="sc_goodsTitle">
+//                         <p>123</p>
+//                     </div>
+//                     <div class="sc_goodsDetail"></div>
+//                     <div class="sc_goodsNum">商品數量:${newArr[i].num}</div>
+//                     </li>`);
                     
-                    node.appendTo($("#items_list ul"));
-                }
-            }
-        })
-    }
-});
+//                     node.appendTo($("#items_list ul"));
+//                 }
+//             }
+//         })
+//     }
+// });
 
 
 //shoppingcart
@@ -593,6 +593,8 @@ $(function () {
     });
     }
 
+    $("")
+
     $('.my-cart-btn').myCart({
     currencySymbol: '$',
     classCartIcon: 'my-cart-icon',
@@ -609,15 +611,10 @@ $(function () {
     afterAddOnCart: function(products, totalPrice, totalQuantity) {
         console.log("afterAddOnCart", products, totalPrice, totalQuantity);
     },
-    // clickOnCartIcon: function($cartIcon, products, totalPrice, totalQuantity) {
-    //     console.log("cart icon clicked", $cartIcon, products, totalPrice, totalQuantity);
-    // },
+
     checkoutCart: function(products, totalPrice, totalQuantity) {
-        
+        $(location).attr("href","../takeMeal/take-meal.html");
     },
-    // getDiscountPrice: function(products, totalPrice, totalQuantity) {
-    //     console.log("calculating discount", products, totalPrice, totalQuantity);
-    //     return totalPrice * 0.5;
-    // }
+
     });
     });
