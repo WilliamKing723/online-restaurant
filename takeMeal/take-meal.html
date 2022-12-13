@@ -11,71 +11,75 @@
     <link rel="stylesheet" href="take-meal.css" />
     <script type="text/javascript">
         $(function(){
-            $("alert").click(function(){
-                $(location).attr("href","CompleteOrder.html")
-            })
+            var $input = $(":input[name$='a']"); 
+            $(".prebtn").click(function(){
+                $(location).attr("href","../Order/order.html");
+            });
+            $(".sendbtn").click(function(){
+                if($input.val()!=""){
+                    $(location).attr("href","CompleteOrder.html");
+                }
+            });
+            $(".emptybtn").click(function(){
+                    $($input).val("");
+            });
         });
     </script>
 </head>
 
 <article>
-<h2 style="font-size: 36px;font-weight: 700;margin-top: 30PX;text-align: center;">取貨方式</h2>
+<h2 style="font-size: 36px;font-weight: 700;margin-top: 30PX;text-align: center;">取餐方式</h2>
 </article>
     <body style="background-color: bisque;">
-    <div class= "card1" style="  width: 700px; height:870px; float: none; margin-top: 50px; margin-right: auto; margin-bottom: 30px; margin-left: auto; padding: 30px; border: solid 1px #dddddd;background-color: rgb(255, 255, 255);">
+    <div class= "card1" style="  width: 700px; height:830px; float: none; margin-top: 50px; margin-right: auto; margin-bottom: 30px; margin-left: auto; padding: 30px; border: solid 1px #dddddd;background-color: rgb(255, 255, 255);">
         <div style="color: #f509f5; font-size: 1.4em; line-height: 30px;">
             本餐廳服務提供時間為 AM 11:00 ~ PM 10:00
         </div>
     <div class="card2" style="font-size: 1.4em; line-height: 40px;">
             <p></p>
-        <form onsubmit="alert('Sent out')">
+        <form>
                 姓 氏 <em>*</em>
                 <br/>
-                <input type="text" name="firstname"  required/>
+                <input type="text" name="firstname_a"  required/>
                 <br/>
                 名 字 <em>*</em>
                 <br/>
-                <input type="text" name="lastname" required/>
-            <p/>
+                <input type="text" name="lastname_a" required/>
+            <p>
             <div>
                 性 別：
-                <input type="radio" name="gender" id="male" checked required/>
+                <input type="radio" name="gender_a" id="male" checked required/>
                 <label for="male">男性</label>
-                <input type="radio" name="gender" id="female" required/>
+                <input type="radio" name="gender_a" id="female" required/>
                 <label for="female">女性</label>
             </div>
-            <p/>
+            <p>
             <div>
                 <label for="phone">電 話：</label>
-                <input type="tel" id="phone" required/>
+                <input type="tel" id="phone" name="number_a" required/>
                 -
                 <input type="tel" id="phone" />
             </div>
-            <p/>
+            <p>
             <div >
-                用餐方式：
-                <input type="radio" name="meal way" id="out" checked required/>
+                取餐方式：
+                <input type="radio" name="meal way_a" id="out" checked required/>
                 <label for="out">外送</label>
-                <input type="radio" name="meal way" id="inside" required/>
+                <input type="radio" name="meal way_a" id="inside" required/>
                 <label for="inside">自取</label>
             </div>
-            <p/>
-            <div>
-                <label for="email">Email：</label>
-                <input type="email" id="email" required/>
-            </div>
-            <p/>
+            <p>
             <div>
                 地 址 
                 <p>
-                <select name="ddlCity" id="ctl00_ddlCity" class="txtRegister" ;style="height:30px;"  required>
+                <select name="ddlCity_a" id="ctl00_ddlCity" class="txtRegister" ;style="height:30px;"  required>
                     <option value="台北市">台北市</option>
                     <option value="基隆市">基隆市</option>
                     <option selected="selected" value="新北市">新北市</option>
                     <option value="宜蘭縣">宜蘭縣</option>
                 
                 </select>
-                <select name="ddlArea" id="ctl00_ddlArea" class="txtRegister" style="height:30px;" required>
+                <select name="ddlArea_a" id="ctl00_ddlArea" class="txtRegister" style="height:30px;" required>
                     <option value="220">板橋區</option>
                     <option value="221">汐止區</option>
                     <option value="223">石碇區</option>
@@ -92,17 +96,17 @@
                     <option selected="selected" value="251">淡水區</option>
                 
                 </select>
-                <input type="text" name="address" required>
+                <input type="text" name="address_a" required>
             </div>
             <p></p>
             <div>
                 <label for="date">取餐日期：</label>
-                <input type="date" id="date" required/>
+                <input type="date" id="date" name="date_a" required/>
             </div>
             <p></p>
             <div>
                 <label for="time">取餐時間：</label>
-                <select name="lHour" onchange="javascript:setTimeout('__doPostBack(\'ctl00$ContentPlaceHolder1$ucDeliverTime$ddlHour\',\'\')', 0)" id="ctl00_ContentPlaceHolder1_ucDeliverTime_ddlHour" class="DeliverTime" required>
+                <select name="lHour_a" onchange="javascript:setTimeout('__doPostBack(\'ctl00$ContentPlaceHolder1$ucDeliverTime$ddlHour\',\'\')', 0)" id="ctl00_ContentPlaceHolder1_ucDeliverTime_ddlHour" class="DeliverTime" required>
                     <option selected="selected" value="12">12</option>
                     <option value="13">13</option>
                     <option value="14">14</option>
@@ -116,7 +120,7 @@
                     <option value="22">22</option>
                 </select>
                 :
-                <select name="lminute" id="ddlminute" class="DeliverTime" required>
+                <select name="lminute_a" id="ddlminute" class="DeliverTime" required>
                     <option selected="selected" value="00">00</option>
                     <option value="31">01</option>
                     <option value="32">02</option>
@@ -180,22 +184,22 @@
             </div>
             <p></p>
             <div id="QuestionLabel">
-                <div class="row">
-                    <label>付款方式 <em>*</em></label> 
-                        <select class="form-control" id="sQuestionName" name="QuestionName" required>
-                            <option value="">請選擇</option>
-                            <option value="1">VISA信用卡</option>
-                            <option value="2">LINE Pay</option>
-                            <option value="3">APPLE Pay</option>
-                            <option value="4">GOOGle Pay</option>
-                            <option value="5">貨到付款</option>
-                        </select>
-                </div>
+                <label>付款方式 <em>*</em></label> 
+                <select class="form-control" id="sQuestionName" name="QuestionName_a" required>
+                    <option value="">請選擇</option>
+                    <option value="1">VISA信用卡</option>
+                    <option value="2">LINE Pay</option>
+                    <option value="3">APPLE Pay</option>
+                    <option value="4">GOOGle Pay</option>
+                    <option value="5">貨到付款</option>
+                </select>
             </div>    
             <br/>
-            <input type="submit" value="send out" class="sendbtn" style="margin-left: 500px; padding-bottom: 40px;" />
+            <input type="button" value="previous" class="prebtn btn-primary"  style="padding-bottom: 40px; float: left;" />
+            <input type="submit" value="send out" id="send" class="sendbtn  btn-primary" style="margin-left: 40px; padding-bottom: 40px; float: right;" />
+            <input type="button" value="empty" id="empty" class="emptybtn  btn-primary" style="padding-bottom: 40px; float: right;" />
         </form> 
-    <footer id="footer" class="footer">
+    <!-- <footer id="footer" class="footer">
 		<nav aria-label="...">
 			<ul class="pagination  pagination-lg">
 				<li class="page-item"><a class="page-link"  href="../Order/order.html">Previous</a></li>
@@ -203,6 +207,6 @@
 				<li class="page-item active"  aria-current="page"><a class="page-link">2</a></li>
 			</ul>
 		</nav>
-	</footer>
+	</footer> -->
 </body>
 </html>
