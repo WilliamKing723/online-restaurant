@@ -202,7 +202,6 @@ $(function(){
         $(".my-cart-btn").each(function(){
             $(this).hide();
         });
-        
 		switch($("#exampleModalLabel").text()){
             case"炒麵 Fried noodles":{
                 $("#bodylist_friedNoodles").find("option").each(function(index){
