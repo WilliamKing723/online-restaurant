@@ -4,6 +4,7 @@
 	<meta mame="viewpoint" content="width=device-width, initial-scale=1.0">
 	<meta charset="utf-8" />
 	<title>Online-Restaurant</title>
+	<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 	<!-- Bootstrap 連結 -->
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
@@ -50,54 +51,87 @@
 				
 				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#linkbar">
 					<span class="navbar-toggler-icon"></span>
-				</button>	
-				<ul class="meals">
-					<li class="meals-item">Main meal</li>					
-					<li class="meals-item">Side meal</li>					
-					<li class="meals-item">Drinks</li>					
-					<li class="meals-item">Dessert</li>
-					<li class="meals-item">Combo meal</li>
+				</button>
+				<ul id="meals"  class="list-unstyled">		
+					<li class="meals-item" type="button">Noodles</li>	
+					<li class="meals-item" type="button">Rice</li>
+					<li class="meals-item" type="button">Side meals</li>
+					<li class="meals-item" type="button">Drinks</li>
+					<li class="meals-item" type="button">Dessert</li>
 				</ul>
-				
 			</div>
 		</div>
 		<div class="middle">
 			<div class="frame">
 				<!--產品名稱-->
-				<div class="prodname">
-					<ul id="name" class="name">		
-						<li class="eat">麵類</li>	
-						<li class="eat">甜點</li>
-						<li class="eat">炒飯</li>
-						<li class="eat">排餐</li>
-						<li class="eat">滷味</li>
-					</ul>
-				</div>
-				<!--計時器-->
-				<script>
-					setInterval(function(){
-						var li=document.querySelector('.eat') ;
-						var ul=document.getElementById('name') ;
-						ul.appendChild(li) ;
-					},3000)
-				</script>
+				<div class="prodName">
+					<ul id="name" class="name">	
+						<li><a>Noodles</a></li>
+							<ul class="eat"></li>
+								<li class=""></li>
+							</ul>
+						<li><a>Rice</a>	</li>
+							<ul class="eat">
+								<li class=""></li>
+							</ul>
+						<li><a>Side meals</a></li>
+							<ul class="eat">
+								<li class=""></li>
+							</ul>
+						<li><a>Drinks</a></li>
+							<ul class="eat">
+								<li class=""></li>
+							</ul>
+						<li><a>Dessert</a></li>
+							<ul class="eat">
+								<li class=""></li>
+							</ul>
+					</div>
+				</ul>
 				<!--產品內容-->
 				<div class="proudct">
-					<ul id="imgs" class="imgs">
-						<li class="img"><img src="Img/麵類.jpg" style="width: 550px; height: 370px"/></li>
-						<li class="img"><img src="Img/甜點.jpg" style="width: 550px; height: 370px"/></li>
-						<li class="img"><img src="Img/炒飯.jpg" style="width: 550px; height: 370px"/></li>
-						<li class="img"><img src="Img/排餐.jpg" style="width: 550px; height: 370px"/></li>
-						<li class="img"><img src="Img/滷味.jpg" style="width: 550px; height: 370px"/></li>
-					</ul>	
+					<div id="imgs" class="imgs">
+						<ul class="prodImg">
+							<li class=""></li>
+						</ul>
+						<ul class="prodImg">
+							<li class=""></li>
+						</ul>
+						<ul class="prodImg">
+							<li class=""></li>
+						</ul>
+						<ul class="prodImg">
+							<li class=""></li>
+						</ul>
+						<ul class="prodImg">
+							<li class=""></li>
+						</ul>
+					</div>	
 				</div>
-				<script>
-					setInterval(function(){
-						var li=document.querySelector('.img') ;
-						var ul=document.getElementById('imgs') ;
-						ul.appendChild(li) ;
-					},3000)
-				</script>
+
+				<!-- 左右按鈕　元件２ -->
+                <!-- 左邊按鈕 -->
+				<button class="carousel-control-prev" type="button" data-bs-target="#slideshow" data-bs-slide="prev">
+					<span class="carousel-control-prev-icon"></span>
+				</button>
+					<!-- 右邊按鈕 -->
+				<button class="carousel-control-next" type="button" data-bs-target="#slideshow" data-bs-slide="next">
+					<span class="carousel-control-next-icon"></span>
+				</button>
+	
+				<!-- 指示按鈕　元件３ -->
+				<div class="carousel-indicators">
+					<button type="button" data-bs-target="#slideshow" data-bs-slide-to="0" class="active">
+	
+					</button>
+	
+					<button type="button" data-bs-target="#slideshow" data-bs-slide-to="1" >
+	
+					</button>
+	
+					<button type="button" data-bs-target="#slideshow" data-bs-slide-to="2" >
+	
+					</button>
 			</div>
 		</div>
 		<div class="right">
