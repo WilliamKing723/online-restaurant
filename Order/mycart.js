@@ -349,6 +349,7 @@ var loadMyCartEvent = function (targetSelector) {
     updateCart();
     var isConfirm = options.checkoutCart(ProductManager.getAllProducts(), ProductManager.getTotalPrice(), ProductManager.getTotalQuantity());
     if (isConfirm !== false) {
+        ProductManager.clearProduct();
         $cartBadge.text(ProductManager.getTotalQuantity());
         $("#" + idCartModal).modal("hide");
     }
