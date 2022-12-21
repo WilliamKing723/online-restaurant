@@ -261,22 +261,22 @@ var loadMyCartEvent = function (targetSelector) {
         '<div class="alert alert-danger" role="alert" id="' + idEmptyCartMessage + '">Your cart is empty</div>'
     );
 
-    var discountPrice = options.getDiscountPrice(products, ProductManager.getTotalPrice(), ProductManager.getTotalQuantity());
-    if (products.length && discountPrice !== null) {
-        $cartTable.append(
-        '<tr style="color: red">' +
-        '<td></td>' +
-        '<td><strong>Total (including discount)</strong></td>' +
-        '<td></td>' +
-        '<td></td>' +
-        '<td class="text-right"><strong id="' + idDiscountPrice + '"></strong></td>' +
-        '<td></td>' +
-        '</tr>'
-        );
-    }
+    // var discountPrice = options.getDiscountPrice(products, ProductManager.getTotalPrice(), ProductManager.getTotalQuantity());
+    // if (products.length && discountPrice !== null) {
+    //     $cartTable.append(
+    //     '<tr style="color: red">' +
+    //     '<td></td>' +
+    //     '<td><strong>Total (including discount)</strong></td>' +
+    //     '<td></td>' +
+    //     '<td></td>' +
+    //     '<td class="text-right"><strong id="' + idDiscountPrice + '"></strong></td>' +
+    //     '<td></td>' +
+    //     '</tr>'
+    //     );
+    // }
 
     showGrandTotal();
-    showDiscountPrice();
+    // showDiscountPrice();
     };
     var showModal = function () {
     drawTable();
