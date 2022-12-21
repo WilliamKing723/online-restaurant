@@ -53,7 +53,6 @@
                 <label for="SexF">小姐</label>
             </div>
         </div>
-
 		<span class="errormsg" id="errormsg_Name">請輸入姓名。</span>
 		<br>
 		<div id="QuestionLabel">
@@ -70,50 +69,23 @@
 					</select>
                 </div>
             </div>
-
 			<div id="MainLabel" style="display:none;">
 				<br>
 				<div class="row">
-					<!--<div class="col-lg-1 col-md-1 col-xs-12">*建議事項</div>-->
 					<div class="col-lg-10 col-md-9 col-xs-12">
 						<small>最大字數: 500 ，還剩: <span id="chLeft">500</span></small>
 						<br>
 						<div style="text-align:center;">
-
 							<textarea style="width:500px;height:150px;" class="McdTxtArea" cols="20" id="Suggestion" maxlength="500" name="Suggestion" onkeyup="checkLength(this);" rows="4"></textarea>
 						</div>
-
 					</div>
 				</div>
-				<!--<span class="errormsg" id="errormsg_Suggestion">請輸入建議事項。</span>-->
 				<br>
 				<br>
-
-
 				<span class="errormsg" id="errormsg_TermsOfService"></span>
-
-				<!--<div class="row">
-
-	<div class="col-lg-2 col-md-2 col-xs-6"  style="text-align: right">
-	<input id="submitbutton" style="float:right" class="btn-lg btn-sm btn-xs btn-block"
-	name="submitbutton" type="submit" value="確認送出" onclick="
-	return CheckInput();">-->
 				<div style="text-align:right">
 					<input type="button" onclick="disp_alert()" value="送出" />
 				</div>
-
-			<!--<div class="row">
-			<div class="col-lg-3 col-md-2 col-xs-6">
-            <input id="submitbutton" class="btn-lg btn-sm btn-xs btn-block" 
-			name="submitbutton" type="submit" value="確認送出" onclick="
-			return CheckInput();">
-			<button class="btn" onclick="c();">確認視窗</button>
-
-			</div>
-			</div>
-
-			</div>
-			<!--</form>-->
 			<hr>
 			<footer> </footer>
         </div>
@@ -125,39 +97,28 @@
 				$.mask.definitions['y'] = '[2]';
 				$.mask.definitions['m'] = '[01]';
 				$.mask.definitions['d'] = '[0-3]';
-				//$("#HappenDate").mask("y?999/m9/d9", { placeholder: "____/__/__" });
-				//$("#HappenTime").mask("9?9:99", { placeholder: "__:__" });
-				//$("#InvoiceNo").mask("a?a-99999999");
 				$("#AreaPhoneNumber").mask("9?999", { placeholder: "" });
 				$("#PhoneNumber").mask("9?999999999", { placeholder: "" });
 				$("#Ext").mask("9?999999999", { placeholder: "" });
 				$("#MobilePhone").mask("9?999999999", { placeholder: "" });
 			});
-	
 			$('input[name="InvoiceType"]').on("click", function (e) {
-	
 				var InvoiceType = $(this).val();
-	
 				$("#InvoiceNo_Eng").removeAttr('value');
 				$("#InvoiceNo_Number").removeAttr('value');     
-	
 				if (InvoiceType === '1') {
 					$("#InvoiceNo_Eng").show();
 					$("#InvoiceNo_Number").show();
 					$("#InvoiceNo_Note").show();            
 				}
-	
 				if (InvoiceType === '2') { 
 					$("#InvoiceNo_Eng").hide();
 					$("#InvoiceNo_Number").hide();
 					$("#InvoiceNo_Note").hide();
 				}
-	
 			});
-	
 			function ShowErrorMsg() {
 				//debugger;
-	
 				var ErrorMsg = '';
 				if (ErrorMsg.length > 0) {
 					alert(ErrorMsg);
@@ -181,27 +142,20 @@
 					CustOther.checked=true;
 				}
 			}
-	
 			$(document).ready(function () {
-				
-	
 				SelectCustSex();
-				
 				var isInit = '';
 				if (isInit == "True") {
 					var errormsg_Valid = document.getElementById("errormsg_Valid");
 					errormsg_Valid.style.display = "none";
 				}
-	
 				ShowErrorMsg();
 			});
-	
 			function SetLabel(Qlist) {
 				var MainLabel = document.getElementById("MainLabel");
 				var AppLabel = document.getElementById("AppLabel");
 				var AppDDL = document.getElementById("AppDDL");
 				var PointCardDDL = document.getElementById("PointCardDDL");
-	
 				if (Qlist.value == "1") {
 					MainLabel.style.display = "block";
 					InvoiceAndDateLabel.style.display = "block";
@@ -233,30 +187,17 @@
 					AppLabel.style.display = "none";
 				}
 			}
-	
-
-	
-	
-	
 			function checkLength(which) {
-	
 				var maxChars = 500;
-	
 				if (which.value.length > maxChars)
-	
 					which.value = which.value.substring(0, maxChars);
-	
 				var curr = maxChars - which.value.length;
-	
 				document.getElementById("chLeft").innerHTML = curr.toString();
-	
 			}
-	
 		</script>
 		<script type="text/javascript">
             var List = document.getElementById("sQuestionName");
             SetLabel(List);
         </script>
-	<!--</div>-->
 </body>
 </html>
