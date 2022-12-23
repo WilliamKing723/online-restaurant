@@ -5,3 +5,9 @@
     list-style-type:none;
     text-decoration:underline;
 }
+
+.prodImage{
+    width: 550px;
+    height: 370px;
+    object-fit: scale-down;
+}

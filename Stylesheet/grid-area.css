@@ -1,19 +1,19 @@
 .container-grid{
     display:grid ;
     grid-template-areas:
-        'top top top top top '
-        'blank-left left middle right blank-right '
-        'blank-left footer footer footer blank-right';
+        'top top top'
+        'left middle right'
+        'footer footer footer';
 }
 .top{
     text-align: center;
     grid-area: top;
 }
 .middle{
-    padding-top: 200px;
-    padding-bottom: 300px;
     background-color: cyan;
     grid-area: middle;
+    padding: 30px;
+    text-align: center;
 }
 .left{
     background-color: coral;
