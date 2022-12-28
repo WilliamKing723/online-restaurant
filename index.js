@@ -36,6 +36,3 @@ app.listen(portNum,function(){
 module.exports=app;
 
 
-// $(function(){
-//     $()
-// })

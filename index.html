@@ -8,139 +8,344 @@
 	<!-- Bootstrap 連結 -->
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
-	<!--幻燈片CSS-->
-	<link rel="stylesheet" type="text/css" href="Stylesheet/slideshow.css" />
 	<!--導覽列CSS-->
 	<link rel="stylesheet" type="text/css" href="Stylesheet/navbar.css" />
-	<!--區塊CSS-->
-	<link rel="stylesheet" type="text/css" href="Stylesheet/grid-area.css" />
-	<!--餐點CSS-->
-	<link rel="stylesheet" type="text/css" href="Stylesheet/meals.css" />
+	<!--幻燈片CSS-->
+	<link rel="stylesheet" type="text/css" href="Stylesheet/slideshow.css" />
 </head>
 <body>
-	<div class="container-grid">
-		<div class="top">
-			<nav id="topbar" class="navbar navbar-expand-lg navbar-light">
-				<div class="container-fluid">					
-					<div class="headline"><a href="index.html"><img src="Img/Title.png " style="width:85px ; height:66px "/></a></div>
-					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#linkbar">
-						<span class="navbar-toggler-icon"></span>
-					</button>				
+	<nav id="topbar" class="navbar navbar-expand-lg navbar-light">
+		<div class="container-fluid">					
+			<div class="headline"><a href="index.html"><img src="Img/logo.jpg " style="width:85px ; height:66px "/></a></div>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#linkbar">
+				<span class="navbar-toggler-icon"></span>
+			</button>				
+			
+			<div class="collapse navbar-collapse" id="linkbar">
+				<ul class="navbar-nav me-auto">
+					<li class="nav-item">
+					<a class="nav-link" href="index.html">Home</a>
+					</li>
+					<li class="nav-item">
+					<a class="nav-link" href="Order/order.html">Your Order</a>
+					</li>
+					<li class="nav-item">
+					<a class="nav-link" href="Feedback/feedback.html">Feedback</a>
+					</li>
+					<li class="nav-item">
+					<a class="nav-link" href="Productprice/productprice.html">Product Price</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<div class="container-all">
+		<div class="row">
+			<div class="left col-sm-2">
+				<div class="container-meals">
+						<p class="meals-item">Noodles</p>
+				</div>
+			</div>
+			<div class="middle col-sm-10">
+				<div class="frame">
+					<!--產品內容-->
+					<div id="proudctSlide1" class="carousel slide" data-bs-ride="carousel">
+						<div class="carousel-inner">
+							<div class="carousel-item active">
+								<h2>海鮮蛋炒麵 Fried Noodles with Seafood and Egg</h2>
+								<img src="https://tokyo-kitchen.icook.network/uploads/recipe/cover/254179/d1d69593d2f4fb80.jpg" alt="silde1" class="slideImg"/>
+							</div>
+							<div class="carousel-item">
+								<h2>沙茶肉絲炒麵 Fried Noodles with Shredded Pork and shacha sauce</h2>
+								<img src="https://img-global.cpcdn.com/recipes/982fed7110ce1e0c/1200x630cq70/photo.jpg" alt="slide2" class="slideImg"/>
+							</div>
+							<div class="carousel-item">
+								<h2>蝦仁炒麵 Fried Noodles with Shrimp</h2>
+								<img src="https://img.ltn.com.tw/Upload/food/page/2016/09/06/160906-3133-00-b5Pq1.jpg" alt="slide3" class="slideImg"/>
+							</div>
+							<div class="carousel-item">
+								<h2>什錦炒麵 Mixed Chow Mein</h2>
+								<img src="https://bussfood.com/Data/Images/20161006/13/440cd465a88295860b52160be5faa617.jpg" alt="slide4" class="slideImg"/>
+							</div>
+							<div class="carousel-item">
+								<h2>咖哩肉絲炒麵 Curry Shredded Pork Fried Noodles</h2>
+								<img src="https://tokyo-kitchen.icook.network/uploads/recipe/cover/371764/291b9f8fae5c7bbb.jpg" alt="slide5" class="slideImg"/>
+							</div>
+							<div class="carousel-item">
+								<h2>香濃牛肉湯麵 Beef Noodles Soup</h2>
+								<img src="https://img-global.cpcdn.com/012_recipes/b3edf7a9cb25c9807d846622cd5eb0f1/1200x630cq70/photo.jpg" alt="slide6" class="slideImg"/>
+							</div>
+							<div class="carousel-item">
+								<h2>麻辣牛肉湯麵 Spicy Beef Noodles Soup</h2>
+								<img src="https://www.alberthsieh.com/webp/wp-content/uploads/flickr/16138214706_865773bebe_b.jpg.webp" alt="slide7" class="slideImg"/>
+							</div>
+							<div class="carousel-item">
+								<h2>餛飩湯麵 Wonton Noodles Soup</h2>
+								<img src="https://4.share.photo.xuite.net/w230219/147ffa7/4745991/181127840_l.jpg" alt="slide8" class="slideImg"/>
+							</div>
+							<div class="carousel-item">
+								<h2>豬排湯麵 Pork Chops Noodles Soup</h2>
+								<img src="https://lazypackonline.com/wp-content/uploads/2021/01/img_3800.jpeg" alt="slide9" class="slideImg"/>
+							</div>
+							<div class="carousel-item">
+								<h2>榨菜肉絲湯麵 Shredded Pork and Vegetable Noodles Soup</h2>
+								<img src="https://7.share.photo.xuite.net/ca062/17475e1/19812444/1121155717_l.jpg" alt="slide10" class="slideImg"/>
+							</div>
+							<div class="carousel-item">
+								<h2>酸辣湯麵 Hot and Sour Noodles Soup</h2>
+								<img src="https://www.8way.com.tw/8WayApi/document/c57ebb05-72a7-4596-b255-ffc3c720a80f.png" alt="slide11" class="slideImg"/>
+							</div>
+							<div class="carousel-item">
+								<h2>排骨湯麵 Spare Ribs Noodles Soup</h2>
+								<img src="https://d3l76hx23vw40a.cloudfront.net/recipe/bk76-023d.jpg" alt="slide12" class="slideImg"/>
+							</div>
+							<div class="carousel-item">
+								<h2>油蔥豆芽乾麵 Dried Noodles with Onion and Bean Sprouts</h2>
+								<img src="https://www.taichungdesign.com/wp-content/uploads/2019/01/48396004_1156121237899273_2778476006627868672_o.jpg" alt="slide13" class="slideImg"/>
+							</div>
+							<div class="carousel-item">
+								<h2>豬肉炒泡麵 Pork Fried Instant Noodles</h2>
+								<img src="https://picdn.gomaji.com/uploads/stores/161/160161/257374/IMG_3960.jpg" alt="slide14" class="slideImg"/>
+							</div>
+							<div class="carousel-item">
+								<h2>牛肉炒泡麵 Beef Fried Instant Noodles</h2>
+								<img src="https://img.i17fun.com/20171122231313_84.jpg" alt="slide15" class="slideImg"/>
+							</div>
+							<div class="carousel-item">
+								<h2>維力炒泡麵 Weili Fried Instant Noodles</h2>
+								<img src="https://farm7.static.flickr.com/6119/6263086582_d136902643_o.jpg" alt="slide16" class="slideImg"/>
+							</div>
+							<div class="carousel-item">
+								<h2>重慶酸辣粉 Chongqing Hot and Sour Rice Noodles</h2>
+								<img src="https://dimg.jiagle.com/media/2021/03/22/a57e7d482c7955c1a92d5215aa35667d.jpg" alt="slide17" class="slideImg"/>
+							</div>
+						</div>
+					</div>
+					<!-- 左邊按鈕 -->
+					<button class="carousel-control-prev" type="button" data-bs-target="#proudctSlide1" data-bs-slide="prev">
+						<span class="carousel-control-prev-icon"></span>
+					</button>
+						<!-- 右邊按鈕 -->
+					<button class="carousel-control-next" type="button" data-bs-target="#proudctSlide1" data-bs-slide="next">
+						<span class="carousel-control-next-icon"></span>
+					</button>
+				</div>
+			</div>
+		</div>
+		<!-- slide2 -->
+		<div class="row">
+			<div class="left col-sm-2">
+				<div class="container-meals">
+					<p class="meals-item">Rice</p>
+				</div>
+			</div>
+			<div class="middle col-sm-10">
+				<div class="frame">
+					<!--產品內容-->
+					<div id="proudctSlide2" class="carousel slide" data-bs-ride="carousel">
+						<div class="carousel-inner">
+							<div class="carousel-item active">
+								<h2>什錦海鮮燴飯 Mixed Seafood Risotto</h2>
+								<img src="https://img-global.cpcdn.com/012_recipes/96e77da3a8ea08951c676bd67979db84/751x532cq70/%E4%BB%80%E9%8C%A6%E7%87%B4%E6%B5%B7%E9%AE%AE-%E9%A3%9F%E8%AD%9C%E6%88%90%E5%93%81%E7%85%A7%E7%89%87.jpg" alt="silde1" class="slideImg"/>
+							</div>
+							<div class="carousel-item">
+								<h2>什錦咖哩燴飯 Mixed curry Risotto</h2>
+								<img src="https://shrimplitw.com/wp-content/uploads/20190116150925_7.jpg" alt="slide2" class="slideImg"/>
+							</div>
+							<div class="carousel-item">
+								<h2>什錦沙茶燴飯 Mixed shacha sauce Risotto</h2>
+								<img src="https://pic.gomaji.com/uploads/stores/951/70951/61567/CWS_3236.jpg" alt="slide3" class="slideImg"/>
+							</div>
+							<div class="carousel-item">
+								<h2>黃金蛋炒飯 Golden Egg Fried Rice</h2>
+								<img src="https://i8.meishichina.com/attachment/recipe/2019/01/12/2019011215472512285169867015271.JPG?x-oss-process=style/p800" alt="slide4" class="slideImg"/>
+							</div>
+							<div class="carousel-item">
+								<h2>蝦仁蛋炒飯 Shrimp Egg Fried Rice</h2>
+								<img src="http://cp2.douguo.net/upload/caiku/e/7/4/yuan_e7932fbc754c70a43c91cd5de2429b44.jpg" alt="slide5" class="slideImg"/>
+							</div>
+							<div class="carousel-item">
+								<h2>海鮮炒飯 Shrimp Egg Fried Rice</h2>
+								<img src="http://pic.ntimg.cn/file/20200604/6789926_172921266080_2.jpg" alt="slide6" class="slideImg"/>
+							</div>
+							<div class="carousel-item">
+								<h2>羊肉炒飯 Lamp Egg Fried Rice</h2>
+								<img src="https://i.ytimg.com/vi/DxU8sHmRox8/maxresdefault.jpg" alt="slide7" class="slideImg"/>
+							</div>
+							<div class="carousel-item">
+								<h2>牛肉炒飯 Beef Egg Fried Rice</h2>
+								<img src="https://cp1.douguo.com/upload/caiku/a/0/6/yuan_a09525261cdc82463ef28929390ec576.jpg" alt="slide8" class="slideImg"/>
+							</div>
+							<div class="carousel-item">
+								<h2>豬肉炒飯 Pork Egg Fried Rice</h2>
+								<img src="https://gss0.baidu.com/9fo3dSag_xI4khGko9WTAnF6hhy/zhidao/pic/item/bd315c6034a85edf5f53757244540923dc547580.jpg" alt="slide9" class="slideImg"/>
+							</div>
+							<div class="carousel-item">
+								<h2>香腸蛋炒飯 Sausage Egg Fried Rice</h2>
+								<img src="https://tokyo-kitchen.icook.network/uploads/recipe/cover/278119/9fb06d1521e7216c.jpg" alt="slide10" class="slideImg"/>
+							</div>
+							<div class="carousel-item">
+								<h2>火腿蛋炒飯 Ham Egg Fried Rice</h2>
+								<img src="https://www.wecook123.com/wp-content/uploads/2017/05/%E7%8E%89%E7%B1%B3%E7%81%AB%E8%85%BF%E8%9B%8B%E7%82%92%E9%A3%AF_w4HljYOt15.jpg" alt="slide11" class="slideImg"/>
+							</div>
+							<div class="carousel-item">
+								<h2>豬排咖哩飯 Pork Chop Curry Rice</h2>
+								<img src="https://2.bp.blogspot.com/-nhw-QiIizlw/UgTwGZ2RAdI/AAAAAAAAJrU/IlVMsb-0wWo/s1600/IMGP0261.JPG" alt="slide12" class="slideImg"/>
+							</div>
+							<div class="carousel-item">
+								<h2>日式咖哩飯 Japanese Curry Rice</h2>
+								<img src="https://tokyo-kitchen.icook.network/uploads/recipe/cover/97801/large_e2f66e9183de7f72.jpg" alt="slide13" class="slideImg"/>
+							</div>
+							<div class="carousel-item">
+								<h2>親子丼 Parent-Child Donburi</h2>
+								<img src="https://www.mook.com.tw/images/upload/article/17955/A17955_1526893343_3.jpg" alt="slide14" class="slideImg"/>
+							</div>
+							<div class="carousel-item">
+								<h2>炸蝦天丼 Fried Shrimp Donburi</h2>
+								<img src="https://cdn2.ettoday.net/images/2221/d2221798.jpg" alt="slide15" class="slideImg"/>
+							</div>
+						</div>
+					</div>
+					<!-- 左邊按鈕 -->
+					<button class="carousel-control-prev" type="button" data-bs-target="#proudctSlide2" data-bs-slide="prev">
+						<span class="carousel-control-prev-icon"></span>
+					</button>
+						<!-- 右邊按鈕 -->
+					<button class="carousel-control-next" type="button" data-bs-target="#proudctSlide2" data-bs-slide="next">
+						<span class="carousel-control-next-icon"></span>
+					</button>
+				</div>
+			</div>
+		</div>
+		<!-- slide3 -->
+		<div class="row">
+			<div class="left col-sm-2">
+				<div class="container-meals">
+					<p class="meals-item">Side meals</p>
+				</div>
+			</div>
+			<div class="middle col-sm-10">
+				<div class="frame">
+					<!--產品內容-->
+					<div id="proudctSlide3" class="carousel slide" data-bs-ride="carousel">
+						<div class="carousel-inner">
+							<div class="carousel-item active">
+								<h2>沙拉 Salad</h2>
+								<img src="http://img.mp.itc.cn/upload/20170329/1552b4ec45214a2f9282f878310ea9f2_th.jpeg" alt="silde1" class="slideImg"/>
+							</div>
+							<div class="carousel-item">
+								<h2>濃湯 Thick soup</h2>
+								<img src="https://www.dayandday-tw.com/image/cache/catalog/Juju/10301576-08-800x800.jpg" alt="slide2" class="slideImg"/>
+							</div>
+							<div class="carousel-item">
+								<h2>炸物 Fried food</h2>
+								<img src="https://cdn.takeout.epark.jp/images/product/616/114533/T4zCv2M0kN8WbO2TJ9jAFc2zvnvIVDvJ58AAgOss.jpeg" alt="slide3" class="slideImg"/>
+							</div>
+							<div class="carousel-item">
+								<h2>燙青菜 Vegetables</h2>
+								<img src="https://pgw.udn.com.tw/gw/photo.php?u=https://uc.udn.com.tw/photo/2018/09/21/1/5294480.jpg&x=0&y=0&sw=0&sh=0&sl=W&fw=1050" alt="slide4" class="slideImg"/>
+							</div>
+							<div class="carousel-item">
+								<h2>滷味 Lu Wei</h2>
+								<img src="https://tokyo-kitchen.icook.network/uploads/recipe/cover/232106/large_3dd294028b7d1d47.jpg" alt="slide5" class="slideImg"/>
+							</div>
+						</div>
+					</div>
+					<!-- 左邊按鈕 -->
+					<button class="carousel-control-prev" type="button" data-bs-target="#proudctSlide3" data-bs-slide="prev">
+						<span class="carousel-control-prev-icon"></span>
+					</button>
+						<!-- 右邊按鈕 -->
+					<button class="carousel-control-next" type="button" data-bs-target="#proudctSlide3" data-bs-slide="next">
+						<span class="carousel-control-next-icon"></span>
+					</button>
 					
-					<div class="collapse navbar-collapse" id="linkbar">
-						<ul class="navbar-nav me-auto">
-							<li class="nav-item">
-							<a class="nav-link" href="index.html">Home</a>
-							</li>
-							<li class="nav-item">
-							<a class="nav-link" href="Order/order.html">Your Order</a>
-							</li>
-							<li class="nav-item">
-							<a class="nav-link" href="Feedback/feedback.html">Feedback</a>
-							</li>
-							<li class="nav-item">
-							<a class="nav-link" href="Productprice/productprice.html">Product Price</a>
-							</li>
-						</ul>
-					</div>
 				</div>
-			</nav>
-		</div>
-		<div class="left">
-			<div class="container-meals">
-				
-				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#linkbar">
-					<span class="navbar-toggler-icon"></span>
-				</button>
-				<ul id="meals"  class="list-unstyled">		
-					<li class="meals-item" type="button">Noodles</li>	
-					<li class="meals-item" type="button">Rice</li>
-					<li class="meals-item" type="button">Side meals</li>
-					<li class="meals-item" type="button">Drinks</li>
-					<li class="meals-item" type="button">Dessert</li>
-				</ul>
 			</div>
 		</div>
-		<div class="middle">
-			<div class="frame">
-				<!--產品名稱-->
-				<div class="prodName">
-					<ul id="name" class="name">	
-						<li><a>Noodles</a></li>
-							<ul class="eat"></li>
+		<!-- slide4 -->
+		<div class="row">
+			<div class="left col-sm-2">
+				<div class="container-meals">
+					<p class="meals-item">Drinks</p>
+				</div>
+			</div>
+			<div class="middle col-sm-10">
+				<div class="frame">
+					<!--產品內容-->
+					<div id="proudctSlide4" class="carousel slide" data-bs-ride="carousel">
+						<div class="carousel-inner">
+							<div class="carousel-item active">
+								<h2>茶類 Tea</h2>
+								<img src="https://www.sunnysyrup.com/proimages/products/04Tea/03/03-5/Lychee-Black-Tea-(Extract)-2.jpg" alt="slide1" class="slideImg"/>
+							</div>
+							<div class="carousel-item">
+								<h2>果汁 Juice</h2>
+								<img src="http://5b0988e595225.cdn.sohucs.com/images/20180507/7ea51f942ae84c08ac66dbee4ce4cfa0.jpeg" alt="slide2" class="slideImg"/>
+							</div>
+							<div class="carousel-item">
+								<h2>咖啡 Coffee</h2>
+								<img src="https://benbrausen.com/wp-content/uploads/2018/02/ChocolatePeanutButterProteinShake-500x500.jpg" alt="slide3" class="slideImg"/>
+							</div>
+							<div class="carousel-item">
+								<h2>碳酸飲料 Carbonated drinks</h2>
+								<img src="https://images-news.now.com/newsimage/NewsImage/2019-04-29-15-55-099AKg74Ck.jpg" alt="slide4" class="slideImg"/>
+							</div>
+							
+						</div>
+					</div>
+					<!-- 左邊按鈕 -->
+					<button class="carousel-control-prev" type="button" data-bs-target="#proudctSlide4" data-bs-slide="prev">
+						<span class="carousel-control-prev-icon"></span>
+					</button>
+						<!-- 右邊按鈕 -->
+					<button class="carousel-control-next" type="button" data-bs-target="#proudctSlide4" data-bs-slide="next">
+						<span class="carousel-control-next-icon"></span>
+					</button>
+				</div>
+			</div>
+		</div>
+		<!-- slide5 -->
+		<div class="row">
+			<div class="left col-sm-2">
+				<div class="container-meals">
+					<p class="meals-item">Dessert</p>
+				</div>
+			</div>
+			<div class="middle col-sm-10">
+				<div class="frame">
+					<!--產品內容-->
+					<div id="proudctSlide5" class="carousel slide" data-bs-ride="carousel">
+						<div class="carousel-inner">
+								<div class="carousel-item active">
+									<h2>布丁 Pudding</h2>
+									<img src="https://keviniscooking.com/wp-content/uploads/2013/11/Cinnamon-Cr%C3%A8me-Br%C3%BBl%C3%A9e-article-400x400.jpg" alt="silde1" class="slideImg"/>
+								</div>
+								<div class="carousel-item">
+									<h2>蛋糕 Cake</h2>
+									<img src="https://www.henri-charpentier.com/cht/wp-content/uploads/sites/3/2016/01/b1887d012ce195aeae384410776f201a.jpg" alt="slide2" class="slideImg"/>
+								</div>
+								<div class="carousel-item">
+									<h2>奶酪  Panna cotta</h2>
+									<img src="https://insimoneskitchen.com/wp-content/uploads/2016/06/Pannacotta0020-668x668.jpg" alt="slide3" class="slideImg"/>
+								</div>
+								<div class="carousel-item">
+									<h2>餅乾 Cookies</h2>
+									<img src="https://chersee.com.tw/wp-content/uploads/2017/08/page-price.jpg" alt="slide4" class="slideImg"/>
+								</div>
 								
-							</ul>
-						<li><a>Rice</a>	</li>
-							<ul class="eat">
-								<li class=""></li>
-							</ul>
-						<li><a>Side meals</a></li>
-							<ul class="eat">
-								<li class=""></li>
-							</ul>
-						<li><a>Drinks</a></li>
-							<ul class="eat">
-								<li class=""></li>
-							</ul>
-						<li><a>Dessert</a></li>
-							<ul class="eat">
-								<li class=""></li>
-							</ul>
+						</div>
 					</div>
-				</ul>
-				<!--產品內容-->
-				<div class="proudct">
-					<ul class="prodImg">
-						<li class="friedNoodlesImg">
-							<img src="https://tokyo-kitchen.icook.network/uploads/recipe/cover/254179/d1d69593d2f4fb80.jpg"  class="prodImage" id="friedNoodlesImg1"/>
-						</li>
-					</ul>
-					<ul class="prodImg">
-						<li class=""></li>
-					</ul>
-					<ul class="prodImg">
-						<li class=""></li>
-					</ul>
-					<ul class="prodImg">
-						<li class=""></li>
-					</ul>
-					<ul class="prodImg">
-						<li class=""></li>
-					</ul>
-				</div>
-
-				<!-- 左右按鈕　元件２ -->
-                <!-- 左邊按鈕 -->
-				<button class="carousel-control-prev" type="button" data-bs-target="#slideshow" data-bs-slide="prev">
-					<span class="carousel-control-prev-icon"></span>
-				</button>
-					<!-- 右邊按鈕 -->
-				<button class="carousel-control-next" type="button" data-bs-target="#slideshow" data-bs-slide="next">
-					<span class="carousel-control-next-icon"></span>
-				</button>
-	
-				<!-- 指示按鈕　元件３ -->
-				<div class="carousel-indicators">
-					<button type="button" data-bs-target="#slideshow" data-bs-slide-to="0" class="active">
-	
+					<!-- 左邊按鈕 -->
+					<button class="carousel-control-prev" type="button" data-bs-target="#proudctSlide5" data-bs-slide="prev">
+						<span class="carousel-control-prev-icon"></span>
 					</button>
-	
-					<button type="button" data-bs-target="#slideshow" data-bs-slide-to="1" >
-	
-					</button>
-	
-					<button type="button" data-bs-target="#slideshow" data-bs-slide-to="2" >
-	
+						<!-- 右邊按鈕 -->
+					<button class="carousel-control-next" type="button" data-bs-target="#proudctSlide5" data-bs-slide="next">
+						<span class="carousel-control-next-icon"></span>
 					</button>
 				</div>
-				
 			</div>
-		</div>
-		<div class="right">
-			advertisement
-		</div>
-		<div class=" footer">
-			some other information
 		</div>
 	</div>
 </body>
